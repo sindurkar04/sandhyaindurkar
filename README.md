@@ -17,13 +17,22 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## GitHub
 
-The remote is `https://github.com/sindurkar04/sandhyaindurkar.git`. The GitHub repo may still be empty until you authenticate and run:
+The remote is `https://github.com/sindurkar04/sandhyaindurkar.git`. If the repo is still empty or out of date, push from this folder:
+
+**Option A — token script (no password prompt):**
+
+```bash
+export GITHUB_TOKEN=ghp_your_pat_here   # classic PAT with "repo", or fine-grained with Contents: Read/Write
+./scripts/push-main.sh
+```
+
+**Option B — HTTPS or SSH:**
 
 ```bash
 git push -u origin main
 ```
 
-Use a [Personal Access Token](https://github.com/settings/tokens) with `repo` scope as the password when prompted (HTTPS), or set up [SSH keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) for Git.
+Use a [Personal Access Token](https://github.com/settings/tokens) as the HTTPS password, or set up [SSH keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
 
 ## Custom domain (Squarespace DNS)
 
