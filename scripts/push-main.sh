@@ -5,6 +5,12 @@
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
+if [[ -f "$ROOT/.env" ]]; then
+  set -a
+  # shellcheck source=/dev/null
+  source "$ROOT/.env"
+  set +a
+fi
 if [[ -z "${GITHUB_TOKEN:-}" ]]; then
   echo "Set GITHUB_TOKEN to a GitHub PAT, then re-run." >&2
   echo "See: https://github.com/settings/tokens" >&2

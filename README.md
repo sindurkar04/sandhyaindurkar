@@ -50,3 +50,9 @@ Remove or replace conflicting **Squarespace** web records (old `A`/`CNAME` for `
 After DNS propagates, Vercel will verify the domain and provision **HTTPS** automatically. Re-check targets in the Vercel dashboard under **Project → Settings → Domains** if Vercel shows different records for your project.
 
 If Squarespace still forces its own web records while the domain is attached to a Squarespace site, use Squarespace’s help for using the domain with an external host (disconnect or repoint the domain’s DNS only).
+
+After saving DNS changes, confirm from your machine:
+
+```bash
+./scripts/verify-dns-for-vercel.sh sandhyaindurkar.com
+```
