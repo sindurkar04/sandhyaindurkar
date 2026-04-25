@@ -48,3 +48,5 @@ In **Squarespace → Domains → your domain → DNS settings** (custom records)
 Remove or replace conflicting **Squarespace** web records (old `A`/`CNAME` for `@` or `www` that point to Squarespace). **Do not** remove **MX** records if you use email on this domain.
 
 After DNS propagates, Vercel will verify the domain and provision **HTTPS** automatically. Re-check targets in the Vercel dashboard under **Project → Settings → Domains** if Vercel shows different records for your project.
+
+If Squarespace still forces its own web records while the domain is attached to a Squarespace site, use Squarespace’s help for using the domain with an external host (disconnect or repoint the domain’s DNS only).
