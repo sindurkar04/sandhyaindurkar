@@ -3,11 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #0a0a0a;
+  --background: #fcfaf7;
+  --foreground: #221f1b;
+  --muted: #6e665f;
+  --surface: #fffdf9;
+  --surface-strong: #f6f0e7;
+  --border: #e7ded2;
+  --border-strong: #d8ccb9;
+  --accent: #8f5d34;
 }
 
 body {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
   color: var(--foreground);
   background: var(--background);
 }

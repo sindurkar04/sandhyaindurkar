@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "sandhyaindurkar",
-  description: "Site migrated from Squarespace to Next.js on Vercel",
+  title: "Sandhya Indurkar | Math, Applied, Learning Through Food",
+  description:
+    "A soft-premium learning space focused on Math, Applied, and Learning Through Food.",
 };
 
 export default function RootLayout({
