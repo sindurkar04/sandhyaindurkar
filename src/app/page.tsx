@@ -2,8 +2,42 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="mx-auto flex w-full max-w-4xl flex-col px-6 pb-20 pt-10 sm:px-10 lg:px-14">
-      <section className="rounded-3xl border border-[color:var(--border)] bg-[color:var(--surface)] p-7 shadow-sm sm:p-10">
+    <main className="mx-auto flex w-full max-w-5xl flex-col px-6 pb-14 pt-8 sm:px-10 lg:px-14">
+      <header className="sticky top-4 z-10 mb-8 rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)]/95 px-5 py-3 shadow-sm backdrop-blur">
+        <nav className="flex flex-wrap items-center justify-between gap-3">
+          <p className="text-sm font-semibold tracking-wide text-[color:var(--accent)]">
+            Sandhya Indurkar
+          </p>
+          <div className="flex flex-wrap gap-2 text-sm">
+            <a
+              className="rounded-full px-3 py-1.5 transition hover:bg-[color:var(--surface-strong)]"
+              href="#home"
+            >
+              Home
+            </a>
+            <a
+              className="rounded-full px-3 py-1.5 transition hover:bg-[color:var(--surface-strong)]"
+              href="#math-applied"
+            >
+              Math, Applied
+            </a>
+            <a
+              className="rounded-full px-3 py-1.5 transition hover:bg-[color:var(--surface-strong)]"
+              href="#learning-through-food"
+            >
+              Learning Through Food
+            </a>
+          </div>
+        </nav>
+      </header>
+
+      <section
+        className="rounded-3xl border border-[color:var(--border)] bg-[color:var(--surface)] p-7 shadow-sm sm:p-10"
+        id="home"
+      >
+        <p className="text-sm font-medium uppercase tracking-[0.2em] text-[color:var(--accent)]">
+          Home
+        </p>
         <div className="mx-auto max-w-sm overflow-hidden rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface-strong)]">
           <Image
             alt="Sandhya Indurkar headshot"
@@ -56,6 +90,55 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      <section
+        className="mt-10 rounded-3xl border border-[color:var(--border)] bg-[color:var(--surface)] p-7 shadow-sm sm:p-10"
+        id="math-applied"
+      >
+        <p className="text-sm font-medium uppercase tracking-[0.2em] text-[color:var(--accent)]">
+          Math, Applied
+        </p>
+        <h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
+          Mathematical concepts in real life
+        </h2>
+        <p className="mt-4 leading-relaxed text-[color:var(--muted)]">
+          This section is where I write about mathematical concepts and how
+          they show up in practical decisions, outcomes, and everyday patterns.
+        </p>
+        <ul className="mt-6 space-y-3 text-[color:var(--muted)]">
+          <li>How concepts appear in work and data-driven decisions</li>
+          <li>Simple explanations tied to practical examples</li>
+          <li>What matters most when applying ideas to real problems</li>
+        </ul>
+      </section>
+
+      <section
+        className="mt-10 rounded-3xl border border-[color:var(--border)] bg-[color:var(--surface)] p-7 shadow-sm sm:p-10"
+        id="learning-through-food"
+      >
+        <p className="text-sm font-medium uppercase tracking-[0.2em] text-[color:var(--accent)]">
+          Learning Through Food
+        </p>
+        <h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
+          What each dish teaches me
+        </h2>
+        <p className="mt-4 leading-relaxed text-[color:var(--muted)]">
+          Here I focus on dishes I am learning, and the lessons each one teaches
+          me about process, patience, timing, and adaptation.
+        </p>
+        <ul className="mt-6 space-y-3 text-[color:var(--muted)]">
+          <li>New dishes and what I learned from trying them</li>
+          <li>What worked, what failed, and what changed the result</li>
+          <li>How cooking mirrors learning in work and life</li>
+        </ul>
+      </section>
+
+      <footer className="mt-10 rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] px-5 py-4 text-sm text-[color:var(--muted)] shadow-sm">
+        <p>
+          © {new Date().getFullYear()} Sandhya Indurkar · Math, Applied ·
+          Learning Through Food
+        </p>
+      </footer>
     </main>
   );
 }
