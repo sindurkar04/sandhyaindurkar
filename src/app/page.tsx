@@ -135,8 +135,7 @@ export default function Home() {
 
       <footer className="mt-10 rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] px-5 py-4 text-sm text-[color:var(--muted)] shadow-sm">
         <p>
-          © {new Date().getFullYear()} Sandhya Indurkar · Math, Applied ·
-          Learning Through Food
+          © 2024 Sandhya Indurkar · Math, Applied · Learning Through Food
         </p>
       </footer>
     </main>
