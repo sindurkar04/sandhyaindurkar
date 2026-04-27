@@ -11,18 +11,17 @@ const storyParagraphs = [
 
 export default function Home() {
   return (
-    <main className="w-full space-y-8 px-4 py-8 sm:px-6 lg:px-8">
-      <section className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6 shadow-sm sm:p-8">
-        <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
-          My Story
-        </p>
-
-        <div className="mt-5 grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+    <main className="w-full">
+      <section className="border-b border-[color:var(--border)] bg-[color:var(--surface)] px-4 py-8 sm:px-6 lg:px-8 lg:py-10">
+        <div className="grid gap-8 lg:grid-cols-2">
           <div className="space-y-4">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[color:var(--muted)]">
+              My Story
+            </p>
             <div className="overflow-hidden rounded-xl border border-[color:var(--border)] bg-[color:var(--surface-strong)]">
               <Image
                 alt="Portrait of Sandhya Indurkar"
-                className="h-full w-full object-cover"
+                className="h-full max-h-[700px] w-full object-cover"
                 height={1000}
                 priority
                 src="/sandhya_headshot.png"
@@ -34,28 +33,56 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="space-y-5">
-            <h1 className="text-3xl font-black tracking-tight text-[color:var(--foreground)] sm:text-4xl">
-              Math, Applied and Learning Through Food
+          <div className="rounded-xl border border-[color:var(--border)] bg-[color:var(--surface-strong)] p-6 sm:p-8">
+            <h1 className="text-3xl font-black tracking-tight text-[color:var(--foreground)] sm:text-5xl">
+              My Story
             </h1>
-            <p className="text-lg font-semibold leading-relaxed text-[color:var(--foreground)]">
+            <p className="mt-5 text-lg font-semibold leading-relaxed text-[color:var(--foreground)]">
               A personal journal on making complex ideas practical through data, work, and food.
             </p>
+            <p className="mt-5 text-base leading-relaxed text-[color:var(--muted)]">
+              I write about the intersection of analytical thinking and everyday learning, with stories that are practical, clear, and grounded in real experience.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <a
+                className="inline-flex rounded-full bg-black px-5 py-2.5 text-sm font-bold text-white transition hover:bg-[#222]"
+                href="/math-applied"
+              >
+                Read Math, Applied
+              </a>
+              <a
+                className="inline-flex rounded-full border border-[color:var(--border-strong)] px-5 py-2.5 text-sm font-bold text-[color:var(--foreground)] transition hover:bg-white"
+                href="/learning-through-food"
+              >
+                Explore Learning Through Food
+              </a>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div className="mt-8 space-y-5 border-t border-[color:var(--border)] pt-7 text-[17px] leading-8 text-[color:var(--muted)]">
+      <section className="px-4 py-8 sm:px-6 lg:px-8 lg:py-10">
+        <h2 className="text-2xl font-black tracking-tight text-[color:var(--foreground)] sm:text-3xl">
+          My Story
+        </h2>
+        <div className="mt-6 grid gap-6 text-[17px] leading-8 text-[color:var(--muted)] lg:grid-cols-2">
           {storyParagraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
       </section>
 
-      <section className="grid gap-5 md:grid-cols-2">
-        <article className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6 shadow-sm">
-          <h2 className="text-2xl font-black tracking-tight text-[color:var(--foreground)]">
+      <section className="grid gap-5 px-4 pb-8 sm:px-6 md:grid-cols-2 lg:px-8 lg:pb-10">
+        <article className="rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6 shadow-sm sm:p-7">
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-[color:var(--muted)]">
+            Journal
+          </p>
+          <h3 className="mt-3 text-2xl font-black tracking-tight text-[color:var(--foreground)]">
             Math, Applied
-          </h2>
+          </h3>
+          <p className="mt-3 leading-relaxed text-[color:var(--muted)]">
+            Exploring how math and data shape real-world decisions through practical stories and breakdowns.
+          </p>
           <a
             className="mt-5 inline-flex rounded-full bg-black px-4 py-2 text-sm font-bold text-white transition hover:bg-[#222]"
             href="/math-applied"
@@ -64,10 +91,16 @@ export default function Home() {
           </a>
         </article>
 
-        <article className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6 shadow-sm">
-          <h2 className="text-2xl font-black tracking-tight text-[color:var(--foreground)]">
+        <article className="rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6 shadow-sm sm:p-7">
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-[color:var(--muted)]">
+            Journal
+          </p>
+          <h3 className="mt-3 text-2xl font-black tracking-tight text-[color:var(--foreground)]">
             Learning Through Food
-          </h2>
+          </h3>
+          <p className="mt-3 leading-relaxed text-[color:var(--muted)]">
+            Lessons from dishes I am learning and what each one teaches about process, patience, and adaptation.
+          </p>
           <a
             className="mt-5 inline-flex rounded-full bg-black px-4 py-2 text-sm font-bold text-white transition hover:bg-[#222]"
             href="/learning-through-food"
