@@ -11,7 +11,7 @@ const storyParagraphs = [
 
 export default function Home() {
   return (
-    <main className="mx-auto w-full max-w-6xl space-y-10 px-6 py-10 sm:px-10 lg:px-14">
+    <main className="w-full space-y-8 px-4 py-8 sm:px-6 lg:px-8">
       <section className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6 shadow-sm sm:p-8">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           My Story

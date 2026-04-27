@@ -1,6 +1,6 @@
 export default function LearningThroughFoodPage() {
   return (
-    <main className="mx-auto w-full max-w-4xl space-y-8 px-6 py-10 sm:px-10">
+    <main className="w-full space-y-8 px-4 py-8 sm:px-6 lg:px-8">
       <header className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6 shadow-sm">
         <h1 className="text-3xl font-black tracking-tight text-[color:var(--foreground)]">
           Learning Through Food

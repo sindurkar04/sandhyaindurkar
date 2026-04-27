@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${lato.variable} min-h-screen bg-[color:var(--background)] antialiased`}>
         <header className="border-b border-[color:var(--border-strong)] bg-black text-white">
-          <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-3 px-6 py-4 sm:px-10 lg:px-14">
+          <div className="flex w-full flex-wrap items-center justify-between gap-3 px-4 py-4 sm:px-6 lg:px-8">
             <p className="text-sm font-bold tracking-[0.08em]">Sandhya Indurkar</p>
             <nav className="flex flex-wrap gap-1 text-sm">
               {navLinks.map((link) => (
@@ -48,7 +48,7 @@ export default function RootLayout({
         {children}
 
         <footer className="mt-16 border-t border-[color:var(--border-strong)] bg-black text-white">
-          <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-3 px-6 py-4 text-sm sm:px-10 lg:px-14">
+          <div className="flex w-full flex-wrap items-center justify-between gap-3 px-4 py-4 text-sm sm:px-6 lg:px-8">
             <p>© 2024 Sandhya Indurkar</p>
             <a
               aria-label="LinkedIn profile"
