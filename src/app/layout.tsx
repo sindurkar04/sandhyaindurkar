@@ -28,13 +28,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${lato.variable} min-h-screen bg-[color:var(--background)] antialiased`}>
-        <header className="border-b border-[color:var(--border-strong)] bg-black text-white">
-          <div className="flex w-full flex-wrap items-center justify-between gap-3 px-4 py-4 sm:px-6 lg:px-8">
-            <p className="text-sm font-bold tracking-[0.08em]">Sandhya Indurkar</p>
-            <nav className="flex flex-wrap gap-1 text-sm">
+        <header className="sticky top-0 z-50 border-b border-white/15 bg-black">
+          <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-5 sm:px-6 lg:px-8">
+            <p className="text-base font-bold tracking-[0.08em] text-white">Sandhya Indurkar</p>
+            <nav className="flex flex-wrap gap-1 text-[15px]">
               {navLinks.map((link) => (
                 <a
-                  className="rounded-full px-3 py-1.5 transition hover:bg-white/15"
+                  className="rounded px-2.5 py-1.5 text-gray-300 transition hover:text-white"
                   href={link.href}
                   key={link.href}
                 >
@@ -47,12 +47,12 @@ export default function RootLayout({
 
         {children}
 
-        <footer className="mt-16 border-t border-[color:var(--border-strong)] bg-black text-white">
-          <div className="flex w-full flex-wrap items-center justify-between gap-3 px-4 py-4 text-sm sm:px-6 lg:px-8">
-            <p>© 2024 Sandhya Indurkar</p>
+        <footer className="mt-16 border-t border-white/15 bg-black">
+          <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-5 text-[15px] sm:px-6 lg:px-8">
+            <p className="text-gray-300">© 2024 Sandhya Indurkar</p>
             <a
               aria-label="LinkedIn profile"
-              className="inline-flex items-center gap-2 rounded-full border border-white/30 px-3 py-1.5 text-xs font-bold transition hover:bg-white/15"
+              className="inline-flex items-center gap-2 rounded border border-white/25 px-3.5 py-2 text-sm font-bold text-white transition hover:bg-white hover:text-black"
               href="https://www.linkedin.com/in/sandhya-indurkar/"
               rel="noreferrer"
               target="_blank"

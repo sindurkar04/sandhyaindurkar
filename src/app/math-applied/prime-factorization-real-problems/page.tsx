@@ -1,15 +1,28 @@
+import Image from "next/image";
+
 export default function PrimeFactorizationPostPage() {
   return (
-    <main className="w-full space-y-7 px-4 py-8 sm:px-6 lg:px-8">
-      <article className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6 shadow-sm sm:p-8">
+    <main className="mx-auto w-full max-w-[720px] space-y-7 px-4 py-10 sm:px-6">
+      <article className="space-y-7">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           Math, Applied
         </p>
-        <h1 className="mt-3 text-3xl font-black tracking-tight text-[color:var(--foreground)] sm:text-4xl">
+        <h1 className="text-3xl font-black tracking-tight text-[color:var(--foreground)] sm:text-4xl">
           Prime Factorization Isn&apos;t Just Math -- It&apos;s How You Break Down Real Problems
         </h1>
+        <div className="overflow-hidden rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] p-3">
+          <div className="mx-auto max-w-[360px]">
+            <Image
+              alt="Prime factorization visual"
+              className="h-auto w-full object-contain"
+              height={900}
+              src="/prime_factorization.png"
+              width={1600}
+            />
+          </div>
+        </div>
 
-        <div className="mt-7 space-y-5 text-base leading-relaxed text-[color:var(--muted)]">
+        <div className="space-y-5 text-[17px] leading-8 text-[color:var(--muted)]">
           <h2 className="text-xl font-bold text-[color:var(--foreground)]">The idea</h2>
           <p>
             Prime factorization is usually taught as a mechanical exercise. You take a number and break it down into its smallest building blocks.

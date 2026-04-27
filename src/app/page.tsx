@@ -9,104 +9,84 @@ const storyParagraphs = [
   "This site is where I write about what I am learning through math, work, and food.",
 ];
 
+const storyIntro = storyParagraphs.slice(0, 2);
+const storyContinuation = storyParagraphs.slice(2);
+
 export default function Home() {
   return (
-    <main className="w-full">
-      <section className="border-b border-[color:var(--border)] bg-[color:var(--surface)] px-4 py-8 sm:px-6 lg:px-8 lg:py-10">
-        <div className="grid gap-8 lg:grid-cols-2">
-          <div className="space-y-4">
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[color:var(--muted)]">
-              My Story
-            </p>
-            <div className="overflow-hidden rounded-xl border border-[color:var(--border)] bg-[color:var(--surface-strong)]">
+    <main className="mx-auto w-full max-w-[1080px] px-4 py-10 sm:px-6 lg:px-8">
+      <section className="space-y-8">
+        <div className="grid gap-8 lg:grid-cols-[390px_minmax(0,1fr)] lg:items-start">
+          <div className="space-y-3">
+            <div className="overflow-hidden rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)]">
               <Image
                 alt="Portrait of Sandhya Indurkar"
-                className="h-full max-h-[700px] w-full object-cover"
+                className="h-auto w-full object-contain"
                 height={1000}
                 priority
                 src="/sandhya_headshot.png"
                 width={900}
               />
             </div>
-            <p className="text-sm leading-relaxed text-[color:var(--muted)]">
-              Based in New York, I write about turning abstract ideas into practical understanding.
-            </p>
           </div>
 
-          <div className="rounded-xl border border-[color:var(--border)] bg-[color:var(--surface-strong)] p-6 sm:p-8">
-            <h1 className="text-3xl font-black tracking-tight text-[color:var(--foreground)] sm:text-5xl">
-              My Story
+          <div className="space-y-5 text-[17px] leading-8 text-[color:var(--muted)]">
+            <p className="text-xs font-bold tracking-[0.18em] text-[color:var(--muted)]">
+              MY STORY
+            </p>
+            <h1 className="text-4xl font-black tracking-tight text-[color:var(--foreground)] sm:text-5xl">
+              Hi, I&apos;m Sandhya.
             </h1>
-            <p className="mt-5 text-lg font-semibold leading-relaxed text-[color:var(--foreground)]">
-              A personal journal on making complex ideas practical through data, work, and food.
-            </p>
-            <p className="mt-5 text-base leading-relaxed text-[color:var(--muted)]">
-              I write about the intersection of analytical thinking and everyday learning, with stories that are practical, clear, and grounded in real experience.
-            </p>
-            <div className="mt-7 flex flex-wrap gap-3">
-              <a
-                className="inline-flex rounded-full bg-black px-5 py-2.5 text-sm font-bold text-white transition hover:bg-[#222]"
-                href="/math-applied"
-              >
-                Read Math, Applied
-              </a>
-              <a
-                className="inline-flex rounded-full border border-[color:var(--border-strong)] px-5 py-2.5 text-sm font-bold text-[color:var(--foreground)] transition hover:bg-white"
-                href="/learning-through-food"
-              >
-                Explore Learning Through Food
-              </a>
-            </div>
+            {storyIntro.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
           </div>
         </div>
-      </section>
 
-      <section className="px-4 py-8 sm:px-6 lg:px-8 lg:py-10">
-        <h2 className="text-2xl font-black tracking-tight text-[color:var(--foreground)] sm:text-3xl">
-          My Story
-        </h2>
-        <div className="mt-6 grid gap-6 text-[17px] leading-8 text-[color:var(--muted)] lg:grid-cols-2">
-          {storyParagraphs.map((paragraph) => (
+        <div className="space-y-5 border-t border-[color:var(--border)] pt-7 text-[17px] leading-8 text-[color:var(--muted)]">
+          {storyContinuation.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
       </section>
 
-      <section className="grid gap-5 px-4 pb-8 sm:px-6 md:grid-cols-2 lg:px-8 lg:pb-10">
-        <article className="rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6 shadow-sm sm:p-7">
-          <p className="text-xs font-bold uppercase tracking-[0.18em] text-[color:var(--muted)]">
-            Journal
-          </p>
-          <h3 className="mt-3 text-2xl font-black tracking-tight text-[color:var(--foreground)]">
+      <section className="mt-12 grid gap-6 border-t border-[color:var(--border)] pt-8 md:grid-cols-2">
+        <article className="overflow-hidden rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)]">
+          <img
+            alt="Math applied section preview"
+            className="h-44 w-full object-cover"
+            src="/prime_factorization.png"
+          />
+          <div className="space-y-3 p-5">
+            <h2 className="text-2xl font-black tracking-tight text-[color:var(--foreground)]">
             Math, Applied
-          </h3>
-          <p className="mt-3 leading-relaxed text-[color:var(--muted)]">
-            Exploring how math and data shape real-world decisions through practical stories and breakdowns.
-          </p>
-          <a
-            className="mt-5 inline-flex rounded-full bg-black px-4 py-2 text-sm font-bold text-white transition hover:bg-[#222]"
-            href="/math-applied"
-          >
-            View posts
-          </a>
+            </h2>
+            <p className="leading-relaxed text-[color:var(--muted)]">
+              Practical writing on how mathematical concepts shape real-world decisions and systems.
+            </p>
+            <a className="inline-flex text-sm font-bold text-[color:var(--foreground)] underline" href="/math-applied">
+              View posts
+            </a>
+          </div>
         </article>
 
-        <article className="rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6 shadow-sm sm:p-7">
-          <p className="text-xs font-bold uppercase tracking-[0.18em] text-[color:var(--muted)]">
-            Journal
-          </p>
-          <h3 className="mt-3 text-2xl font-black tracking-tight text-[color:var(--foreground)]">
+        <article className="overflow-hidden rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)]">
+          <img
+            alt="Learning through food section preview"
+            className="h-44 w-full object-cover"
+            src="/rasmalai.jpg"
+          />
+          <div className="space-y-3 p-5">
+            <h2 className="text-2xl font-black tracking-tight text-[color:var(--foreground)]">
             Learning Through Food
-          </h3>
-          <p className="mt-3 leading-relaxed text-[color:var(--muted)]">
-            Lessons from dishes I am learning and what each one teaches about process, patience, and adaptation.
-          </p>
-          <a
-            className="mt-5 inline-flex rounded-full bg-black px-4 py-2 text-sm font-bold text-white transition hover:bg-[#222]"
-            href="/learning-through-food"
-          >
-            View stories
-          </a>
+            </h2>
+            <p className="leading-relaxed text-[color:var(--muted)]">
+              Cooking posts focused on process, precision, and what each dish teaches in practice.
+            </p>
+            <a className="inline-flex text-sm font-bold text-[color:var(--foreground)] underline" href="/learning-through-food">
+              View posts
+            </a>
+          </div>
         </article>
       </section>
     </main>
