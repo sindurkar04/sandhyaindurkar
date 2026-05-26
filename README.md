@@ -15,6 +15,16 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+## Recipe finder (Spoonacular)
+
+The ingredient-based recipe tool at `/learning-through-food/recipe-finder` uses the [Spoonacular API](https://spoonacular.com/food-api).
+
+1. Sign up and copy an API key from Spoonacular.
+2. Copy [`.env.example`](./.env.example) to `.env` and set `SPOONACULAR_API_KEY`.
+3. In Vercel, add the same variable under **Project → Settings → Environment Variables** (Production and Preview), then redeploy.
+
+Free tier allows roughly 150 requests per day.
+
 ## GitHub
 
 The remote is `https://github.com/sindurkar04/sandhyaindurkar.git`. If the repo is still empty or out of date, push from this folder:

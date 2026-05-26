@@ -13,6 +13,22 @@ export default function LearningThroughFoodPage() {
         </p>
       </header>
 
+      <section className="rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6">
+        <h2 className="text-2xl font-bold tracking-tight text-[color:var(--foreground)]">
+          Recipe finder
+        </h2>
+        <p className="mt-2 max-w-2xl leading-relaxed text-[color:var(--muted)]">
+          Enter ingredients you have and get ranked recipe ideas based on what is already in your
+          pantry.
+        </p>
+        <a
+          className="mt-4 inline-flex text-sm font-bold text-[color:var(--foreground)] underline"
+          href="/learning-through-food/recipe-finder"
+        >
+          Find a recipe
+        </a>
+      </section>
+
       <section className="grid gap-6 md:grid-cols-2">
         <article className="overflow-hidden rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] transition hover:shadow-sm">
           <img
