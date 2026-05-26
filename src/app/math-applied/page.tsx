@@ -51,6 +51,52 @@ export default function MathAppliedPage() {
             </a>
           </div>
         </article>
+
+        <article className="overflow-hidden rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] transition hover:shadow-sm">
+          <img
+            alt="Percent change recovery visual"
+            className="h-52 w-full object-cover"
+            src="/percent_change.png"
+          />
+          <div className="space-y-3 p-5">
+            <h2 className="text-2xl font-bold tracking-tight text-[color:var(--foreground)]">
+              Percent Change Isn&apos;t Intuitive -- How Growth Math Distorts Real Decisions
+            </h2>
+            <p className="text-sm leading-relaxed text-[color:var(--muted)]">
+              Why equal-looking percentage moves do not cancel out, and how to set recovery targets
+              that match reality.
+            </p>
+            <a
+              className="text-sm font-bold text-[color:var(--foreground)] underline"
+              href="/math-applied/percent-change-real-decisions"
+            >
+              Read post
+            </a>
+          </div>
+        </article>
+
+        <article className="overflow-hidden rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] transition hover:shadow-sm">
+          <img
+            alt="Variance and spread comparison visual"
+            className="h-52 w-full object-cover"
+            src="/variance_spread.png"
+          />
+          <div className="space-y-3 p-5">
+            <h2 className="text-2xl font-bold tracking-tight text-[color:var(--foreground)]">
+              Variance and Spread -- Why the Same Average Can Hide a Very Different Story
+            </h2>
+            <p className="text-sm leading-relaxed text-[color:var(--muted)]">
+              Same mean, different volatility: how standard deviation and range reveal consistency
+              that averages alone cannot.
+            </p>
+            <a
+              className="text-sm font-bold text-[color:var(--foreground)] underline"
+              href="/math-applied/variance-spread-real-data"
+            >
+              Read post
+            </a>
+          </div>
+        </article>
       </section>
     </main>
   );
