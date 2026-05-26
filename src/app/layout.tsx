@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
+
+const GA_MEASUREMENT_ID = "G-P9WDL6RW5V";
 
 const lato = Lato({
   variable: "--font-lato",
@@ -28,6 +31,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${lato.variable} min-h-screen bg-[color:var(--background)] antialiased`}>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
+
         <header className="sticky top-0 z-50 border-b border-white/15 bg-black">
           <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-5 sm:px-6 lg:px-8">
             <p className="text-base font-bold tracking-[0.08em] text-white">Sandhya Indurkar</p>
