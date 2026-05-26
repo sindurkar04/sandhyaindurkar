@@ -8,6 +8,14 @@ Next.js app deployed on [Vercel](https://vercel.com).
 
 Use Node.js 20+ (this repo includes a portable Node under [`.tools/node-v22.14.0`](./.tools/node-v22.14.0) used for agent/bootstrap installs; add `.tools/` to your PATH or install Node from [nodejs.org](https://nodejs.org)).
 
+**If `npm` is not found** in your terminal, use the project script (uses portable Node in `.tools/`):
+
+```bash
+./scripts/dev.sh
+```
+
+**If you have Node installed globally:**
+
 ```bash
 npm install
 npm run dev
