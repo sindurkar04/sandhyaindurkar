@@ -66,7 +66,7 @@ function toRecommendation(recipe: SpoonacularFindByIngredientsResult): RecipeRec
 export async function findRecipesByIngredients(
   ingredients: string[],
 ): Promise<RecipeRecommendation[]> {
-  const apiKey = process.env.SPOONACULAR_API_KEY;
+  const apiKey = process.env.SPOONACULAR_API_KEY?.trim();
 
   if (!apiKey) {
     throw new Error("SPOONACULAR_API_KEY is not configured.");

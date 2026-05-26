@@ -6,6 +6,9 @@ import type {
 } from "@/lib/recipes/types";
 import { NextResponse } from "next/server";
 
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
+
 export async function POST(request: Request) {
   let body: RecommendRecipesRequest;
 
@@ -39,7 +42,10 @@ export async function POST(request: Request) {
 
     if (message.includes("SPOONACULAR_API_KEY")) {
       return NextResponse.json<RecommendRecipesError>(
-        { error: "Recipe search is not configured yet." },
+        {
+          error:
+            "Recipe search is not configured on Production yet. In Vercel, edit SPOONACULAR_API_KEY, enable the Production environment, save, then redeploy.",
+        },
         { status: 503 },
       );
     }

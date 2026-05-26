@@ -23,6 +23,10 @@ The ingredient-based recipe tool at `/learning-through-food/recipe-finder` uses 
 2. Copy [`.env.example`](./.env.example) to `.env` and set `SPOONACULAR_API_KEY`.
 3. In Vercel, add the same variable under **Project → Settings → Environment Variables** (Production and Preview), then redeploy.
 
+**Important:** The variable must list **Production** (not Development only). If Vercel shows "Development" under the key, edit it, check **Production**, save, and redeploy.
+
+**Verify on production:** open `https://sandhyaindurkar.com/api/recipes/health` — it should return `{"configured":true,"vercelEnv":"production"}`.
+
 Free tier allows roughly 150 requests per day.
 
 ## GitHub
