@@ -18,5 +18,10 @@ if [[ ! -d node_modules ]]; then
   npm install
 fi
 
+if [[ -d .next ]]; then
+  echo "Clearing .next cache (avoids stale webpack errors after new pages)..."
+  rm -rf .next
+fi
+
 echo "Starting dev server at http://localhost:3000"
 npm run dev

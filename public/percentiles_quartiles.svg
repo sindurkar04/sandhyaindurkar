@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#f5f1eb"/>
+  <rect x="100" y="70" width="600" height="360" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <line x1="160" y1="380" x2="640" y2="380" stroke="#d1d5db" stroke-width="2"/>
+  <line x1="280" y1="120" x2="280" y2="380" stroke="#9ca3af" stroke-width="2" stroke-dasharray="6 4"/>
+  <line x1="400" y1="120" x2="400" y2="380" stroke="#111111" stroke-width="2" stroke-dasharray="6 4"/>
+  <line x1="520" y1="120" x2="520" y2="380" stroke="#9ca3af" stroke-width="2" stroke-dasharray="6 4"/>
+  <rect x="280" y="200" width="240" height="120" fill="#f5f1eb" stroke="#d1d5db" stroke-width="1"/>
+  <circle cx="200" cy="340" r="8" fill="#d1d5db"/>
+  <circle cx="240" cy="310" r="8" fill="#d1d5db"/>
+  <circle cx="300" cy="280" r="8" fill="#9ca3af"/>
+  <circle cx="360" cy="250" r="8" fill="#6b7280"/>
+  <circle cx="420" cy="230" r="8" fill="#4b5563"/>
+  <circle cx="500" cy="200" r="8" fill="#111111"/>
+  <circle cx="560" cy="170" r="8" fill="#111111"/>
+  <circle cx="600" cy="150" r="8" fill="#111111"/>
+  <text x="280" y="410" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#6b7280">Q1</text>
+  <text x="400" y="410" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#111111">Q2</text>
+  <text x="520" y="410" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#6b7280">Q3</text>
+  <text x="400" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" font-weight="800" fill="#111111">Percentiles and Quartiles</text>
+</svg>

@@ -120,6 +120,29 @@ export default function MathAppliedPage() {
             </a>
           </div>
         </article>
+
+        <article className="overflow-hidden rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] transition hover:shadow-sm">
+          <img
+            alt="Percentiles and quartiles visual"
+            className="h-52 w-full object-cover"
+            src="/percentiles_quartiles.svg"
+          />
+          <div className="space-y-3 p-5">
+            <h2 className="text-2xl font-bold tracking-tight text-[color:var(--foreground)]">
+              The Average User Isn&apos;t Average -- What Percentiles and Quartiles Tell You in Real Data
+            </h2>
+            <p className="text-sm leading-relaxed text-[color:var(--muted)]">
+              Why P90 and quartiles describe tails and typical experience better than the mean
+              alone for SLAs, latency, and everyday metrics.
+            </p>
+            <a
+              className="text-sm font-bold text-[color:var(--foreground)] underline"
+              href="/math-applied/percentiles-quartiles-real-data"
+            >
+              Read post
+            </a>
+          </div>
+        </article>
       </section>
     </main>
   );
