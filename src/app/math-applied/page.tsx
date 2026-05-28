@@ -97,6 +97,29 @@ export default function MathAppliedPage() {
             </a>
           </div>
         </article>
+
+        <article className="overflow-hidden rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] transition hover:shadow-sm">
+          <img
+            alt="Correlation versus causation scatter visual"
+            className="h-52 w-full object-cover"
+            src="/correlation_causation.svg"
+          />
+          <div className="space-y-3 p-5">
+            <h2 className="text-2xl font-bold tracking-tight text-[color:var(--foreground)]">
+              Correlation Isn&apos;t Causation -- How Linked Data Misleads Real Decisions
+            </h2>
+            <p className="text-sm leading-relaxed text-[color:var(--muted)]">
+              Why strong r values still fail as proof: confounders, direction, and what you need
+              before acting on a pattern.
+            </p>
+            <a
+              className="text-sm font-bold text-[color:var(--foreground)] underline"
+              href="/math-applied/correlation-vs-causation-real-decisions"
+            >
+              Read post
+            </a>
+          </div>
+        </article>
       </section>
     </main>
   );
