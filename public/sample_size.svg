@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#f5f1eb"/>
+  <rect x="100" y="80" width="600" height="340" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <polyline
+    fill="none"
+    points="140,300 200,260 260,280 320,220 380,235 440,210 500,205 560,200 620,198 680,200"
+    stroke="#d1d5db"
+    stroke-width="3"
+  />
+  <circle cx="200" cy="260" fill="#111111" r="10"/>
+  <circle cx="320" cy="220" fill="#111111" r="10"/>
+  <circle cx="680" cy="200" fill="#111111" r="10"/>
+  <text x="200" y="245" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#111111">n=50</text>
+  <text x="320" y="205" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#111111">n=150</text>
+  <text x="680" y="185" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#111111">n=2000</text>
+  <line stroke="#9ca3af" stroke-dasharray="6 4" stroke-width="2" x1="120" x2="680" y1="200" y2="200"/>
+  <text x="400" y="52" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" font-weight="800" fill="#111111">Sample Size Matters</text>
+  <text x="400" y="420" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#6b7280">Same question, different n</text>
+</svg>

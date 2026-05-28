@@ -143,6 +143,29 @@ export default function MathAppliedPage() {
             </a>
           </div>
         </article>
+
+        <article className="overflow-hidden rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] transition hover:shadow-sm">
+          <img
+            alt="Sample size stability visual"
+            className="h-52 w-full object-cover"
+            src="/sample_size.svg"
+          />
+          <div className="space-y-3 p-5">
+            <h2 className="text-2xl font-bold tracking-tight text-[color:var(--foreground)]">
+              Twelve Data Points Isn&apos;t a Trend -- What Sample Size Changes in Real Decisions
+            </h2>
+            <p className="text-sm leading-relaxed text-[color:var(--muted)]">
+              Why small samples inflate experiment wins and shaky averages, and how mean,
+              spread, and percentiles shift as n grows.
+            </p>
+            <a
+              className="text-sm font-bold text-[color:var(--foreground)] underline"
+              href="/math-applied/sample-size-real-decisions"
+            >
+              Read post
+            </a>
+          </div>
+        </article>
       </section>
     </main>
   );
