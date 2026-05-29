@@ -59,7 +59,7 @@ export default function PercentilesExplorer() {
   return (
     <section className="my-8 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-6">
       <h3 className="text-lg font-bold text-[color:var(--foreground)]">
-        Interactive example: read the distribution
+        Example: read the distribution
       </h3>
       <p className="mt-2 max-w-prose text-sm leading-relaxed text-[color:var(--muted)]">
         Choose a dataset and a percentile. Dark bars are values at or below that percentile. The

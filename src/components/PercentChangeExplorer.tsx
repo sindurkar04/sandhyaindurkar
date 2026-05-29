@@ -65,7 +65,7 @@ export default function PercentChangeExplorer() {
   return (
     <section className="my-8 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-6">
       <h3 className="text-lg font-bold text-[color:var(--foreground)]">
-        Interactive example: recovery after a drop
+        Example: recovery after a drop
       </h3>
       <p className="mt-2 text-sm leading-relaxed text-[color:var(--muted)]">
         Start with a value, apply a drop, then apply a recovery. See why equal-looking percentages

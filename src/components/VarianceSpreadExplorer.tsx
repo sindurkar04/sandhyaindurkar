@@ -64,7 +64,7 @@ export default function VarianceSpreadExplorer() {
   return (
     <section className="my-8 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-6">
       <h3 className="text-lg font-bold text-[color:var(--foreground)]">
-        Interactive example: same average, different spread
+        Example: same average, different spread
       </h3>
       <p className="mt-2 text-sm leading-relaxed text-[color:var(--muted)]">
         Two delivery teams can share the same mean time while feeling very different to customers.

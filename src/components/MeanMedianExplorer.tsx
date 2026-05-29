@@ -56,7 +56,7 @@ export default function MeanMedianExplorer() {
   return (
     <section className="my-8 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-6">
       <h3 className="text-lg font-bold text-[color:var(--foreground)]">
-        Interactive example: customer orders
+        Example: customer orders
       </h3>
       <p className="mt-2 text-sm leading-relaxed text-[color:var(--muted)]">
         Toggle the outlier and switch what you highlight. Watch how the mean moves more than the

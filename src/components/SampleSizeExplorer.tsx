@@ -140,7 +140,7 @@ export default function SampleSizeExplorer() {
   return (
     <section className="my-8 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-6">
       <h3 className="text-lg font-bold text-[color:var(--foreground)]">
-        Interactive example: how sample size changes the story
+        Example: how sample size changes the story
       </h3>
       <p className="mt-2 max-w-prose text-sm leading-relaxed text-[color:var(--muted)]">
         {meta.businessContext} Move the slider to see how noisy early reads compare to the full

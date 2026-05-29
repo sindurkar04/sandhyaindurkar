@@ -18,7 +18,7 @@ export default function MathAppliedPage() {
           <img
             alt="Prime factorization flow visual"
             className="h-52 w-full object-cover"
-            src="/prime_factorization.png"
+            src="/prime_factorization.svg"
           />
           <div className="space-y-3 p-5">
             <h2 className="text-2xl font-bold tracking-tight text-[color:var(--foreground)]">
@@ -161,6 +161,29 @@ export default function MathAppliedPage() {
             <a
               className="text-sm font-bold text-[color:var(--foreground)] underline"
               href="/math-applied/sample-size-real-decisions"
+            >
+              Read post
+            </a>
+          </div>
+        </article>
+
+        <article className="overflow-hidden rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] transition hover:shadow-sm">
+          <img
+            alt="Regression tables and predictions visual"
+            className="h-52 w-full object-cover"
+            src="/regression_mean.svg"
+          />
+          <div className="space-y-3 p-5">
+            <h2 className="text-2xl font-bold tracking-tight text-[color:var(--foreground)]">
+              Regression for Prediction -- One Real Example from Data to Decisions
+            </h2>
+            <p className="text-sm leading-relaxed text-[color:var(--muted)]">
+              Weekly orders from ad spend and email: parameters, predictions, tuning models,
+              and planning scenarios in tables.
+            </p>
+            <a
+              className="text-sm font-bold text-[color:var(--foreground)] underline"
+              href="/math-applied/regression-real-decisions"
             >
               Read post
             </a>

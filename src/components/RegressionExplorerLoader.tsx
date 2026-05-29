@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 
-const PercentilesExplorer = dynamic(() => import("@/components/PercentilesExplorer"), {
+const RegressionExplorer = dynamic(() => import("@/components/RegressionExplorer"), {
   ssr: false,
   loading: () => (
     <div className="my-8 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-8 text-center text-sm text-[color:var(--muted)]">
@@ -11,6 +11,6 @@ const PercentilesExplorer = dynamic(() => import("@/components/PercentilesExplor
   ),
 });
 
-export default function PercentilesExplorerLoader() {
-  return <PercentilesExplorer />;
+export default function RegressionExplorerLoader() {
+  return <RegressionExplorer />;
 }

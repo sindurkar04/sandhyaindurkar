@@ -324,7 +324,7 @@ export default function CorrelationCausationExplorer() {
     <>
       <section className="my-8 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-6">
         <h3 className="text-lg font-bold text-[color:var(--foreground)]">
-          Interactive example: correlation is not causation
+          Example: correlation is not causation
         </h3>
         <p className="mt-2 text-sm leading-relaxed text-[color:var(--muted)]">
           Pick a real-world pattern, read the correlation, then reveal the hidden factor. The
@@ -419,7 +419,7 @@ export default function CorrelationCausationExplorer() {
 
       <section className="my-8 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-6">
         <h3 className="text-lg font-bold text-[color:var(--foreground)]">
-          Interactive checklist: what supports a causal claim?
+          Checklist: what supports a causal claim?
         </h3>
         <p className="mt-2 text-sm leading-relaxed text-[color:var(--muted)]">
           Strong correlation is only the starting point. Toggle what you would need before acting
