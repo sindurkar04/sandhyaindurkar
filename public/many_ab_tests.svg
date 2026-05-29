@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#f5f1eb"/>
+  <rect x="100" y="70" width="600" height="360" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="400" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" font-weight="800" fill="#111111">Many A/B Tests</text>
+  <text x="400" y="115" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#6b7280">20 tests, each at 95% confidence</text>
+  <rect x="200" y="150" width="60" height="180" rx="4" fill="#d1d5db"/>
+  <rect x="280" y="170" width="60" height="160" rx="4" fill="#d1d5db"/>
+  <rect x="360" y="140" width="60" height="190" rx="4" fill="#111111"/>
+  <rect x="440" y="190" width="60" height="140" rx="4" fill="#d1d5db"/>
+  <rect x="520" y="160" width="60" height="170" rx="4" fill="#d1d5db"/>
+  <text x="390" y="130" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#111111">Winner?</text>
+  <rect x="280" y="360" width="240" height="48" rx="8" fill="#6b7280"/>
+  <text x="400" y="390" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="800" fill="#ffffff">~64% chance of a false win</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#f5f1eb"/>
+  <rect x="100" y="70" width="600" height="360" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="400" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="#111111">Goodhart's Law</text>
+  <text x="220" y="120" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#6b7280">Dashboard metric</text>
+  <text x="580" y="120" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#6b7280">Real outcome</text>
+  <line x1="220" y1="320" x2="220" y2="160" stroke="#111111" stroke-width="4"/>
+  <polyline points="220,160 280,140 340,120 400,100" stroke="#111111" stroke-width="3" fill="none"/>
+  <text x="400" y="90" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="800" fill="#111111">Target hit!</text>
+  <line x1="580" y1="320" x2="580" y2="280" stroke="#9ca3af" stroke-width="4"/>
+  <polyline points="580,280 520,300 460,310 400,320" stroke="#9ca3af" stroke-width="3" fill="none"/>
+  <text x="400" y="350" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#6b7280">Same period: customers worse off</text>
+</svg>

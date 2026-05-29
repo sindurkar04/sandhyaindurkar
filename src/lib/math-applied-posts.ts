@@ -13,6 +13,8 @@ export type MathPost = {
   description: string;
   image: string;
   category: MathCategoryId;
+  tags?: string[];
+  problemPhrases?: string[];
 };
 
 export const MATH_CATEGORIES: MathCategory[] = [
@@ -75,6 +77,20 @@ export const MATH_POSTS: MathPost[] = [
     category: "summarize",
   },
   {
+    slug: "weighted-averages-real-data",
+    href: "/math-applied/weighted-averages-real-data",
+    title: "Weighted Averages: Roll Up the Number That Matches Volume",
+    description: "Simple vs volume-weighted rollups when segment sizes differ.",
+    image: "/weighted_averages.svg",
+    category: "summarize",
+    tags: ["rollup", "dashboard", "segments", "csat"],
+    problemPhrases: [
+      "company-wide rate from regions",
+      "average of averages is wrong",
+      "small segment skews headline KPI",
+    ],
+  },
+  {
     slug: "sample-size-real-decisions",
     href: "/math-applied/sample-size-real-decisions",
     title: "Twelve Data Points Isn't a Trend: Sample Size in Real Decisions",
@@ -115,12 +131,40 @@ export const MATH_POSTS: MathPost[] = [
     category: "experiments",
   },
   {
+    slug: "many-ab-tests-real-decisions",
+    href: "/math-applied/many-ab-tests-real-decisions",
+    title: "When Everything Wins Once: Running Many A/B Tests",
+    description: "False winners multiply when you run dozens of null tests in one sprint.",
+    image: "/many_ab_tests.svg",
+    category: "experiments",
+    tags: ["ab-test", "multiple-comparisons", "false-positive", "experiment-sprint"],
+    problemPhrases: [
+      "we ran twenty tests and three won",
+      "how many false wins to expect",
+      "experiment sprint too many winners",
+    ],
+  },
+  {
     slug: "simpsons-paradox-real-decisions",
     href: "/math-applied/simpsons-paradox-real-decisions",
     title: "Simpson's Paradox: When Every Slice Wins but the Total Loses",
     description: "Segment tables before rollups so mix shifts do not flip the winner.",
     image: "/simpsons_paradox.svg",
     category: "experiments",
+  },
+  {
+    slug: "false-alarm-missed-win-real-decisions",
+    href: "/math-applied/false-alarm-missed-win-real-decisions",
+    title: "False Alarm vs Missed Win: Two Ways an Experiment Decision Goes Wrong",
+    description: "Ship a bad change vs kill a good one: pick which mistake you can afford.",
+    image: "/false_alarm_missed_win.svg",
+    category: "experiments",
+    tags: ["ab-test", "type-i", "type-ii", "launch-policy"],
+    problemPhrases: [
+      "ship or wait on inconclusive test",
+      "false positive vs false negative experiment",
+      "how strict should our launch bar be",
+    ],
   },
   {
     slug: "expected-value-real-decisions",
@@ -145,6 +189,34 @@ export const MATH_POSTS: MathPost[] = [
     description: "Surveys, betas, and who never made it into the sample.",
     image: "/selection_bias.svg",
     category: "traps",
+  },
+  {
+    slug: "survivorship-bias-real-decisions",
+    href: "/math-applied/survivorship-bias-real-decisions",
+    title: "Only the Winners Stay Visible: Survivorship Bias",
+    description: "Success stories hide failures that left the dataset before you measured.",
+    image: "/survivorship_bias.svg",
+    category: "traps",
+    tags: ["bias", "reviews", "startups", "track-record"],
+    problemPhrases: [
+      "only successful customers visible",
+      "app reviews look too positive",
+      "portfolio of winners looks easy",
+    ],
+  },
+  {
+    slug: "goodhart-law-real-decisions",
+    href: "/math-applied/goodhart-law-real-decisions",
+    title: "You Hit the Target and Missed the Point: Goodhart's Law",
+    description: "When the metric becomes the goal, the dashboard greens while the real outcome reddens.",
+    image: "/goodhart_law.svg",
+    category: "traps",
+    tags: ["metrics", "kpis", "incentives", "gaming"],
+    problemPhrases: [
+      "team hit the metric but customers unhappy",
+      "KPI green but outcome worse",
+      "people gaming the dashboard number",
+    ],
   },
   {
     slug: "regression-to-the-mean-real-decisions",
@@ -206,14 +278,24 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "sample-size-real-decisions",
   ],
   "regression-to-the-mean-real-decisions": [
-    "sample-size-real-decisions",
+    "goodhart-law-real-decisions",
     "selection-bias-real-decisions",
     "percent-change-real-decisions",
   ],
   "selection-bias-real-decisions": [
-    "sample-size-real-decisions",
+    "survivorship-bias-real-decisions",
+    "goodhart-law-real-decisions",
     "confidence-intervals-real-decisions",
+  ],
+  "survivorship-bias-real-decisions": [
+    "selection-bias-real-decisions",
+    "goodhart-law-real-decisions",
     "correlation-vs-causation-real-decisions",
+  ],
+  "goodhart-law-real-decisions": [
+    "selection-bias-real-decisions",
+    "regression-to-the-mean-real-decisions",
+    "percent-change-real-decisions",
   ],
   "confidence-intervals-real-decisions": [
     "sample-size-real-decisions",
@@ -232,13 +314,28 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
   ],
   "ab-test-readouts-real-decisions": [
     "confidence-intervals-real-decisions",
+    "many-ab-tests-real-decisions",
+    "false-alarm-missed-win-real-decisions",
+  ],
+  "many-ab-tests-real-decisions": [
+    "ab-test-readouts-real-decisions",
+    "false-alarm-missed-win-real-decisions",
     "sample-size-real-decisions",
-    "simpsons-paradox-real-decisions",
   ],
   "simpsons-paradox-real-decisions": [
+    "weighted-averages-real-data",
     "ab-test-readouts-real-decisions",
     "selection-bias-real-decisions",
+  ],
+  "false-alarm-missed-win-real-decisions": [
+    "ab-test-readouts-real-decisions",
+    "many-ab-tests-real-decisions",
     "sample-size-real-decisions",
+  ],
+  "weighted-averages-real-data": [
+    "mean-vs-median-real-data",
+    "simpsons-paradox-real-decisions",
+    "percentiles-quartiles-real-data",
   ],
   "expected-value-real-decisions": [
     "probability-real-decisions",
