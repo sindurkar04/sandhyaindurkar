@@ -91,6 +91,20 @@ export const MATH_POSTS: MathPost[] = [
     ],
   },
   {
+    slug: "benchmarks-baselines-real-decisions",
+    href: "/math-applied/benchmarks-baselines-real-decisions",
+    title: "Up 10% Compared to What? Benchmarks and Baselines",
+    description: "Same metric, different story: last month, last year, plan, or peer.",
+    image: "/benchmarks_baselines.svg",
+    category: "summarize",
+    tags: ["benchmark", "baseline", "target", "yoy"],
+    problemPhrases: [
+      "up 10 percent compared to what",
+      "beat last month but miss plan",
+      "which baseline should we use",
+    ],
+  },
+  {
     slug: "sample-size-real-decisions",
     href: "/math-applied/sample-size-real-decisions",
     title: "Twelve Data Points Isn't a Trend: Sample Size in Real Decisions",
@@ -248,9 +262,9 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "sample-size-real-decisions",
   ],
   "percent-change-real-decisions": [
+    "benchmarks-baselines-real-decisions",
     "regression-to-the-mean-real-decisions",
     "sample-size-real-decisions",
-    "confidence-intervals-real-decisions",
   ],
   "variance-spread-real-data": [
     "mean-vs-median-real-data",
@@ -333,9 +347,14 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "sample-size-real-decisions",
   ],
   "weighted-averages-real-data": [
+    "benchmarks-baselines-real-decisions",
     "mean-vs-median-real-data",
     "simpsons-paradox-real-decisions",
-    "percentiles-quartiles-real-data",
+  ],
+  "benchmarks-baselines-real-decisions": [
+    "percent-change-real-decisions",
+    "weighted-averages-real-data",
+    "goodhart-law-real-decisions",
   ],
   "expected-value-real-decisions": [
     "probability-real-decisions",

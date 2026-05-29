@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#f5f1eb"/>
+  <rect x="100" y="70" width="600" height="360" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="400" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="#111111">Compare to What?</text>
+  <rect x="320" y="110" width="160" height="56" rx="8" fill="#111111"/>
+  <text x="400" y="145" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="800" fill="#ffffff">12% now</text>
+  <rect x="140" y="210" width="120" height="72" rx="6" fill="#f3f4f6" stroke="#111111" stroke-width="2"/>
+  <text x="200" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#111111">vs last mo</text>
+  <text x="200" y="265" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="800" fill="#111111">+9%</text>
+  <rect x="290" y="210" width="120" height="72" rx="6" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+  <text x="350" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#6b7280">vs last yr</text>
+  <text x="350" y="265" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="800" fill="#6b7280">-4%</text>
+  <rect x="440" y="210" width="120" height="72" rx="6" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+  <text x="500" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#6b7280">vs target</text>
+  <text x="500" y="265" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="800" fill="#6b7280">-3 pts</text>
+  <rect x="590" y="210" width="120" height="72" rx="6" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+  <text x="650" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#6b7280">vs peer</text>
+  <text x="650" y="265" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="800" fill="#6b7280">-2 pts</text>
+  <text x="400" y="360" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#6b7280">Same headline number, different stories</text>
+</svg>
