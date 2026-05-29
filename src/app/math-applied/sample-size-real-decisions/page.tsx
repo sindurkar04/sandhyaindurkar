@@ -117,7 +117,6 @@ export default function SampleSizePostPage() {
             week to a band of normal weeks, not to a single small batch.
           </p>
 
-          <h2 className="text-xl font-bold text-[color:var(--foreground)]">Closing</h2>
           <p>
             Data quality is not only about clean pipelines. It is about whether you have enough
             observations to support the story you tell. Before you change pricing, ship a

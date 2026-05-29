@@ -122,7 +122,6 @@ export default function PrimeFactorizationPostPage() {
             early, you avoid fixing problems later.
           </p>
 
-          <h2 className="text-xl font-bold text-[color:var(--foreground)]">Closing</h2>
           <p>
             Most problems feel complex because we try to handle them as a whole. Once you understand
             what they are made of, the decisions around them become much simpler. Prime factorization

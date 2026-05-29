@@ -182,7 +182,6 @@ export default function RegressionPostPage() {
             only a single predicted number with no sense of error, outliers, or alternatives.
           </p>
 
-          <h2 className="text-xl font-bold text-[color:var(--foreground)]">Closing</h2>
           <p>
             Regression is a large topic, but one worked example carries most of the habit. Start
             with a clear outcome, pick inputs you can defend, fit on enough history, keep some

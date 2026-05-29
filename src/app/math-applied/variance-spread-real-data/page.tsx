@@ -116,7 +116,6 @@ export default function VarianceSpreadPostPage() {
             tend to land and how much they move around that point.
           </p>
 
-          <h2 className="text-xl font-bold text-[color:var(--foreground)]">Closing</h2>
           <p>
             Averages are useful, but they are incomplete. They compress a full distribution into
             one number and can hide volatility that people experience every day.

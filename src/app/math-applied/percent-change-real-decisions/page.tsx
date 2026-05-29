@@ -103,7 +103,6 @@ export default function PercentChangePostPage() {
             mistakes in growth, operations, and forecasting.
           </p>
 
-          <h2 className="text-xl font-bold text-[color:var(--foreground)]">Closing</h2>
           <p>
             Most percent-change mistakes are not calculation errors. They come from assuming
             symmetry where none exists.

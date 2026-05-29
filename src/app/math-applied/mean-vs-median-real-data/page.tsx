@@ -93,7 +93,6 @@ export default function MeanVsMedianPostPage() {
             In practice, the strongest analysis includes both. The gap between them is often more informative than either number alone. A rising mean with a flat median usually means change is concentrated. A flat mean with a falling median can mean trouble is spreading through the typical case even before totals move.
           </p>
 
-          <h2 className="text-xl font-bold text-[color:var(--foreground)]">Closing</h2>
           <p>
             Most misleading conclusions in data do not come from bad math. They come from summarizing too much into one number and picking the wrong one.
           </p>

@@ -109,7 +109,6 @@ export default function CorrelationVsCausationPostPage() {
             alternative explanations before you scale a change.
           </p>
 
-          <h2 className="text-xl font-bold text-[color:var(--foreground)]">Closing</h2>
           <p>
             Most costly mistakes in analytics are not calculation errors. They come from treating
             correlation as proof.

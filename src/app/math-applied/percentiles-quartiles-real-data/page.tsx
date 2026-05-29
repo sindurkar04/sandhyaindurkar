@@ -104,7 +104,6 @@ export default function PercentilesQuartilesPostPage() {
             percentiles unstable. Context still matters.
           </p>
 
-          <h2 className="text-xl font-bold text-[color:var(--foreground)]">Closing</h2>
           <p>
             There is no single number that captures a full distribution. Means and medians are
             useful. Spread adds volatility. Percentiles and quartiles add position: who is affected

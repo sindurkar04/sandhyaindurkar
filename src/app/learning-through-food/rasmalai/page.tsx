@@ -92,7 +92,6 @@ export default function RasmalaiPostPage() {
             That was the part I did not expect. Not the recipe itself, but the way it forces you to notice where precision matters and where restraint matters more.
           </p>
 
-          <h2 className="text-xl font-bold text-[color:var(--foreground)]">Closing</h2>
           <p>
             Rasmalai went from something I would buy to something I can make and understand. The process is straightforward on paper, but sensitive in practice, and that difference is where most of the learning happens. It is a reminder that getting something right often comes down to paying attention to the details that actually matter.
           </p>
