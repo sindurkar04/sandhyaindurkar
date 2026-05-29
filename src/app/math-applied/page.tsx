@@ -1,3 +1,4 @@
+import GanitaGuide from "@/components/GanitaGuide";
 import PostIndexCard from "@/components/PostIndexCard";
 import { buildSectionMetadata } from "@/lib/metadata";
 import { getPostsGroupedByCategory, MATH_CATEGORIES } from "@/lib/math-applied-posts";
@@ -46,6 +47,17 @@ export default function MathAppliedPage() {
           ))}
         </nav>
       </header>
+
+      <section
+        className="space-y-6 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6 sm:p-8"
+        id="ganita"
+      >
+        <h2 className="text-3xl font-black tracking-tight text-[color:var(--foreground)] sm:text-4xl">
+          Ganita
+        </h2>
+
+        <GanitaGuide />
+      </section>
 
       <div className="space-y-14">
         {groups.map(({ category, posts }) => (

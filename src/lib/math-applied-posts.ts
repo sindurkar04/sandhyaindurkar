@@ -43,6 +43,12 @@ export const MATH_POSTS: MathPost[] = [
     description: "Clean batch splits, ETL jobs, and resource planning from number structure.",
     image: "/prime_factorization.svg",
     category: "summarize",
+    tags: ["factorization", "batching", "etl", "planning"],
+    problemPhrases: [
+      "split work into even batches",
+      "break down a big number for jobs",
+      "prime factors for scheduling",
+    ],
   },
   {
     slug: "mean-vs-median-real-data",
@@ -51,6 +57,12 @@ export const MATH_POSTS: MathPost[] = [
     description: "When one summary number misleads dashboards and product decisions.",
     image: "/mean_median.png",
     category: "summarize",
+    tags: ["mean", "median", "average", "skew"],
+    problemPhrases: [
+      "average is misleading with outliers",
+      "mean vs median for revenue",
+      "one big customer skews the average",
+    ],
   },
   {
     slug: "percent-change-real-decisions",
@@ -59,6 +71,12 @@ export const MATH_POSTS: MathPost[] = [
     description: "Why recovery percentages do not undo drops, and how to set targets.",
     image: "/percent_change.png",
     category: "summarize",
+    tags: ["percent", "growth", "recovery"],
+    problemPhrases: [
+      "down fifty percent then up fifty",
+      "percent recovery does not undo drop",
+      "set a realistic growth target",
+    ],
   },
   {
     slug: "variance-spread-real-data",
@@ -67,6 +85,12 @@ export const MATH_POSTS: MathPost[] = [
     description: "Standard deviation and range for delivery, ops, and reliability.",
     image: "/variance_spread.png",
     category: "summarize",
+    tags: ["variance", "spread", "standard-deviation", "reliability"],
+    problemPhrases: [
+      "same average different variability",
+      "delivery times are inconsistent",
+      "how spread out are the numbers",
+    ],
   },
   {
     slug: "percentiles-quartiles-real-data",
@@ -75,6 +99,12 @@ export const MATH_POSTS: MathPost[] = [
     description: "P90, SLAs, latency tails, and typical vs worst-case experience.",
     image: "/percentiles_quartiles.svg",
     category: "summarize",
+    tags: ["percentile", "p90", "latency", "sla"],
+    problemPhrases: [
+      "p90 latency worse than average",
+      "typical user vs worst case",
+      "what does the 95th percentile mean",
+    ],
   },
   {
     slug: "weighted-averages-real-data",
@@ -111,6 +141,12 @@ export const MATH_POSTS: MathPost[] = [
     description: "A/B tests, noisy averages, and when a readout is too thin to ship.",
     image: "/sample_size.svg",
     category: "experiments",
+    tags: ["sample-size", "ab-test", "noise"],
+    problemPhrases: [
+      "twelve data points is not a trend",
+      "test too small to call a winner",
+      "how much data before we decide",
+    ],
   },
   {
     slug: "probability-real-decisions",
@@ -119,6 +155,12 @@ export const MATH_POSTS: MathPost[] = [
     description: "Estimate win rates from trials and know when the read is still shaky.",
     image: "/probability.svg",
     category: "experiments",
+    tags: ["probability", "win-rate", "trials"],
+    problemPhrases: [
+      "how often does this succeed",
+      "estimate win rate from trials",
+      "count wins not stories",
+    ],
   },
   {
     slug: "confidence-intervals-real-decisions",
@@ -127,6 +169,12 @@ export const MATH_POSTS: MathPost[] = [
     description: "Ranges around conversion, CSAT, and defect rates before you ship.",
     image: "/confidence_intervals.svg",
     category: "experiments",
+    tags: ["confidence-interval", "range", "uncertainty"],
+    problemPhrases: [
+      "one conversion number is not enough",
+      "how wide is the range around the rate",
+      "interval overlap before we ship",
+    ],
   },
   {
     slug: "base-rates-real-decisions",
@@ -135,6 +183,12 @@ export const MATH_POSTS: MathPost[] = [
     description: "Why a strong alert can still mean mostly false alarms when the base rate is low.",
     image: "/base_rates.svg",
     category: "experiments",
+    tags: ["base-rate", "bayes", "false-alarm"],
+    problemPhrases: [
+      "strong alert but mostly false alarms",
+      "rare event loud signal",
+      "how likely given this alert",
+    ],
   },
   {
     slug: "ab-test-readouts-real-decisions",
@@ -143,6 +197,12 @@ export const MATH_POSTS: MathPost[] = [
     description: "Lift, sample size, interval overlap, and when to ship without p-value talk.",
     image: "/ab_test_readouts.svg",
     category: "experiments",
+    tags: ["ab-test", "lift", "significance"],
+    problemPhrases: [
+      "when to ship the ab test",
+      "read the test without p values",
+      "lift and sample size together",
+    ],
   },
   {
     slug: "many-ab-tests-real-decisions",
@@ -165,6 +225,12 @@ export const MATH_POSTS: MathPost[] = [
     description: "Segment tables before rollups so mix shifts do not flip the winner.",
     image: "/simpsons_paradox.svg",
     category: "experiments",
+    tags: ["simpsons-paradox", "segments", "rollup"],
+    problemPhrases: [
+      "every segment wins but total loses",
+      "mix shift flipped the winner",
+      "check segment tables before rollup",
+    ],
   },
   {
     slug: "false-alarm-missed-win-real-decisions",
@@ -187,6 +253,12 @@ export const MATH_POSTS: MathPost[] = [
     description: "Rank campaigns by upside, probability, and cost before spend.",
     image: "/expected_value.svg",
     category: "experiments",
+    tags: ["expected-value", "bets", "campaigns"],
+    problemPhrases: [
+      "compare campaigns by expected value",
+      "rank bets by upside and probability",
+      "which option is worth the cost",
+    ],
   },
   {
     slug: "correlation-vs-causation-real-decisions",
@@ -195,6 +267,12 @@ export const MATH_POSTS: MathPost[] = [
     description: "Confounders, direction, and what you need before acting on r.",
     image: "/correlation_causation.svg",
     category: "traps",
+    tags: ["correlation", "causation", "confounder"],
+    problemPhrases: [
+      "correlated does not mean caused",
+      "act on correlation in dashboard",
+      "confounder explains the link",
+    ],
   },
   {
     slug: "selection-bias-real-decisions",
@@ -203,6 +281,12 @@ export const MATH_POSTS: MathPost[] = [
     description: "Surveys, betas, and who never made it into the sample.",
     image: "/selection_bias.svg",
     category: "traps",
+    tags: ["selection-bias", "survey", "sample"],
+    problemPhrases: [
+      "only happy customers answered survey",
+      "beta users are not everyone",
+      "who is missing from the sample",
+    ],
   },
   {
     slug: "survivorship-bias-real-decisions",
@@ -239,6 +323,12 @@ export const MATH_POSTS: MathPost[] = [
     description: "Sales quotas, support metrics, and snap-back after extreme scores.",
     image: "/regression_to_mean.svg",
     category: "traps",
+    tags: ["regression-to-mean", "outlier", "quota"],
+    problemPhrases: [
+      "star performer slumped next quarter",
+      "extreme score snapped back",
+      "was it real improvement or luck",
+    ],
   },
   {
     slug: "regression-real-decisions",
@@ -247,6 +337,12 @@ export const MATH_POSTS: MathPost[] = [
     description: "Weekly orders from ad spend and email, with forecast, holdout, and scenarios.",
     image: "/regression_mean.svg",
     category: "traps",
+    tags: ["regression", "forecast", "prediction"],
+    problemPhrases: [
+      "forecast orders from ad spend",
+      "predict metric from drivers",
+      "holdout test for a model",
+    ],
   },
 ];
 
