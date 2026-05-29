@@ -87,7 +87,6 @@ export default function PercentChangePostPage() {
             targets in absolute terms when clarity matters.
           </p>
 
-          <h2 className="text-xl font-bold text-[color:var(--foreground)]">The deeper takeaway</h2>
           <p>
             Percent change is a lens, not a complete story. It tells you how much something moved
             relative to where it was, not where you started across multiple steps.

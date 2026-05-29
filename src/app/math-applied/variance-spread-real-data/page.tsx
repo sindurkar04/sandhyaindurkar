@@ -100,7 +100,6 @@ export default function VarianceSpreadPostPage() {
             actually more reliable.
           </p>
 
-          <h2 className="text-xl font-bold text-[color:var(--foreground)]">The deeper takeaway</h2>
           <p>
             Variance is not just a classroom formula. It is a way to quantify uncertainty in real
             systems.

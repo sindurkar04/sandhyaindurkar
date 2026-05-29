@@ -110,7 +110,6 @@ export default function PrimeFactorizationPostPage() {
             }))}
           />
 
-          <h2 className="text-xl font-bold text-[color:var(--foreground)]">The deeper takeaway</h2>
           <p>
             Prime factorization is a way of asking what something is made of. Once you understand
             that, decisions become more straightforward. You can choose better ways to divide work,

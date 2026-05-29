@@ -105,7 +105,6 @@ export default function SampleSizePostPage() {
             but still label early results as directional, not final.
           </p>
 
-          <h2 className="text-xl font-bold text-[color:var(--foreground)]">The deeper takeaway</h2>
           <p>
             Sample size is not a technical footnote. It is a business risk control. Leaders
             who always ask how many observations sit behind a metric make fewer false

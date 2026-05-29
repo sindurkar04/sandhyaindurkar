@@ -88,7 +88,6 @@ export default function PercentilesQuartilesPostPage() {
             periods without letting one outlier dominate the story.
           </p>
 
-          <h2 className="text-xl font-bold text-[color:var(--foreground)]">The deeper takeaway</h2>
           <p>
             Percentiles are not advanced statistics reserved for specialists. They are a practical
             way to describe experience at different points in the distribution.

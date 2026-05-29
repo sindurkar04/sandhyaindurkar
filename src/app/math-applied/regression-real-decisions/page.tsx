@@ -171,7 +171,6 @@ export default function RegressionPostPage() {
             rows={leverRows}
           />
 
-          <h2 className="text-xl font-bold text-[color:var(--foreground)]">The deeper takeaway</h2>
           <p>
             Regression connects the math you already use to daily decisions. Correlation shows
             movement together. Sample size tells you how much to trust a read. Regression adds

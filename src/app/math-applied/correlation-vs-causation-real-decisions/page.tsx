@@ -91,7 +91,6 @@ export default function CorrelationVsCausationPostPage() {
             feature itself caused retention for everyone.
           </p>
 
-          <h2 className="text-xl font-bold text-[color:var(--foreground)]">The deeper takeaway</h2>
           <p>
             Good data work treats correlation as a signal to investigate, not a conclusion to ship.
             Before acting, teams ask what else could explain the pattern, whether cause precedes

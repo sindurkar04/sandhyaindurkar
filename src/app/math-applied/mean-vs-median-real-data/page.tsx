@@ -79,7 +79,6 @@ export default function MeanVsMedianPostPage() {
             The same pattern shows up in response times, delivery delays, and survey scores. One outlier can inflate the mean. The median keeps you grounded in everyday experience.
           </p>
 
-          <h2 className="text-xl font-bold text-[color:var(--foreground)]">The deeper takeaway</h2>
           <p>
             Choosing between mean and median is not a technical detail. It is a decision about what you are trying to understand.
           </p>
