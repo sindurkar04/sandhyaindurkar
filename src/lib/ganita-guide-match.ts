@@ -64,16 +64,37 @@ const STOP_WORDS = new Set([
 
 const SYNONYMS: Record<string, string[]> = {
   ab: ["test", "experiment"],
+  alert: ["alarm", "signal"],
+  average: ["mean", "avg"],
   avg: ["average", "mean"],
+  causal: ["causation", "cause"],
+  cause: ["causation", "causal"],
+  conversion: ["rate"],
+  correlate: ["correlation"],
+  correlation: ["correlate"],
+  experiment: ["test", "ab"],
+  false: ["alarm", "positive"],
   kpi: ["metric", "target"],
+  launch: ["ship"],
+  latency: ["p90", "percentile"],
+  mean: ["average", "avg"],
   metric: ["kpi"],
+  outlier: ["skew", "outliers"],
+  outliers: ["outlier", "skew"],
   percent: ["percentage"],
+  ship: ["launch", "release"],
+  significance: ["significant"],
+  significant: ["significance"],
+  skew: ["outlier", "outliers"],
   stats: ["statistics", "data"],
+  test: ["experiment", "ab"],
 };
 
 function normalize(text: string): string {
   return text
     .toLowerCase()
+    .replace(/a\s*\/\s*b/g, "ab")
+    .replace(/p-value|pvalue/g, "pvalue")
     .replace(/['']/g, "'")
     .replace(/[^\w\s%]/g, " ")
     .replace(/\s+/g, " ")
@@ -213,6 +234,7 @@ export const GANITA_GUIDE_EXAMPLES = [
   "We ran twenty tests and three won",
   "KPI green but customers unhappy",
   "Average of averages is wrong",
-  "Up 10% compared to what",
-  "Only successful customers left reviews",
+  "Should we ship this A/B test",
+  "One outlier is skewing the average",
+  "Correlation between two dashboard metrics",
 ];

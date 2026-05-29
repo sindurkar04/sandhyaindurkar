@@ -62,6 +62,8 @@ export const MATH_POSTS: MathPost[] = [
       "average is misleading with outliers",
       "mean vs median for revenue",
       "one big customer skews the average",
+      "one outlier is skewing the average",
+      "should i use average or median",
     ],
   },
   {
@@ -146,6 +148,8 @@ export const MATH_POSTS: MathPost[] = [
       "twelve data points is not a trend",
       "test too small to call a winner",
       "how much data before we decide",
+      "conversion went up is it noise",
+      "not enough visitors in the test",
     ],
   },
   {
@@ -202,6 +206,8 @@ export const MATH_POSTS: MathPost[] = [
       "when to ship the ab test",
       "read the test without p values",
       "lift and sample size together",
+      "should we ship this test",
+      "is the lift significant enough",
     ],
   },
   {
@@ -272,6 +278,8 @@ export const MATH_POSTS: MathPost[] = [
       "correlated does not mean caused",
       "act on correlation in dashboard",
       "confounder explains the link",
+      "correlation between two dashboard metrics",
+      "does one metric cause the other",
     ],
   },
   {
@@ -300,6 +308,8 @@ export const MATH_POSTS: MathPost[] = [
       "only successful customers visible",
       "app reviews look too positive",
       "portfolio of winners looks easy",
+      "only happy customers left reviews",
+      "success stories hide the failures",
     ],
   },
   {
@@ -314,6 +324,8 @@ export const MATH_POSTS: MathPost[] = [
       "team hit the metric but customers unhappy",
       "KPI green but outcome worse",
       "people gaming the dashboard number",
+      "dashboard green but users complain",
+      "metric improved but real outcome did not",
     ],
   },
   {
@@ -328,6 +340,8 @@ export const MATH_POSTS: MathPost[] = [
       "star performer slumped next quarter",
       "extreme score snapped back",
       "was it real improvement or luck",
+      "great month then bad month",
+      "did we actually improve or revert",
     ],
   },
   {

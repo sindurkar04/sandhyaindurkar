@@ -73,24 +73,44 @@ export default function RootLayout({
         {children}
 
         <footer className="mt-16 border-t border-white/15 bg-black">
-          <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-5 text-[15px] sm:px-6 lg:px-8">
-            <p className="text-gray-300">© 2024 Sandhya Indurkar</p>
-            <a
-              aria-label="LinkedIn profile"
-              className="inline-flex items-center gap-2 rounded border border-white/25 px-3.5 py-2 text-sm font-bold text-white transition hover:bg-white hover:text-black"
-              href="https://www.linkedin.com/in/sandhya-indurkar/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <svg
-                aria-hidden="true"
-                className="h-4 w-4"
-                fill="currentColor"
-                viewBox="0 0 24 24"
+          <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-4 py-6 sm:px-6 lg:px-8">
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <p className="text-gray-300">© 2026 Sandhya Indurkar</p>
+              <a
+                aria-label="LinkedIn profile"
+                className="inline-flex items-center gap-2 rounded border border-white/25 px-3.5 py-2 text-sm font-bold text-white transition hover:bg-white hover:text-black"
+                href="https://www.linkedin.com/in/sandhya-indurkar/"
+                rel="noreferrer"
+                target="_blank"
               >
-                <path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM.5 8h4V24h-4V8zM8 8h3.8v2.2h.1c.5-.95 1.72-2.2 3.55-2.2C20.03 8 24 10.44 24 16.22V24h-4v-6.9c0-1.64-.03-3.75-2.29-3.75-2.29 0-2.64 1.79-2.64 3.64V24h-4V8z" />
-              </svg>
-              LinkedIn
+                <svg
+                  aria-hidden="true"
+                  className="h-4 w-4"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM.5 8h4V24h-4V8zM8 8h3.8v2.2h.1c.5-.95 1.72-2.2 3.55-2.2C20.03 8 24 10.44 24 16.22V24h-4v-6.9c0-1.64-.03-3.75-2.29-3.75-2.29 0-2.64 1.79-2.64 3.64V24h-4V8z" />
+                </svg>
+                LinkedIn
+              </a>
+            </div>
+            <a
+              className="inline-flex items-center gap-3 text-sm text-gray-300 transition hover:text-white"
+              href="/math-applied#ganita"
+            >
+              <span className="h-8 w-8 shrink-0 overflow-hidden rounded-md border border-white/20 bg-[#f5f1eb]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  className="h-12 w-8 object-cover object-top"
+                  src="/ganita_logo.png"
+                />
+              </span>
+              <span>
+                <span className="font-bold text-white">Math, Applied</span> is part of{" "}
+                <span className="font-bold text-white">Ganita</span>
+              </span>
             </a>
           </div>
         </footer>

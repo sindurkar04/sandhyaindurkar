@@ -69,7 +69,7 @@ export default function Home() {
         <div className="grid gap-6 md:grid-cols-2">
           <PostIndexCard
             alt="Math, Applied: charts, summaries, and decisions from data"
-            description="Practical posts on experiments, metrics, and traps. Includes Ganita, a tool to find the right read for your problem."
+            description="Practical posts on experiments, metrics, and traps."
             href="/math-applied"
             image="/math_applied_home.svg"
             title="Math, Applied"
@@ -82,6 +82,29 @@ export default function Home() {
             title="Learning Through Food"
           />
         </div>
+
+        <a
+          className="flex items-center gap-4 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 transition hover:border-[color:var(--border-strong)] hover:shadow-sm"
+          href="/math-applied#ganita"
+        >
+          <div className="h-12 w-12 shrink-0 overflow-hidden rounded-lg border border-[color:var(--border)] bg-[#f5f1eb]">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              alt=""
+              aria-hidden="true"
+              className="h-[4.5rem] w-12 object-cover object-top"
+              src="/ganita_logo.png"
+            />
+          </div>
+          <div className="space-y-1">
+            <p className="text-lg font-black tracking-tight text-[color:var(--foreground)]">
+              Ask Ganita
+            </p>
+            <p className="text-sm leading-relaxed text-[color:var(--muted)]">
+              Not sure which post to read? Describe your problem and Ganita will suggest a match.
+            </p>
+          </div>
+        </a>
       </section>
     </main>
   );
