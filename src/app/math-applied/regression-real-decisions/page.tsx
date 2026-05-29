@@ -12,6 +12,11 @@ import {
 } from "@/lib/regression-example-data";
 import Image from "next/image";
 
+import { mathPostMetadata } from "@/lib/math-post-metadata";
+
+export const metadata = mathPostMetadata("regression-real-decisions");
+
+
 const planningColumns = [
   { key: "plan" as const, header: "Plan", align: "left" as const },
   { key: "adSpendK" as const, header: "Ad ($k)", align: "right" as const },

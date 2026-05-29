@@ -1,5 +1,14 @@
 import RecipeFinder from "@/components/RecipeFinder";
 import PostIndexCard from "@/components/PostIndexCard";
+import { buildSectionMetadata } from "@/lib/metadata";
+
+export const metadata = buildSectionMetadata({
+  title: "Learning Through Food",
+  description:
+    "Stories of cooking as applied learning: precision, patience, and decisions in practice.",
+  path: "/learning-through-food",
+  image: "/learning_through_food_home.svg",
+});
 
 export default function LearningThroughFoodPage() {
   return (

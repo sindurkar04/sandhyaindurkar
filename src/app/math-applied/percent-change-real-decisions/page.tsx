@@ -3,6 +3,11 @@ import PercentChangeExplorer from "@/components/PercentChangeExplorer";
 import RelatedPosts from "@/components/RelatedPosts";
 import Image from "next/image";
 
+import { mathPostMetadata } from "@/lib/math-post-metadata";
+
+export const metadata = mathPostMetadata("percent-change-real-decisions");
+
+
 export default function PercentChangePostPage() {
   return (
     <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">

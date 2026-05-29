@@ -5,6 +5,11 @@ import RelatedPosts from "@/components/RelatedPosts";
 import { SCENARIOS, formatRate, wilsonInterval } from "@/lib/confidence-intervals-data";
 import Image from "next/image";
 
+import { mathPostMetadata } from "@/lib/math-post-metadata";
+
+export const metadata = mathPostMetadata("confidence-intervals-real-decisions");
+
+
 const sampleSizes = [100, 400, 1600];
 
 const columns = [

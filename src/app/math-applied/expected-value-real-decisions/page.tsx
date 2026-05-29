@@ -9,6 +9,11 @@ import {
 } from "@/lib/expected-value-data";
 import Image from "next/image";
 
+import { mathPostMetadata } from "@/lib/math-post-metadata";
+
+export const metadata = mathPostMetadata("expected-value-real-decisions");
+
+
 const columns = [
   { key: "option" as const, header: "Option", align: "left" as const },
   { key: "cost" as const, header: "Cost", align: "right" as const },

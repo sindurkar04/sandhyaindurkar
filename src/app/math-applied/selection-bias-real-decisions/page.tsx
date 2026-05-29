@@ -5,6 +5,11 @@ import SelectionBiasExplorer from "@/components/SelectionBiasExplorer";
 import { SCENARIOS, formatCount, formatPercent } from "@/lib/selection-bias-data";
 import Image from "next/image";
 
+import { mathPostMetadata } from "@/lib/math-post-metadata";
+
+export const metadata = mathPostMetadata("selection-bias-real-decisions");
+
+
 const columns = [
   { key: "scenario" as const, header: "Scenario", align: "left" as const },
   { key: "selected" as const, header: "Selected sample", align: "right" as const },

@@ -1,4 +1,13 @@
 import Image from "next/image";
+import { buildPageMetadata } from "@/lib/metadata";
+
+export const metadata = buildPageMetadata({
+  title: "Rasmalai",
+  description:
+    "Making rasmalai at home: what the process teaches about patience, timing, and small adjustments.",
+  path: "/learning-through-food/rasmalai",
+  image: "/rasmalai.jpg",
+});
 
 export default function RasmalaiPostPage() {
   return (

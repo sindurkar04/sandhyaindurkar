@@ -3,6 +3,11 @@ import MathBlock from "@/components/MathBlock";
 import RelatedPosts from "@/components/RelatedPosts";
 import Image from "next/image";
 
+import { mathPostMetadata } from "@/lib/math-post-metadata";
+
+export const metadata = mathPostMetadata("ab-test-readouts-real-decisions");
+
+
 export default function AbTestReadoutsPostPage() {
   return (
     <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">

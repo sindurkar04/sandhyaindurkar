@@ -4,6 +4,11 @@ import RelatedPosts from "@/components/RelatedPosts";
 import VarianceSpreadExplorer from "@/components/VarianceSpreadExplorer";
 import Image from "next/image";
 
+import { mathPostMetadata } from "@/lib/math-post-metadata";
+
+export const metadata = mathPostMetadata("variance-spread-real-data");
+
+
 export default function VarianceSpreadPostPage() {
   return (
     <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">

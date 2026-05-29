@@ -3,6 +3,11 @@ import RelatedPosts from "@/components/RelatedPosts";
 import SimpsonsParadoxExplorer from "@/components/SimpsonsParadoxExplorer";
 import Image from "next/image";
 
+import { mathPostMetadata } from "@/lib/math-post-metadata";
+
+export const metadata = mathPostMetadata("simpsons-paradox-real-decisions");
+
+
 export default function SimpsonsParadoxPostPage() {
   return (
     <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">

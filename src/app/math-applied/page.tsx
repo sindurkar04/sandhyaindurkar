@@ -1,5 +1,14 @@
 import PostIndexCard from "@/components/PostIndexCard";
-import { getPostsGroupedByCategory } from "@/lib/math-applied-posts";
+import { buildSectionMetadata } from "@/lib/metadata";
+import { getPostsGroupedByCategory, MATH_CATEGORIES } from "@/lib/math-applied-posts";
+
+export const metadata = buildSectionMetadata({
+  title: "Math, Applied",
+  description:
+    "Exploring how math and data shape real-world decisions: summarizing data, running experiments, and avoiding common traps.",
+  path: "/math-applied",
+  image: "/math_applied_home.svg",
+});
 
 export default function MathAppliedPage() {
   const groups = getPostsGroupedByCategory();
@@ -16,11 +25,31 @@ export default function MathAppliedPage() {
         <p className="text-base leading-relaxed text-[color:var(--muted)]">
           Breaking down complex systems into ideas we can actually use.
         </p>
+        <nav
+          aria-label="Jump to section"
+          className="flex flex-wrap gap-x-1 gap-y-2 pt-2 text-sm font-bold"
+        >
+          {MATH_CATEGORIES.map((category, index) => (
+            <span className="inline-flex items-center" key={category.id}>
+              {index > 0 ? (
+                <span aria-hidden="true" className="mx-2 text-[color:var(--muted)]">
+                  ·
+                </span>
+              ) : null}
+              <a
+                className="text-[color:var(--foreground)] underline-offset-4 transition hover:underline"
+                href={`#${category.id}`}
+              >
+                {category.label}
+              </a>
+            </span>
+          ))}
+        </nav>
       </header>
 
       <div className="space-y-14">
         {groups.map(({ category, posts }) => (
-          <section className="space-y-6" key={category.id}>
+          <section className="scroll-mt-24 space-y-6" id={category.id} key={category.id}>
             <div className="space-y-2 border-b border-[color:var(--border)] pb-4">
               <h2 className="text-2xl font-black tracking-tight text-[color:var(--foreground)]">
                 {category.label}

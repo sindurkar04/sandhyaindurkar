@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import Script from "next/script";
+import { DEFAULT_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const GA_MEASUREMENT_ID = "G-P9WDL6RW5V";
@@ -12,9 +13,17 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "Sandhya Indurkar",
-  description:
-    "Math, Applied and Learning Through Food - stories on practical thinking and learning.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_NAME,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: DEFAULT_DESCRIPTION,
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: SITE_NAME,
+  },
 };
 
 const navLinks = [

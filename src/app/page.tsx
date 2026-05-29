@@ -1,4 +1,7 @@
 import Image from "next/image";
+import { homeMetadata } from "@/lib/metadata";
+
+export const metadata = homeMetadata;
 
 const storyParagraphs = [
   "Growing up, I thought I wasn't good at math. Most of what I learned felt abstract, and I couldn't see how it connected to anything outside the classroom.",

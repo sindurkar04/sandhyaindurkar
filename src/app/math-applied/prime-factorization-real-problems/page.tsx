@@ -9,6 +9,11 @@ import {
 } from "@/lib/prime-factorization-data";
 import Image from "next/image";
 
+import { mathPostMetadata } from "@/lib/math-post-metadata";
+
+export const metadata = mathPostMetadata("prime-factorization-real-problems");
+
+
 const cleanColumns = [
   { key: "batchSize" as const, header: "Batch size", align: "right" as const },
   { key: "batches" as const, header: "Jobs needed", align: "right" as const },
