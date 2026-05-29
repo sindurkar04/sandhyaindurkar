@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#f5f1eb"/>
+  <rect x="80" y="60" width="640" height="380" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="400" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="#111111">Headline vs Cohorts</text>
+  <rect x="120" y="100" width="200" height="64" rx="8" fill="#111111"/>
+  <text x="220" y="128" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Overall retention</text>
+  <text x="220" y="154" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="#ffffff">44%</text>
+  <rect x="360" y="95" width="320" height="220" rx="8" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="380" y="125" font-family="system-ui, sans-serif" font-size="13" font-weight="800" fill="#111111">Signup cohort (D30)</text>
+  <rect x="380" y="140" width="280" height="28" rx="4" fill="#e5e7eb"/>
+  <rect x="380" y="140" width="252" height="28" rx="4" fill="#111111"/>
+  <text x="390" y="159" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Oct  46%</text>
+  <rect x="380" y="178" width="280" height="28" rx="4" fill="#e5e7eb"/>
+  <rect x="380" y="178" width="235" height="28" rx="4" fill="#374151"/>
+  <text x="390" y="197" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Nov  43%</text>
+  <rect x="380" y="216" width="280" height="28" rx="4" fill="#e5e7eb"/>
+  <rect x="380" y="216" width="218" height="28" rx="4" fill="#6b7280"/>
+  <text x="390" y="235" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Dec  40%</text>
+  <rect x="380" y="254" width="280" height="28" rx="4" fill="#e5e7eb"/>
+  <rect x="380" y="254" width="196" height="28" rx="4" fill="#9ca3af"/>
+  <text x="390" y="273" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#111111">Jan  37%</text>
+  <text x="400" y="360" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#6b7280">Same users, different story when you split by signup month</text>
+  <path d="M330 132 L350 180" stroke="#111111" stroke-width="2" stroke-dasharray="4 4"/>
+</svg>

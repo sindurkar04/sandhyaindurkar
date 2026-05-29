@@ -235,6 +235,6 @@ export const GANITA_GUIDE_EXAMPLES = [
   "KPI green but customers unhappy",
   "Average of averages is wrong",
   "Should we ship this A/B test",
-  "One outlier is skewing the average",
+  "Retention dropped after signup surge",
   "Correlation between two dashboard metrics",
 ];

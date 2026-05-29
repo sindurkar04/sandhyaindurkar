@@ -137,6 +137,22 @@ export const MATH_POSTS: MathPost[] = [
     ],
   },
   {
+    slug: "cohort-analysis-real-decisions",
+    href: "/math-applied/cohort-analysis-real-decisions",
+    title: "The New Users Look Great: Cohort Analysis in Real Decisions",
+    description: "Headline retention vs signup cohorts: when the mix shifts and when product quality actually changed.",
+    image: "/cohort_analysis.svg",
+    category: "summarize",
+    tags: ["cohort", "retention", "mix-shift", "signup"],
+    problemPhrases: [
+      "new users look better but mix changed",
+      "headline retention vs signup cohort",
+      "retention dropped after signup surge",
+      "each signup month worse at day 30",
+      "user base got younger retention fell",
+    ],
+  },
+  {
     slug: "sample-size-real-decisions",
     href: "/math-applied/sample-size-real-decisions",
     title: "Twelve Data Points Isn't a Trend: Sample Size in Real Decisions",
@@ -447,9 +463,9 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "sample-size-real-decisions",
   ],
   "simpsons-paradox-real-decisions": [
+    "cohort-analysis-real-decisions",
     "weighted-averages-real-data",
     "ab-test-readouts-real-decisions",
-    "selection-bias-real-decisions",
   ],
   "false-alarm-missed-win-real-decisions": [
     "ab-test-readouts-real-decisions",
@@ -457,14 +473,19 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "sample-size-real-decisions",
   ],
   "weighted-averages-real-data": [
+    "cohort-analysis-real-decisions",
     "benchmarks-baselines-real-decisions",
     "mean-vs-median-real-data",
-    "simpsons-paradox-real-decisions",
   ],
   "benchmarks-baselines-real-decisions": [
     "percent-change-real-decisions",
+    "cohort-analysis-real-decisions",
     "weighted-averages-real-data",
-    "goodhart-law-real-decisions",
+  ],
+  "cohort-analysis-real-decisions": [
+    "weighted-averages-real-data",
+    "simpsons-paradox-real-decisions",
+    "benchmarks-baselines-real-decisions",
   ],
   "expected-value-real-decisions": [
     "probability-real-decisions",
