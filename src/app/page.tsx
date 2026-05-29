@@ -1,4 +1,5 @@
 import Image from "next/image";
+import PostIndexCard from "@/components/PostIndexCard";
 import { homeMetadata } from "@/lib/metadata";
 
 export const metadata = homeMetadata;
@@ -11,89 +12,76 @@ const storyParagraphs = [
   "This site is where I write about what I am learning through math, work, and food.",
 ];
 
-const storyIntro = storyParagraphs.slice(0, 2);
-const storyContinuation = storyParagraphs.slice(2);
-
 export default function Home() {
   return (
-    <main className="mx-auto w-full max-w-[1080px] px-4 py-10 sm:px-6 lg:px-8">
-      <section className="space-y-8">
-        <div className="grid gap-8 lg:grid-cols-[390px_minmax(0,1fr)] lg:items-start">
-          <div className="space-y-3">
-            <div className="overflow-hidden rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)]">
-              <Image
-                alt="Portrait of Sandhya Indurkar"
-                className="h-auto w-full object-contain"
-                height={1000}
-                priority
-                src="/sandhya_headshot.png"
-                width={900}
-              />
-            </div>
-          </div>
-
-          <div className="space-y-5 text-[17px] leading-8 text-[color:var(--muted)]">
-            <p className="text-xs font-bold tracking-[0.18em] text-[color:var(--muted)]">
-              MY STORY
-            </p>
-            <h1 className="text-4xl font-black tracking-tight text-[color:var(--foreground)] sm:text-5xl">
-              Hi, I&apos;m Sandhya.
-            </h1>
-            {storyIntro.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
+    <main className="mx-auto w-full max-w-[1100px] space-y-14 px-4 py-10 sm:px-6 lg:px-8">
+      <section className="grid gap-10 lg:grid-cols-[minmax(0,280px)_1fr] lg:items-center lg:gap-12">
+        <div className="mx-auto w-full max-w-[280px] lg:mx-0">
+          <div className="overflow-hidden rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] shadow-sm">
+            <Image
+              alt="Portrait of Sandhya Indurkar"
+              className="h-auto w-full object-cover"
+              height={1000}
+              priority
+              src="/sandhya_headshot.png"
+              width={900}
+            />
           </div>
         </div>
 
-        <div className="space-y-5 border-t border-[color:var(--border)] pt-7 text-[17px] leading-8 text-[color:var(--muted)]">
-          {storyContinuation.map((paragraph) => (
+        <div className="space-y-4 text-center lg:text-left">
+          <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
+            Sandhya Indurkar
+          </p>
+          <h1 className="text-4xl font-black tracking-tight text-[color:var(--foreground)] sm:text-5xl">
+            Math and food, applied in real life.
+          </h1>
+          <p className="max-w-xl text-lg leading-relaxed text-[color:var(--muted)] lg:max-w-none">
+            I write about how data shapes decisions at work, and what cooking teaches about
+            learning by doing.
+          </p>
+        </div>
+      </section>
+
+      <section className="space-y-6 border-t border-[color:var(--border)] pt-12">
+        <div className="space-y-2">
+          <h2 className="text-2xl font-black tracking-tight text-[color:var(--foreground)] sm:text-3xl">
+            My story
+          </h2>
+        </div>
+        <div className="space-y-5 text-base leading-relaxed text-[color:var(--muted)]">
+          {storyParagraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
       </section>
 
-      <section className="mt-12 grid gap-6 border-t border-[color:var(--border)] pt-8 md:grid-cols-2">
-        <article className="overflow-hidden rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)]">
-          <div className="border-b border-[color:var(--border)] bg-[#f5f1eb]">
-            <img
-              alt="Math, Applied: charts, summaries, and decisions from data"
-              className="h-auto w-full"
-              src="/math_applied_home.svg"
-            />
-          </div>
-          <div className="space-y-3 p-5">
-            <h2 className="text-2xl font-black tracking-tight text-[color:var(--foreground)]">
-              Math, Applied
-            </h2>
-            <p className="leading-relaxed text-[color:var(--muted)]">
-              Practical writing on how mathematical concepts shape real-world decisions and systems.
-            </p>
-            <a className="inline-flex text-sm font-bold text-[color:var(--foreground)] underline" href="/math-applied">
-              View posts
-            </a>
-          </div>
-        </article>
+      <section className="space-y-6 border-t border-[color:var(--border)] pt-12">
+        <div className="space-y-2">
+          <h2 className="text-2xl font-black tracking-tight text-[color:var(--foreground)] sm:text-3xl">
+            Start here
+          </h2>
+          <p className="text-base leading-relaxed text-[color:var(--muted)]">
+            Two threads on this site. Pick the one that fits what you are looking for.
+          </p>
+        </div>
 
-        <article className="overflow-hidden rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)]">
-          <div className="border-b border-[color:var(--border)] bg-[#f5f1eb]">
-            <img
-              alt="Learning Through Food: cooking as applied learning"
-              className="h-auto w-full"
-              src="/learning_through_food_home.svg"
-            />
-          </div>
-          <div className="space-y-3 p-5">
-            <h2 className="text-2xl font-black tracking-tight text-[color:var(--foreground)]">
-              Learning Through Food
-            </h2>
-            <p className="leading-relaxed text-[color:var(--muted)]">
-              Cooking posts focused on process, precision, and what each dish teaches in practice.
-            </p>
-            <a className="inline-flex text-sm font-bold text-[color:var(--foreground)] underline" href="/learning-through-food">
-              View posts
-            </a>
-          </div>
-        </article>
+        <div className="grid gap-6 md:grid-cols-2">
+          <PostIndexCard
+            alt="Math, Applied: charts, summaries, and decisions from data"
+            description="Practical posts on experiments, metrics, and traps. Includes Ganita, a tool to find the right read for your problem."
+            href="/math-applied"
+            image="/math_applied_home.svg"
+            title="Math, Applied"
+          />
+          <PostIndexCard
+            alt="Learning Through Food: cooking as applied learning"
+            description="What I learned making each dish: timing, texture, and the small decisions that matter."
+            href="/learning-through-food"
+            image="/learning_through_food_home.svg"
+            title="Learning Through Food"
+          />
+        </div>
       </section>
     </main>
   );
