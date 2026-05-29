@@ -1,15 +1,17 @@
+import MathBlock from "@/components/MathBlock";
 import MeanMedianExplorer from "@/components/MeanMedianExplorer";
+import RelatedPosts from "@/components/RelatedPosts";
 import Image from "next/image";
 
 export default function MeanVsMedianPostPage() {
   return (
-    <main className="mx-auto w-full max-w-[720px] space-y-7 px-4 py-10 sm:px-6">
+    <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">
       <article className="space-y-7">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           Math, Applied
         </p>
         <h1 className="text-3xl font-black tracking-tight text-[color:var(--foreground)] sm:text-4xl">
-          The Average Isn&apos;t the Answer -- What Mean and Median Actually Tell You in Real Data
+          The Average Isn&apos;t the Answer: What Mean and Median Actually Tell You in Real Data
         </h1>
         <div className="overflow-hidden rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] p-3">
           <div className="mx-auto max-w-[360px]">
@@ -43,6 +45,36 @@ export default function MeanVsMedianPostPage() {
           </p>
 
           <MeanMedianExplorer />
+
+          <h2 className="text-xl font-bold text-[color:var(--foreground)]">The math</h2>
+          <p>
+            Both summaries come from the same list. The difference is how each one treats every
+            value in that list.
+          </p>
+          <MathBlock
+            formula="mean = (x1 + x2 + ... + xn) / n"
+            label="Mean (arithmetic average)"
+          >
+            <p>
+              Add every order value, then divide by how many orders you have. In the example above,
+              ($12 + $18 + $20 + $22 + $128) ÷ 5 = $40. Every dollar counts equally, including the
+              $128 outlier.
+            </p>
+          </MathBlock>
+          <MathBlock formula="median = middle value after sorting" label="Median">
+            <p>
+              Sort the values: $12, $18, $20, $22, $128. The middle entry is $20. Half the orders
+              are at or below $20, half are at or above. One huge order does not get extra weight
+              just because it is large.
+            </p>
+          </MathBlock>
+          <p>
+            Add one extreme value and the mean moves toward it while the median may barely budge.
+            With more typical orders, the outlier dilutes in the mean but the median shifts only
+            when the middle of the sorted list changes. Shift every value by the same amount and
+            both move together. When mean and median sit far apart, you usually have a skewed tail;
+            that gap is often more informative than either number alone.
+          </p>
 
           <h2 className="text-xl font-bold text-[color:var(--foreground)]">Why one summary isn&apos;t enough</h2>
           <p>
@@ -99,6 +131,8 @@ export default function MeanVsMedianPostPage() {
             Mean and median are simple tools, but they shape how teams interpret results, set targets, and decide what to fix. When you report both and explain the gap between them, you move from a vague average to a clearer picture of what is actually happening.
           </p>
         </div>
+
+        <RelatedPosts slug="mean-vs-median-real-data" />
       </article>
     </main>
   );

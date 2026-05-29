@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#f5f1eb"/>
+  <rect x="100" y="70" width="600" height="360" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="400" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" font-weight="800" fill="#111111">Base Rates</text>
+  <text x="400" y="120" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#6b7280">Only 2% are actually fraud</text>
+  <rect x="180" y="150" width="440" height="36" rx="6" fill="#f3f4f6"/>
+  <rect x="180" y="150" width="44" height="36" rx="6" fill="#111111"/>
+  <text x="400" y="210" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#111111">Model flags 100 orders</text>
+  <rect x="220" y="240" width="360" height="100" rx="8" fill="#111111"/>
+  <text x="400" y="285" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="800" fill="#ffffff">~19% truly fraud</text>
+  <text x="400" y="315" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#d1d5db">after the alert, not 90%</text>
+  <text x="400" y="420" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#6b7280">Start with how common the thing is</text>
+</svg>

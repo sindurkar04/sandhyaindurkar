@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function RasmalaiPostPage() {
   return (
-    <main className="mx-auto w-full max-w-[720px] space-y-7 px-4 py-10 sm:px-6">
+    <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">
       <article className="space-y-7">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           Learning Through Food
@@ -10,16 +10,14 @@ export default function RasmalaiPostPage() {
         <h1 className="text-3xl font-black tracking-tight text-[color:var(--foreground)] sm:text-4xl">
           Rasmalai
         </h1>
-        <div className="overflow-hidden rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] p-3">
-          <div className="mx-auto max-w-[360px]">
-            <Image
-              alt="Rasmalai"
-              className="h-auto w-full rounded object-contain"
-              height={900}
-              src="/rasmalai.jpg"
-              width={1600}
-            />
-          </div>
+        <div className="overflow-hidden rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)]">
+          <Image
+            alt="Homemade rasmalai in cardamom milk"
+            className="h-auto w-full object-cover"
+            height={900}
+            src="/rasmalai.jpg"
+            width={1600}
+          />
         </div>
 
         <div className="space-y-5 text-[17px] leading-8 text-[color:var(--muted)]">

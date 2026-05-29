@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#f5f1eb"/>
+  <rect x="100" y="70" width="600" height="360" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="400" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" font-weight="800" fill="#111111">Simpson's Paradox</text>
+  <text x="400" y="115" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#6b7280">Overall: variant loses</text>
+  <rect x="180" y="140" width="200" height="120" rx="8" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+  <text x="280" y="175" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#111111">Mobile</text>
+  <text x="280" y="210" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="800" fill="#111111">Variant wins</text>
+  <rect x="420" y="140" width="200" height="120" rx="8" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+  <text x="520" y="175" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#111111">Desktop</text>
+  <text x="520" y="210" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="800" fill="#111111">Variant wins</text>
+  <path d="M280 300 L400 340 L520 300" stroke="#9ca3af" stroke-width="2" fill="none"/>
+  <rect x="300" y="350" width="200" height="56" rx="8" fill="#6b7280"/>
+  <text x="400" y="385" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="800" fill="#ffffff">Aggregate: control wins</text>
+  <text x="400" y="420" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#6b7280">Slice before you roll up</text>
+</svg>

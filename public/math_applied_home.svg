@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" fill="none">
+  <rect width="800" height="320" fill="#f5f1eb"/>
+  <rect x="48" y="36" width="704" height="248" rx="14" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+
+  <text x="400" y="72" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="800" fill="#111111">Math, Applied</text>
+  <text x="400" y="98" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#6b7280">From numbers to real decisions</text>
+
+  <!-- mini bar chart -->
+  <rect x="88" y="200" width="36" height="48" rx="4" fill="#d1d5db"/>
+  <rect x="132" y="176" width="36" height="72" rx="4" fill="#d1d5db"/>
+  <rect x="176" y="188" width="36" height="60" rx="4" fill="#d1d5db"/>
+  <rect x="220" y="148" width="36" height="100" rx="4" fill="#111111"/>
+  <line x1="72" y1="248" x2="272" y2="248" stroke="#e5e7eb" stroke-width="2"/>
+
+  <!-- mean vs median lines -->
+  <line x1="320" y1="168" x2="500" y2="168" stroke="#111111" stroke-dasharray="6 4" stroke-width="2"/>
+  <text x="510" y="172" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#111111">mean</text>
+  <line x1="320" y1="210" x2="500" y2="210" stroke="#6b7280" stroke-dasharray="4 4" stroke-width="2"/>
+  <text x="510" y="214" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6b7280">median</text>
+
+  <!-- decision arrow -->
+  <rect x="560" y="148" width="152" height="88" rx="10" fill="#111111"/>
+  <text x="636" y="182" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Ship or wait?</text>
+  <text x="636" y="208" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="800" fill="#ffffff">n = 400</text>
+
+  <path d="M296 192 H340" stroke="#9ca3af" stroke-width="2"/>
+  <path d="M334 186 L340 192 L334 198" stroke="#9ca3af" stroke-width="2" fill="none"/>
+  <path d="M524 192 H552" stroke="#9ca3af" stroke-width="2"/>
+  <path d="M546 186 L552 192 L546 198" stroke="#9ca3af" stroke-width="2" fill="none"/>
+</svg>

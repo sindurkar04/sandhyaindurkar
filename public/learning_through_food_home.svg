@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" fill="none">
+  <rect width="800" height="320" fill="#f5f1eb"/>
+  <rect x="48" y="36" width="704" height="248" rx="14" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+
+  <text x="400" y="72" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="800" fill="#111111">Learning Through Food</text>
+  <text x="400" y="98" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#6b7280">Process, precision, and patience in the kitchen</text>
+
+  <!-- cutting board -->
+  <rect x="88" y="132" width="180" height="112" rx="12" fill="#f9fafb" stroke="#d1d5db" stroke-width="2"/>
+  <ellipse cx="148" cy="188" rx="28" ry="22" fill="#111111"/>
+  <ellipse cx="210" cy="200" rx="22" ry="18" fill="#374151"/>
+  <rect x="170" y="148" width="56" height="8" rx="4" fill="#d1d5db"/>
+
+  <!-- timer -->
+  <circle cx="400" cy="188" r="44" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+  <line x1="400" y1="188" x2="400" y2="158" stroke="#111111" stroke-width="3" stroke-linecap="round"/>
+  <line x1="400" y1="188" x2="422" y2="198" stroke="#111111" stroke-width="3" stroke-linecap="round"/>
+  <text x="400" y="248" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6b7280">timing</text>
+
+  <!-- steps -->
+  <rect x="520" y="140" width="168" height="96" rx="10" fill="#111111"/>
+  <text x="544" y="168" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#ffffff">1. Measure</text>
+  <text x="544" y="194" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#ffffff">2. Adjust</text>
+  <text x="544" y="220" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#ffffff">3. Taste</text>
+</svg>

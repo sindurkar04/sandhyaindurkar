@@ -1,3 +1,6 @@
+import RecipeFinder from "@/components/RecipeFinder";
+import PostIndexCard from "@/components/PostIndexCard";
+
 export default function LearningThroughFoodPage() {
   return (
     <main className="mx-auto w-full max-w-[1100px] space-y-10 px-4 py-10 sm:px-6 lg:px-8">
@@ -13,41 +16,58 @@ export default function LearningThroughFoodPage() {
         </p>
       </header>
 
-      <section className="rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6">
-        <h2 className="text-2xl font-bold tracking-tight text-[color:var(--foreground)]">
-          Recipe finder
-        </h2>
-        <p className="mt-2 max-w-2xl leading-relaxed text-[color:var(--muted)]">
-          Enter ingredients you have and get ranked recipe ideas based on what is already in your
-          pantry.
+      <section
+        className="space-y-6 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6 sm:p-8"
+        id="recipe-finder"
+      >
+        <div className="space-y-2">
+          <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
+            Tool
+          </p>
+          <h2 className="text-3xl font-black tracking-tight text-[color:var(--foreground)] sm:text-4xl">
+            Recipe finder
+          </h2>
+          <p className="max-w-2xl text-base leading-relaxed text-[color:var(--muted)]">
+            Enter ingredients you have and get ranked recipe ideas based on what is already in your
+            pantry.
+          </p>
+        </div>
+
+        <RecipeFinder />
+
+        <p className="border-t border-[color:var(--border)] pt-5 text-sm text-[color:var(--muted)]">
+          Recipe data provided by{" "}
+          <a
+            className="font-bold text-[color:var(--foreground)] underline"
+            href="https://spoonacular.com"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Spoonacular
+          </a>
+          .
         </p>
-        <a
-          className="mt-4 inline-flex text-sm font-bold text-[color:var(--foreground)] underline"
-          href="/learning-through-food/recipe-finder"
-        >
-          Find a recipe
-        </a>
       </section>
 
-      <section className="grid gap-6 md:grid-cols-2">
-        <article className="overflow-hidden rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] transition hover:shadow-sm">
-          <img
-            alt="Rasmalai dessert in milk"
-            className="h-52 w-full object-cover"
-            src="/rasmalai.jpg"
+      <section className="space-y-6 border-t border-[color:var(--border)] pt-12">
+        <div className="space-y-2">
+          <h2 className="text-3xl font-black tracking-tight text-[color:var(--foreground)] sm:text-4xl">
+            My recipes
+          </h2>
+          <p className="max-w-2xl text-base leading-relaxed text-[color:var(--muted)]">
+            What I learned making each dish: timing, texture, and the small decisions that matter.
+          </p>
+        </div>
+        <div className="grid gap-6 md:grid-cols-2">
+          <PostIndexCard
+            alt="Homemade rasmalai in cardamom milk"
+            description="Soft cheese dumplings in milk: what the process taught me about timing and texture."
+            href="/learning-through-food/rasmalai"
+            image="/rasmalai.jpg"
+            imageCover
+            title="Rasmalai"
           />
-          <div className="space-y-3 p-5">
-            <h2 className="text-2xl font-bold tracking-tight text-[color:var(--foreground)]">
-              Rasmalai
-            </h2>
-            <a
-              className="text-sm font-bold text-[color:var(--foreground)] underline"
-              href="/learning-through-food/rasmalai"
-            >
-              Read post
-            </a>
-          </div>
-        </article>
+        </div>
       </section>
     </main>
   );

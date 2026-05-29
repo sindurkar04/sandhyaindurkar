@@ -1,15 +1,17 @@
 import CorrelationCausationExplorer from "@/components/CorrelationCausationExplorer";
+import MathBlock from "@/components/MathBlock";
+import RelatedPosts from "@/components/RelatedPosts";
 import Image from "next/image";
 
 export default function CorrelationVsCausationPostPage() {
   return (
-    <main className="mx-auto w-full max-w-[720px] space-y-7 px-4 py-10 sm:px-6">
+    <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">
       <article className="space-y-7">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           Math, Applied
         </p>
         <h1 className="text-3xl font-black tracking-tight text-[color:var(--foreground)] sm:text-4xl">
-          Correlation Isn&apos;t Causation -- How Linked Data Misleads Real Decisions
+          Correlation Isn&apos;t Causation: How Linked Data Misleads Real Decisions
         </h1>
         <div className="overflow-hidden rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] p-3">
           <div className="mx-auto max-w-[360px]">
@@ -44,6 +46,40 @@ export default function CorrelationVsCausationPostPage() {
           </p>
 
           <CorrelationCausationExplorer />
+
+          <h2 className="text-xl font-bold text-[color:var(--foreground)]">The math</h2>
+          <p>
+            Correlation summarizes how two variables move together. It does not tell you which one
+            causes the other.
+          </p>
+          <MathBlock
+            formula="r = correlation between X and Y (ranges from −1 to +1)"
+            label="Pearson correlation coefficient"
+          >
+            <p>
+              r near +1 means when X rises, Y tends to rise. r near −1 means when X rises, Y tends
+              to fall. r near 0 means little linear relationship. The explorer scenarios show r
+              values that look convincing but come from confounders, not direct cause.
+            </p>
+          </MathBlock>
+          <MathBlock
+            formula="r² = fraction of Y movement explained by X (in a linear model)"
+            label="Coefficient of determination"
+          >
+            <p>
+              If r = 0.85, then r² ≈ 0.72, meaning about 72% of the linear variation in Y aligns
+              with X. The other 28% comes from other factors, noise, or a non-linear relationship.
+              High r² still does not prove that changing X will change Y.
+            </p>
+          </MathBlock>
+          <p>
+            A hidden third variable can inflate r even when neither metric causes the other.
+            Outliers and small samples can do the same. Pearson r only captures linear co-movement,
+            so a curved relationship can look weak on paper while still mattering in practice. A
+            strong r is worth investigating, but causation still needs mechanism, timing, and
+            ideally a controlled test. r² tells you how much linear variation lines up; neither
+            number proves that pulling one lever will move the other.
+          </p>
 
           <h2 className="text-xl font-bold text-[color:var(--foreground)]">
             Why correlation breaks intuition
@@ -118,6 +154,8 @@ export default function CorrelationVsCausationPostPage() {
             turns a chart into a decision you can defend.
           </p>
         </div>
+
+        <RelatedPosts slug="correlation-vs-causation-real-decisions" />
       </article>
     </main>
   );

@@ -1,15 +1,17 @@
+import MathBlock from "@/components/MathBlock";
 import PercentilesExplorerLoader from "@/components/PercentilesExplorerLoader";
+import RelatedPosts from "@/components/RelatedPosts";
 import Image from "next/image";
 
 export default function PercentilesQuartilesPostPage() {
   return (
-    <main className="mx-auto w-full max-w-[720px] space-y-7 px-4 py-10 sm:px-6">
+    <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">
       <article className="space-y-7">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           Math, Applied
         </p>
         <h1 className="text-3xl font-black tracking-tight text-[color:var(--foreground)] sm:text-4xl">
-          The Average User Isn&apos;t Average -- What Percentiles and Quartiles Tell You in Real Data
+          The Average User Isn&apos;t Average: What Percentiles and Quartiles Tell You in Real Data
         </h1>
         <div className="overflow-hidden rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] p-3">
           <div className="mx-auto max-w-[360px]">
@@ -41,6 +43,46 @@ export default function PercentilesQuartilesPostPage() {
           </p>
 
           <PercentilesExplorerLoader />
+
+          <h2 className="text-xl font-bold text-[color:var(--foreground)]">The math</h2>
+          <p>
+            Percentiles mark positions in a sorted list. They answer where a value sits relative to
+            the rest of the distribution.
+          </p>
+          <MathBlock
+            formula="P90 = value where 90% of observations fall at or below it"
+            label="Percentile"
+          >
+            <p>
+              P50 is the median: half the data is at or below it. P90 is the value where about 90%
+              of requests are faster and 10% are slower. If P90 latency is 145 ms, the slowest tenth
+              of users see worse than that.
+            </p>
+          </MathBlock>
+          <MathBlock
+            formula="Q1 = P25,  Q2 = P50 (median),  Q3 = P75"
+            label="Quartiles"
+          >
+            <p>
+              Quartiles split sorted data into four equal-sized chunks. Q1 to Q3 holds the middle
+              50%, which is often where everyday performance lives.
+            </p>
+          </MathBlock>
+          <MathBlock formula="IQR = Q3 − Q1" label="Interquartile range">
+            <p>
+              The width of the middle half. A small IQR means most typical values cluster together.
+              A large IQR means even the middle 50% is spread out. IQR is less sensitive to extreme
+              tails than the full range.
+            </p>
+          </MathBlock>
+          <p>
+            The tail moves high percentiles more than the center: a few slow requests can push P99
+            up while P50 barely shifts. Extreme percentiles need large n to be stable; P99 on a
+            hundred points is a rough guess compared to P99 on millions of events. Pick the
+            percentile that matches the decision: P50 for typical experience, P90 or P99 for SLAs
+            and pain in the slow tail. IQR describes the middle 50% and stays robust when outliers
+            stretch the full range.
+          </p>
 
           <h2 className="text-xl font-bold text-[color:var(--foreground)]">
             Why one summary is not enough
@@ -114,6 +156,8 @@ export default function PercentilesQuartilesPostPage() {
             including the tail.
           </p>
         </div>
+
+        <RelatedPosts slug="percentiles-quartiles-real-data" />
       </article>
     </main>
   );

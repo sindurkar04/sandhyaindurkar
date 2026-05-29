@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#f5f1eb"/>
+  <rect x="100" y="70" width="600" height="360" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="400" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" font-weight="800" fill="#111111">Expected Value</text>
+  <rect x="160" y="180" width="220" height="180" rx="8" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+  <text x="270" y="220" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#111111">Big swing</text>
+  <text x="270" y="280" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="#6b7280">+$18k</text>
+  <text x="270" y="310" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6b7280">expected</text>
+  <rect x="420" y="180" width="220" height="180" rx="8" fill="#111111"/>
+  <text x="530" y="220" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#ffffff">Steady test</text>
+  <text x="530" y="280" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="#ffffff">+$11k</text>
+  <text x="530" y="310" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#ffffff">expected</text>
+  <text x="400" y="420" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#6b7280">Upside x chance minus cost</text>
+</svg>

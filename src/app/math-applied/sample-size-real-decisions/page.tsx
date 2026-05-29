@@ -1,15 +1,17 @@
+import MathBlock from "@/components/MathBlock";
+import RelatedPosts from "@/components/RelatedPosts";
 import SampleSizeExplorerLoader from "@/components/SampleSizeExplorerLoader";
 import Image from "next/image";
 
 export default function SampleSizePostPage() {
   return (
-    <main className="mx-auto w-full max-w-[720px] space-y-7 px-4 py-10 sm:px-6">
+    <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">
       <article className="space-y-7">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           Math, Applied
         </p>
         <h1 className="text-3xl font-black tracking-tight text-[color:var(--foreground)] sm:text-4xl">
-          Twelve Data Points Isn&apos;t a Trend -- What Sample Size Changes in Real Decisions
+          Twelve Data Points Isn&apos;t a Trend: What Sample Size Changes in Real Decisions
         </h1>
         <div className="overflow-hidden rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] p-3">
           <div className="mx-auto max-w-[360px]">
@@ -40,6 +42,50 @@ export default function SampleSizePostPage() {
           </p>
 
           <SampleSizeExplorerLoader />
+
+          <h2 className="text-xl font-bold text-[color:var(--foreground)]">The math</h2>
+          <p>
+            Sample size controls how much random noise shows up in your summary stats. Larger n
+            does not remove bias, but it does stabilize the numbers.
+          </p>
+          <MathBlock
+            formula="standard error ∝ 1 ÷ √n"
+            label="Core idea: noise shrinks with the square root of n"
+          >
+            <p>
+              Quadrupling sample size roughly halves the typical wobble in your mean or rate. That
+              is why going from 50 to 200 observations helps more than going from 50 to 100, but
+              each doubling of n buys less and less stability.
+            </p>
+          </MathBlock>
+          <MathBlock
+            formula="SE(rate) ≈ √(p(1 − p) ÷ n)"
+            label="Standard error for a proportion (conversion, CSAT yes/no)"
+          >
+            <p>
+              p is the observed rate (e.g. 12% conversion). n is sample size. At p = 0.12 and n =
+              100, SE ≈ 3.3 percentage points, so a read of 12% might really be somewhere near 9%
+              to 15%. At n = 1,600, SE ≈ 0.8 points. Same rate, much tighter estimate.
+            </p>
+          </MathBlock>
+          <MathBlock
+            formula="SE(mean) ≈ s ÷ √n"
+            label="Standard error for an average"
+          >
+            <p>
+              s is the sample standard deviation. More observations shrink the uncertainty around
+              your average order value or handle time. The explorer shows how means and rates jump
+              when n is small and settle when n grows.
+            </p>
+          </MathBlock>
+          <p>
+            Larger n stabilizes summaries: experiment lifts stop flipping sign and percentiles
+            settle, especially in the tail. Noisy processes and rates near 50% stay wide even with
+            more data. Slice the sample by region or device and n per slice drops; a trend that
+            looks clear overall can vanish in each subgroup. More rows reduce random noise, not
+            systematic bias, so report n alongside every rate and average so the audience can judge
+            how much to trust the headline.
+          </p>
 
           <h2 className="text-xl font-bold text-[color:var(--foreground)]">
             Why small samples mislead teams
@@ -89,9 +135,8 @@ export default function SampleSizePostPage() {
             What to look at besides the headline
           </h2>
           <p>
-            You do not need formulas to think clearly about sample size. You need a habit:
-            report n alongside every summary, then ask how stable that summary would be if you
-            kept collecting data.
+            You need a habit: report n alongside every summary, then ask how stable that summary
+            would be if you kept collecting data. The formulas above show why that habit works.
           </p>
           <p>
             Useful companions include the mean and median for level, spread for volatility,
@@ -127,6 +172,8 @@ export default function SampleSizePostPage() {
             it that way.
           </p>
         </div>
+
+        <RelatedPosts slug="sample-size-real-decisions" />
       </article>
     </main>
   );

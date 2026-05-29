@@ -51,14 +51,16 @@ export default function Home() {
 
       <section className="mt-12 grid gap-6 border-t border-[color:var(--border)] pt-8 md:grid-cols-2">
         <article className="overflow-hidden rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)]">
-          <img
-            alt="Math applied section preview"
-            className="h-44 w-full object-cover"
-            src="/prime_factorization.png"
-          />
+          <div className="border-b border-[color:var(--border)] bg-[#f5f1eb]">
+            <img
+              alt="Math, Applied: charts, summaries, and decisions from data"
+              className="h-auto w-full"
+              src="/math_applied_home.svg"
+            />
+          </div>
           <div className="space-y-3 p-5">
             <h2 className="text-2xl font-black tracking-tight text-[color:var(--foreground)]">
-            Math, Applied
+              Math, Applied
             </h2>
             <p className="leading-relaxed text-[color:var(--muted)]">
               Practical writing on how mathematical concepts shape real-world decisions and systems.
@@ -70,14 +72,16 @@ export default function Home() {
         </article>
 
         <article className="overflow-hidden rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)]">
-          <img
-            alt="Learning through food section preview"
-            className="h-44 w-full object-cover"
-            src="/rasmalai.jpg"
-          />
+          <div className="border-b border-[color:var(--border)] bg-[#f5f1eb]">
+            <img
+              alt="Learning Through Food: cooking as applied learning"
+              className="h-auto w-full"
+              src="/learning_through_food_home.svg"
+            />
+          </div>
           <div className="space-y-3 p-5">
             <h2 className="text-2xl font-black tracking-tight text-[color:var(--foreground)]">
-            Learning Through Food
+              Learning Through Food
             </h2>
             <p className="leading-relaxed text-[color:var(--muted)]">
               Cooking posts focused on process, precision, and what each dish teaches in practice.

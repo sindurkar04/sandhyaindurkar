@@ -1,5 +1,7 @@
 import DataTable from "@/components/DataTable";
+import MathBlock from "@/components/MathBlock";
 import RegressionExplorerLoader from "@/components/RegressionExplorerLoader";
+import RelatedPosts from "@/components/RelatedPosts";
 import {
   PRIMARY_MODEL,
   buildLeverRows,
@@ -47,13 +49,13 @@ export default function RegressionPostPage() {
   const leverRows = buildLeverRows(PRIMARY_MODEL);
 
   return (
-    <main className="mx-auto w-full max-w-[720px] space-y-7 px-4 py-10 sm:px-6">
+    <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">
       <article className="space-y-7">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           Math, Applied
         </p>
         <h1 className="text-3xl font-black tracking-tight text-[color:var(--foreground)] sm:text-4xl">
-          Regression for Prediction -- One Real Example from Data to Decisions
+          Regression for Prediction: One Real Example from Data to Decisions
         </h1>
         <div className="overflow-hidden rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] p-3">
           <div className="mx-auto max-w-[360px]">
@@ -111,6 +113,46 @@ export default function RegressionPostPage() {
           <RegressionExplorerLoader />
 
           <p className="text-sm font-bold text-[color:var(--foreground)]">{modelSummary(PRIMARY_MODEL)}</p>
+
+          <h2 className="text-xl font-bold text-[color:var(--foreground)]">The math</h2>
+          <p>
+            Predictive regression fits a line (or plane) that turns inputs you control into a
+            forecast for the outcome you care about.
+          </p>
+          <MathBlock
+            formula="predicted orders = b0 + b1(ad spend) + b2(email sends)"
+            label="Linear regression model"
+          >
+            <p>
+              b₀ is the baseline intercept. b₁ is how many extra orders each $1k of ad spend adds,
+              holding email volume flat. b₂ is how many orders each 1k emails adds, holding ad spend
+              flat. The explorer and Table 4 show these as business levers.
+            </p>
+          </MathBlock>
+          <MathBlock formula="residual = actual − predicted" label="Prediction error">
+            <p>
+              Each week has a gap between what happened and what the model expected. Small, random
+              residuals on holdout weeks mean the model generalizes. Large or patterned residuals
+              mean you are missing a driver or overfitting history.
+            </p>
+          </MathBlock>
+          <MathBlock
+            formula="holdout error = average |residual| on weeks the model never trained on"
+            label="Why holdout matters"
+          >
+            <p>
+              Training error always looks good if you have enough parameters. Holdout error is the
+              honest check: can the model forecast new weeks it has not seen?
+            </p>
+          </MathBlock>
+          <p>
+            Coefficients turn inputs into forecast movement: higher b₁ means each ad dollar buys
+            more orders. One outlier week can tilt the whole line; toggle it in the explorer to
+            see the shift. Adding inputs can help or overfit when history is short. Trust a
+            coefficient only if it holds on holdout weeks and the input is something you can
+            actually change. This is not regression to the mean: here you are forecasting from
+            levers, not watching extremes snap back over time.
+          </p>
 
           <h2 className="text-xl font-bold text-[color:var(--foreground)]">
             Business planning: three budget scenarios
@@ -188,6 +230,8 @@ export default function RegressionPostPage() {
             planning. That workflow is what regression is for in real work.
           </p>
         </div>
+
+        <RelatedPosts slug="regression-real-decisions" />
       </article>
     </main>
   );

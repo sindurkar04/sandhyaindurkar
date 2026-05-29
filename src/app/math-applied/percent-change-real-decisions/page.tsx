@@ -1,15 +1,17 @@
+import MathBlock from "@/components/MathBlock";
 import PercentChangeExplorer from "@/components/PercentChangeExplorer";
+import RelatedPosts from "@/components/RelatedPosts";
 import Image from "next/image";
 
 export default function PercentChangePostPage() {
   return (
-    <main className="mx-auto w-full max-w-[720px] space-y-7 px-4 py-10 sm:px-6">
+    <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">
       <article className="space-y-7">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           Math, Applied
         </p>
         <h1 className="text-3xl font-black tracking-tight text-[color:var(--foreground)] sm:text-4xl">
-          Percent Change Isn&apos;t Intuitive -- How Growth Math Distorts Real Decisions
+          Percent Change Isn&apos;t Intuitive: How Growth Math Distorts Real Decisions
         </h1>
         <div className="overflow-hidden rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] p-3">
           <div className="mx-auto max-w-[360px]">
@@ -43,6 +45,39 @@ export default function PercentChangePostPage() {
           </p>
 
           <PercentChangeExplorer />
+
+          <h2 className="text-xl font-bold text-[color:var(--foreground)]">The math</h2>
+          <p>
+            Percent change is always measured from a starting value. That starting value is the
+            denominator, and it changes after every step.
+          </p>
+          <MathBlock
+            formula="percent change = ((new − old) ÷ old) × 100"
+            label="One-step percent change"
+          >
+            <p>
+              Drop from $100 to $50: (($50 − $100) ÷ $100) × 100 = −50%. Rise from $50 to $75:
+              (($75 − $50) ÷ $50) × 100 = +50%. Same percentage size, different bases, different
+              dollar impact.
+            </p>
+          </MathBlock>
+          <MathBlock
+            formula="recovery % = ((target − trough) ÷ trough) × 100"
+            label="Recovery to a prior level"
+          >
+            <p>
+              To return from 7,000 users to 10,000: ((10,000 − 7,000) ÷ 7,000) × 100 ≈ 43%. The
+              drop was 30% of 10,000, but the recovery is 43% of 7,000 because the base changed.
+            </p>
+          </MathBlock>
+          <p>
+            The base in the denominator is what drives most surprises. A 10% move on $1,000 is
+            $100; on $100 it is $10. Down then up does not undo itself because each step uses a
+            different base. Starting near zero inflates percentages: a jump from 2 to 5 is +150%,
+            which may be three customers. After a drop, set recovery targets from the trough, not
+            the peak, and report absolute values alongside percentages so the audience sees
+            whether you actually got back to the goal.
+          </p>
 
           <h2 className="text-xl font-bold text-[color:var(--foreground)]">
             Why intuition fails
@@ -112,6 +147,8 @@ export default function PercentChangePostPage() {
             undo a 50% drop — and start designing targets that match reality.
           </p>
         </div>
+
+        <RelatedPosts slug="percent-change-real-decisions" />
       </article>
     </main>
   );

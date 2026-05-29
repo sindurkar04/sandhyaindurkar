@@ -173,7 +173,16 @@ export default function RecipeFinder() {
       )}
 
       {results.length > 0 && (
-        <section className="grid gap-6 md:grid-cols-2">
+        <section className="space-y-4 border-t border-[color:var(--border)] pt-6">
+          <div className="space-y-1">
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
+              Recommendations
+            </p>
+            <p className="text-sm text-[color:var(--muted)]">
+              Ranked by how many of your ingredients each recipe uses.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
           {results.map((recipe) => (
             <article
               className="overflow-hidden rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)]"
@@ -209,6 +218,7 @@ export default function RecipeFinder() {
               </div>
             </article>
           ))}
+          </div>
         </section>
       )}
     </div>

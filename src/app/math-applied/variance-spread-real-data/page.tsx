@@ -1,16 +1,18 @@
 import DeliveryPerformanceViz from "@/components/DeliveryPerformanceViz";
+import MathBlock from "@/components/MathBlock";
+import RelatedPosts from "@/components/RelatedPosts";
 import VarianceSpreadExplorer from "@/components/VarianceSpreadExplorer";
 import Image from "next/image";
 
 export default function VarianceSpreadPostPage() {
   return (
-    <main className="mx-auto w-full max-w-[720px] space-y-7 px-4 py-10 sm:px-6">
+    <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">
       <article className="space-y-7">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           Math, Applied
         </p>
         <h1 className="text-3xl font-black tracking-tight text-[color:var(--foreground)] sm:text-4xl">
-          Variance and Spread -- Why the Same Average Can Hide a Very Different Story
+          Variance and Spread: Why the Same Average Can Hide a Very Different Story
         </h1>
         <div className="overflow-hidden rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] p-3">
           <div className="mx-auto max-w-[360px]">
@@ -47,6 +49,43 @@ export default function VarianceSpreadPostPage() {
           </p>
 
           <VarianceSpreadExplorer />
+
+          <h2 className="text-xl font-bold text-[color:var(--foreground)]">The math</h2>
+          <p>
+            Spread measures how far values sit from the center. Two teams can share the same mean
+            while having very different variance.
+          </p>
+          <MathBlock
+            formula="variance = Σ(xᵢ − mean)² ÷ n"
+            label="Variance (average squared distance from the mean)"
+          >
+            <p>
+              For each delivery time, subtract the mean, square the gap, then average those
+              squares. Squaring prevents positive and negative gaps from canceling out. Team A&apos;s
+              tight cluster produces a small variance. Team B&apos;s wide swings produce a large one.
+            </p>
+          </MathBlock>
+          <MathBlock formula="standard deviation = √variance" label="Standard deviation">
+            <p>
+              Take the square root of variance so the result is back in the original units (minutes,
+              dollars, etc.). Team A might have σ ≈ 2 minutes. Team B might have σ ≈ 20 minutes.
+              Same mean, very different reliability.
+            </p>
+          </MathBlock>
+          <MathBlock formula="range = max − min" label="Range (quick read)">
+            <p>
+              The full gap from smallest to largest value. Easy to compute, but one outlier can
+              stretch the range without describing the middle of the data.
+            </p>
+          </MathBlock>
+          <p>
+            Push values farther from the mean and variance grows; the mean can stay put if increases
+            and decreases balance. One outlier hits variance hard because squaring amplifies large
+            gaps. Shift every value by the same amount and the mean moves, but spread stays the
+            same because spread describes shape, not location. On a slide, standard deviation is
+            usually clearer than variance because it stays in the original units, like minutes or
+            dollars.
+          </p>
 
           <h2 className="text-xl font-bold text-[color:var(--foreground)]">
             Why the average is not enough
@@ -125,6 +164,8 @@ export default function VarianceSpreadPostPage() {
             but how stable is typical?
           </p>
         </div>
+
+        <RelatedPosts slug="variance-spread-real-data" />
       </article>
     </main>
   );
