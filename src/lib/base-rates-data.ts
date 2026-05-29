@@ -56,20 +56,29 @@ export function posteriorGivenSignal(
   return (base * tp) / signalRate;
 }
 
+/** Returns posterior probability as a percent (0–100). Inputs are in percent. */
+export function posteriorGivenSignalPercent(
+  baseRatePercent: number,
+  truePositivePercent: number,
+  falsePositivePercent: number,
+): number {
+  return posteriorGivenSignal(baseRatePercent, truePositivePercent, falsePositivePercent) * 100;
+}
+
 export function formatPercent(value: number, digits = 1): string {
   return `${value.toFixed(digits)}%`;
 }
 
 export function posteriorRead(
-  posterior: number,
+  posteriorPercent: number,
   baseRate: number,
   scenario: Scenario,
 ): string {
-  if (posterior < baseRate * 1.5 && baseRate < 10) {
-    return `Even with a positive ${scenario.signalLabel.toLowerCase()}, only about ${formatPercent(posterior)} are truly in the target group. Most flagged cases are still false alarms when the base rate is ${formatPercent(baseRate)}.`;
+  if (posteriorPercent < 10 && baseRate < 10) {
+    return `Even with a positive ${scenario.signalLabel.toLowerCase()}, only about ${formatPercent(posteriorPercent)} are truly in the target group. Most flagged cases are still false alarms when the base rate is ${formatPercent(baseRate)}.`;
   }
-  if (posterior > 50) {
-    return `A positive signal is meaningful here: about ${formatPercent(posterior)} of flagged cases are real. Still pair with human review when stakes are high.`;
+  if (posteriorPercent > 50) {
+    return `A positive signal is meaningful here: about ${formatPercent(posteriorPercent)} of flagged cases are real. Still pair with human review when stakes are high.`;
   }
-  return `After a positive signal, the updated chance is ${formatPercent(posterior)}, up from a ${formatPercent(baseRate)} base rate. Better, but not certainty.`;
+  return `After a positive signal, the updated chance is ${formatPercent(posteriorPercent)}, up from a ${formatPercent(baseRate)} base rate. Better, but not certainty.`;
 }

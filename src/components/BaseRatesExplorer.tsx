@@ -3,7 +3,7 @@
 import {
   SCENARIOS,
   formatPercent,
-  posteriorGivenSignal,
+  posteriorGivenSignalPercent,
   posteriorRead,
   type ScenarioKey,
 } from "@/lib/base-rates-data";
@@ -17,7 +17,7 @@ export default function BaseRatesExplorer() {
   const [falsePositive, setFalsePositive] = useState(scenario.defaultFalsePositiveRate);
 
   const posterior = useMemo(
-    () => posteriorGivenSignal(baseRate, truePositive, falsePositive),
+    () => posteriorGivenSignalPercent(baseRate, truePositive, falsePositive),
     [baseRate, truePositive, falsePositive],
   );
   const insight = posteriorRead(posterior, baseRate, scenario);
