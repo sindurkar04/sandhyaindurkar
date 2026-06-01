@@ -26,11 +26,11 @@ export default function SimpsonsParadoxExplorer() {
   const insight = paradoxRead(aggregateControl, aggregateVariant, scenario.segments);
 
   return (
-    <section className="my-8 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-6">
+    <section className="my-6 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-4 sm:p-5">
       <h3 className="text-lg font-bold text-[color:var(--foreground)]">
         Example: segment wins vs aggregate loss
       </h3>
-      <p className="mt-2 max-w-prose text-sm leading-relaxed text-[color:var(--muted)]">
+      <p className="mt-2 max-w-prose text-base leading-relaxed text-[color:var(--muted)]">
         {scenario.context}. Compare each slice first, then the rolled-up rate. A different mix of
         traffic between arms can flip the overall winner.
       </p>
@@ -110,7 +110,7 @@ export default function SimpsonsParadoxExplorer() {
         </table>
       </div>
 
-      <p className="mt-4 rounded-lg border border-[color:var(--border)] bg-[color:var(--surface-strong)] px-4 py-3 text-sm text-[color:var(--muted)]">
+      <p className="mt-4 rounded-lg border border-[color:var(--border)] bg-[color:var(--surface-strong)] px-4 py-3 text-base text-[color:var(--muted)]">
         {insight}
       </p>
     </section>

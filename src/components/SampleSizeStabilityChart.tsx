@@ -107,12 +107,12 @@ export default function SampleSizeStabilityChart({
         )}
         <polyline fill="none" points={polyline} stroke="#111111" strokeWidth="2" />
         <circle cx={scaleX(currentN)} cy={scaleY(currentValue)} fill="#111111" r="5" />
-        <text fill="#6b7280" fontSize="10" textAnchor="middle" x={width / 2} y={height - 6}>
+        <text fill="#6b7280" fontSize="12" textAnchor="middle" x={width / 2} y={height - 6}>
           Sample size (n)
         </text>
         <text
           fill="#6b7280"
-          fontSize="10"
+          fontSize="12"
           textAnchor="middle"
           transform={`rotate(-90, 12, ${height / 2})`}
           x={12}

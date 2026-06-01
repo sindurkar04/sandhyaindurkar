@@ -12,7 +12,7 @@ export const metadata = buildSectionMetadata({
 
 export default function LearningThroughFoodPage() {
   return (
-    <main className="mx-auto w-full max-w-[1100px] space-y-10 px-4 py-10 sm:px-6 lg:px-8">
+    <main className="mx-auto w-full max-w-[1100px] space-y-10 px-4 py-7 sm:px-6 lg:px-8">
       <header className="space-y-3">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           Learning Through Food
@@ -26,7 +26,7 @@ export default function LearningThroughFoodPage() {
       </header>
 
       <section
-        className="space-y-6 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6 sm:p-8"
+        className="space-y-6 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-4 sm:p-5"
         id="recipe-finder"
       >
         <div className="space-y-2">
@@ -58,7 +58,7 @@ export default function LearningThroughFoodPage() {
         </p>
       </section>
 
-      <section className="space-y-6 border-t border-[color:var(--border)] pt-12">
+      <section className="space-y-6 border-t border-[color:var(--border)] pt-8">
         <div className="space-y-2">
           <h2 className="text-3xl font-black tracking-tight text-[color:var(--foreground)] sm:text-4xl">
             My recipes

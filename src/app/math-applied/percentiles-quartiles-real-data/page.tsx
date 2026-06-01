@@ -1,4 +1,5 @@
 import MathBlock from "@/components/MathBlock";
+import BusinessCaseExplorer from "@/components/BusinessCaseExplorer";
 import PercentilesExplorerLoader from "@/components/PercentilesExplorerLoader";
 import RelatedPosts from "@/components/RelatedPosts";
 import Image from "next/image";
@@ -10,8 +11,8 @@ export const metadata = mathPostMetadata("percentiles-quartiles-real-data");
 
 export default function PercentilesQuartilesPostPage() {
   return (
-    <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">
-      <article className="space-y-7">
+    <main className="mx-auto w-full max-w-[1100px] space-y-5 px-2 py-7 sm:px-3">
+      <article className="space-y-5">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           Math, Applied
         </p>
@@ -30,7 +31,7 @@ export default function PercentilesQuartilesPostPage() {
           </div>
         </div>
 
-        <div className="space-y-5 text-[17px] leading-8 text-[color:var(--muted)]">
+        <div className="space-y-5 text-lg leading-8 text-[color:var(--muted)]">
           <h2 className="text-xl font-bold text-[color:var(--foreground)]">The idea</h2>
           <p>
             Means and medians compress a full dataset into one number. Spread tells you how wide
@@ -114,6 +115,8 @@ export default function PercentilesQuartilesPostPage() {
             Suppose your team reports average API latency of 72 ms against an 80 ms target. The
             headline is green.
           </p>
+          <BusinessCaseExplorer slug="percentiles-quartiles-real-data" />
+
           <p>
             Then you check P90: 145 ms. That means about 10% of requests are slower than 145 ms.
             For those users, the service feels nothing like the average. Product and support

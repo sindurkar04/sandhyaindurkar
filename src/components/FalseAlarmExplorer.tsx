@@ -39,11 +39,11 @@ export default function FalseAlarmExplorer() {
   const barHeight = (rate: number) => (rate / maxRate) * plotHeight;
 
   return (
-    <section className="my-8 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-6">
+    <section className="my-6 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-4 sm:p-5">
       <h3 className="text-lg font-bold text-[color:var(--foreground)]">
         Example: balance false alarms and missed wins
       </h3>
-      <p className="mt-2 max-w-prose text-sm leading-relaxed text-[color:var(--muted)]">
+      <p className="mt-2 max-w-prose text-base leading-relaxed text-[color:var(--muted)]">
         Drag the decision bar from loose to strict. A tighter bar cuts false alarms but raises
         missed wins. The counts below update as you move the slider.
       </p>
@@ -90,7 +90,7 @@ export default function FalseAlarmExplorer() {
       </div>
 
       <div className="mt-5 grid gap-3 sm:grid-cols-2">
-        <div className="rounded-lg border border-black bg-black px-4 py-3 text-white">
+        <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] px-4 py-3 text-[color:var(--foreground)]">
           <p className="text-xs font-bold uppercase tracking-[0.1em] opacity-80">False alarm rate</p>
           <p className="mt-1 text-3xl font-black">{formatPercent(falseAlarm)}</p>
           <p className="mt-1 text-sm opacity-90">

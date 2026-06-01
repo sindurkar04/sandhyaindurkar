@@ -1,5 +1,5 @@
-import DeliveryPerformanceViz from "@/components/DeliveryPerformanceViz";
 import MathBlock from "@/components/MathBlock";
+import BusinessCaseExplorer from "@/components/BusinessCaseExplorer";
 import RelatedPosts from "@/components/RelatedPosts";
 import VarianceSpreadExplorer from "@/components/VarianceSpreadExplorer";
 import Image from "next/image";
@@ -11,8 +11,8 @@ export const metadata = mathPostMetadata("variance-spread-real-data");
 
 export default function VarianceSpreadPostPage() {
   return (
-    <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">
-      <article className="space-y-7">
+    <main className="mx-auto w-full max-w-[1100px] space-y-5 px-2 py-7 sm:px-3">
+      <article className="space-y-5">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           Math, Applied
         </p>
@@ -31,7 +31,7 @@ export default function VarianceSpreadPostPage() {
           </div>
         </div>
 
-        <div className="space-y-5 text-[17px] leading-8 text-[color:var(--muted)]">
+        <div className="space-y-5 text-lg leading-8 text-[color:var(--muted)]">
           <h2 className="text-xl font-bold text-[color:var(--foreground)]">The idea</h2>
           <p>
             The mean tells you the center of a dataset. It does not tell you how spread out the
@@ -121,6 +121,8 @@ export default function VarianceSpreadPostPage() {
             Suppose leadership compares two teams with the same average delivery time of 50
             minutes. On paper, they look equal.
           </p>
+          <BusinessCaseExplorer slug="variance-spread-real-data" />
+
           <p>
             Team A usually lands between 47 and 53 minutes. Planning is easier. Customers get a
             predictable experience.
@@ -129,8 +131,6 @@ export default function VarianceSpreadPostPage() {
             Team B often delivers in the 20s on some days and the 70s on others. The mean is still
             50, but the process is harder to trust and harder to staff for.
           </p>
-
-          <DeliveryPerformanceViz />
 
           <p className="font-bold text-[color:var(--foreground)]">
             Mean answers: What is the typical center?

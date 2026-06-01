@@ -19,7 +19,7 @@ const WELCOME: ChatMessage = {
 
 function BotAvatar() {
   return (
-    <div className="h-9 w-9 shrink-0 overflow-hidden rounded-lg border border-[color:var(--border)] bg-[#f5f1eb]">
+    <div className="h-9 w-9 shrink-0 overflow-hidden rounded-lg border border-[color:var(--border)] bg-[color:var(--surface-strong)]">
       <img
         alt=""
         aria-hidden="true"

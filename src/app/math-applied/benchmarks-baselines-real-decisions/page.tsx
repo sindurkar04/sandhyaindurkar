@@ -1,4 +1,5 @@
 import BenchmarksBaselinesExplorer from "@/components/BenchmarksBaselinesExplorer";
+import BusinessCaseExplorer from "@/components/BusinessCaseExplorer";
 import MathBlock from "@/components/MathBlock";
 import RelatedPosts from "@/components/RelatedPosts";
 import Image from "next/image";
@@ -8,8 +9,8 @@ export const metadata = mathPostMetadata("benchmarks-baselines-real-decisions");
 
 export default function BenchmarksBaselinesPostPage() {
   return (
-    <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">
-      <article className="space-y-7">
+    <main className="mx-auto w-full max-w-[1100px] space-y-5 px-2 py-7 sm:px-3">
+      <article className="space-y-5">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           Math, Applied
         </p>
@@ -28,7 +29,7 @@ export default function BenchmarksBaselinesPostPage() {
           </div>
         </div>
 
-        <div className="space-y-5 text-[17px] leading-8 text-[color:var(--muted)]">
+        <div className="space-y-5 text-lg leading-8 text-[color:var(--muted)]">
           <h2 className="text-xl font-bold text-[color:var(--foreground)]">The idea</h2>
           <p>
             A metric without a baseline is half a sentence. Conversion is 11%. Revenue is $820k.
@@ -86,6 +87,8 @@ export default function BenchmarksBaselinesPostPage() {
             Finance notes the same 11% misses the 12% target. Strategy adds that peers sit near 13%.
             Everyone looked at one number. They answered different questions.
           </p>
+          <BusinessCaseExplorer slug="benchmarks-baselines-real-decisions" />
+
           <p>
             Fix: one headline metric, then a small baseline table: vs last month, vs last year, vs
             plan, vs peer. State which baseline drives the decision. Percent change posts cover the

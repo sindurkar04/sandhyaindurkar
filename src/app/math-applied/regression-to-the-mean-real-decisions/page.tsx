@@ -1,4 +1,5 @@
 import MathBlock from "@/components/MathBlock";
+import BusinessCaseExplorer from "@/components/BusinessCaseExplorer";
 import RegressionMeanExplorer from "@/components/RegressionMeanExplorer";
 import RelatedPosts from "@/components/RelatedPosts";
 import Image from "next/image";
@@ -10,8 +11,8 @@ export const metadata = mathPostMetadata("regression-to-the-mean-real-decisions"
 
 export default function RegressionToTheMeanPostPage() {
   return (
-    <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">
-      <article className="space-y-7">
+    <main className="mx-auto w-full max-w-[1100px] space-y-5 px-2 py-7 sm:px-3">
+      <article className="space-y-5">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           Math, Applied
         </p>
@@ -30,7 +31,7 @@ export default function RegressionToTheMeanPostPage() {
           </div>
         </div>
 
-        <div className="space-y-5 text-[17px] leading-8 text-[color:var(--muted)]">
+        <div className="space-y-5 text-lg leading-8 text-[color:var(--muted)]">
           <h2 className="text-xl font-bold text-[color:var(--foreground)]">The idea</h2>
           <p>
             Regression to the mean is a pattern, not a failure of effort. When a result is unusually
@@ -129,6 +130,15 @@ export default function RegressionToTheMeanPostPage() {
             exciting because normal is less exciting. That is regression to the mean, and it shows
             up anywhere rankings meet randomness.
           </p>
+
+          <h2 className="text-xl font-bold text-[color:var(--foreground)]">
+            A simple application: after a spike week
+          </h2>
+          <p>
+            Move last week&apos;s spike. See how much the next period is expected to cool even when
+            nothing broke.
+          </p>
+          <BusinessCaseExplorer slug="regression-to-the-mean-real-decisions" />
         </div>
 
         <RelatedPosts slug="regression-to-the-mean-real-decisions" />

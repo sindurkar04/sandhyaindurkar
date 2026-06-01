@@ -21,11 +21,11 @@ export default function WeightedAveragesExplorer() {
   const totalCount = scenario.segments.reduce((sum, row) => sum + row.count, 0);
 
   return (
-    <section className="my-8 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-6">
+    <section className="my-6 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-4 sm:p-5">
       <h3 className="text-lg font-bold text-[color:var(--foreground)]">
         Example: simple average vs weighted rollup
       </h3>
-      <p className="mt-2 max-w-prose text-sm leading-relaxed text-[color:var(--muted)]">
+      <p className="mt-2 max-w-prose text-base leading-relaxed text-[color:var(--muted)]">
         Averaging segment rates treats a small region like a large one. Weight by volume to get the
         true company-wide number.
       </p>
@@ -86,7 +86,7 @@ export default function WeightedAveragesExplorer() {
           </p>
           <p className="mt-1 text-xs text-[color:var(--muted)]">Mean of segment rates</p>
         </div>
-        <div className="rounded-lg border border-black bg-black px-4 py-3 text-white">
+        <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] px-4 py-3 text-[color:var(--foreground)]">
           <p className="text-xs font-bold uppercase tracking-[0.1em] opacity-80">
             Weighted average
           </p>
@@ -104,7 +104,7 @@ export default function WeightedAveragesExplorer() {
         </div>
       </div>
 
-      <p className="mt-4 rounded-lg border border-[color:var(--border)] bg-[color:var(--surface-strong)] px-4 py-3 text-sm text-[color:var(--muted)]">
+      <p className="mt-4 rounded-lg border border-[color:var(--border)] bg-[color:var(--surface-strong)] px-4 py-3 text-base text-[color:var(--muted)]">
         {insight}
       </p>
     </section>

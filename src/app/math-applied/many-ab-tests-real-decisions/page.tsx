@@ -1,4 +1,5 @@
 import MathBlock from "@/components/MathBlock";
+import BusinessCaseExplorer from "@/components/BusinessCaseExplorer";
 import ManyAbTestsExplorer from "@/components/ManyAbTestsExplorer";
 import RelatedPosts from "@/components/RelatedPosts";
 import Image from "next/image";
@@ -8,8 +9,8 @@ export const metadata = mathPostMetadata("many-ab-tests-real-decisions");
 
 export default function ManyAbTestsPostPage() {
   return (
-    <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">
-      <article className="space-y-7">
+    <main className="mx-auto w-full max-w-[1100px] space-y-5 px-2 py-7 sm:px-3">
+      <article className="space-y-5">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           Math, Applied
         </p>
@@ -28,7 +29,7 @@ export default function ManyAbTestsPostPage() {
           </div>
         </div>
 
-        <div className="space-y-5 text-[17px] leading-8 text-[color:var(--muted)]">
+        <div className="space-y-5 text-lg leading-8 text-[color:var(--muted)]">
           <h2 className="text-xl font-bold text-[color:var(--foreground)]">The idea</h2>
           <p>
             One A/B test at 95% confidence accepts a 5% false alarm rate when there is no real lift.
@@ -83,6 +84,8 @@ export default function ManyAbTestsPostPage() {
             winners to the same interval overlap and sample size bar as a single test. When many
             tests run at once, skepticism scales with n.
           </p>
+          <BusinessCaseExplorer slug="many-ab-tests-real-decisions" />
+
           <p>
             False wins are not a reason to stop testing. They are a reason to rank evidence before
             you ship a bundle of changes that never really worked.

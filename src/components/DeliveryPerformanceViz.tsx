@@ -107,7 +107,7 @@ function TeamChart({ team, chartMin, chartMax, highlighted }: TeamChartProps) {
               />
               <text
                 fill="#111111"
-                fontSize="10"
+                fontSize="12"
                 fontWeight="700"
                 textAnchor="middle"
                 x={x + barWidth / 2}
@@ -172,7 +172,7 @@ export default function DeliveryPerformanceViz() {
   }, []);
 
   return (
-    <section className="my-8 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-6">
+    <section className="my-6 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-4 sm:p-5">
       <h3 className="text-lg font-bold text-[color:var(--foreground)]">
         Delivery performance: same mean, different reliability
       </h3>

@@ -63,11 +63,11 @@ export default function PercentChangeExplorer() {
   }
 
   return (
-    <section className="my-8 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-6">
+    <section className="my-6 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-4 sm:p-5">
       <h3 className="text-lg font-bold text-[color:var(--foreground)]">
         Example: recovery after a drop
       </h3>
-      <p className="mt-2 text-sm leading-relaxed text-[color:var(--muted)]">
+      <p className="mt-2 text-base leading-relaxed text-[color:var(--muted)]">
         Start with a value, apply a drop, then apply a recovery. See why equal-looking percentages
         do not cancel out.
       </p>
@@ -185,7 +185,7 @@ export default function PercentChangeExplorer() {
             y1={scaleY(startValue)}
             y2={scaleY(startValue)}
           />
-          <text fill="#6b7280" fontSize="10" fontWeight="700" x="26" y={scaleY(startValue) - 6}>
+          <text fill="#6b7280" fontSize="12" fontWeight="700" x="26" y={scaleY(startValue) - 6}>
             Start level
           </text>
 
@@ -210,7 +210,7 @@ export default function PercentChangeExplorer() {
                 </text>
                 <text
                   fill="#6b7280"
-                  fontSize="10"
+                  fontSize="12"
                   textAnchor="middle"
                   x={x + barWidth / 2}
                   y={chartHeight + 18}

@@ -1,4 +1,5 @@
 import CorrelationCausationExplorer from "@/components/CorrelationCausationExplorer";
+import BusinessCaseExplorer from "@/components/BusinessCaseExplorer";
 import MathBlock from "@/components/MathBlock";
 import RelatedPosts from "@/components/RelatedPosts";
 import Image from "next/image";
@@ -10,8 +11,8 @@ export const metadata = mathPostMetadata("correlation-vs-causation-real-decision
 
 export default function CorrelationVsCausationPostPage() {
   return (
-    <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">
-      <article className="space-y-7">
+    <main className="mx-auto w-full max-w-[1100px] space-y-5 px-2 py-7 sm:px-3">
+      <article className="space-y-5">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           Math, Applied
         </p>
@@ -30,7 +31,7 @@ export default function CorrelationVsCausationPostPage() {
           </div>
         </div>
 
-        <div className="space-y-5 text-[17px] leading-8 text-[color:var(--muted)]">
+        <div className="space-y-5 text-lg leading-8 text-[color:var(--muted)]">
           <h2 className="text-xl font-bold text-[color:var(--foreground)]">The idea</h2>
           <p>
             When two metrics move together, it is tempting to say one causes the other. Dashboards
@@ -110,6 +111,8 @@ export default function CorrelationVsCausationPostPage() {
             Imagine weekly ad spend and weekly revenue correlate at r = +0.85. Leadership concludes
             that increasing ads will reliably increase revenue.
           </p>
+          <BusinessCaseExplorer slug="correlation-vs-causation-real-decisions" />
+
           <p>
             But several launch weeks appear in the same period. During those weeks, the company
             spent more on ads and also sold more because of the launch itself. Ads and revenue moved

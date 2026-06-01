@@ -57,11 +57,11 @@ export default function PercentilesExplorer() {
   }, [meanBelowTarget, meanValue, p90BelowTarget, p90Value, scenario.targetLabel, scenario.unit]);
 
   return (
-    <section className="my-8 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-6">
+    <section className="my-6 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-4 sm:p-5">
       <h3 className="text-lg font-bold text-[color:var(--foreground)]">
         Example: read the distribution
       </h3>
-      <p className="mt-2 max-w-prose text-sm leading-relaxed text-[color:var(--muted)]">
+      <p className="mt-2 max-w-prose text-base leading-relaxed text-[color:var(--muted)]">
         Choose a dataset and a percentile. Dark bars are values at or below that percentile. The
         shaded band is the middle half of the data (Q1 to Q3).
       </p>

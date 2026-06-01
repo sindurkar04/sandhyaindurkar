@@ -1,4 +1,5 @@
 import MathBlock from "@/components/MathBlock";
+import BusinessCaseExplorer from "@/components/BusinessCaseExplorer";
 import RelatedPosts from "@/components/RelatedPosts";
 import SampleSizeExplorerLoader from "@/components/SampleSizeExplorerLoader";
 import Image from "next/image";
@@ -10,8 +11,8 @@ export const metadata = mathPostMetadata("sample-size-real-decisions");
 
 export default function SampleSizePostPage() {
   return (
-    <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">
-      <article className="space-y-7">
+    <main className="mx-auto w-full max-w-[1100px] space-y-5 px-2 py-7 sm:px-3">
+      <article className="space-y-5">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           Math, Applied
         </p>
@@ -30,7 +31,7 @@ export default function SampleSizePostPage() {
           </div>
         </div>
 
-        <div className="space-y-5 text-[17px] leading-8 text-[color:var(--muted)]">
+        <div className="space-y-5 text-lg leading-8 text-[color:var(--muted)]">
           <h2 className="text-xl font-bold text-[color:var(--foreground)]">The idea</h2>
           <p>
             Every metric you report is computed from a sample. A conversion rate from last
@@ -176,6 +177,15 @@ export default function SampleSizePostPage() {
             If the answer is no, you do not have a trend yet. You have a starting point. Treat
             it that way.
           </p>
+
+          <h2 className="text-xl font-bold text-[color:var(--foreground)]">
+            A simple application: how tight can you measure?
+          </h2>
+          <p>
+            Move sample size and baseline rate. Watch margin of error shrink before you ship a
+            readout.
+          </p>
+          <BusinessCaseExplorer slug="sample-size-real-decisions" />
         </div>
 
         <RelatedPosts slug="sample-size-real-decisions" />

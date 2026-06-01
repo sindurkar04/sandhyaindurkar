@@ -83,18 +83,18 @@ export default function RegressionExplorer() {
   const outlierShift = predicted - predictedNoOutlier;
 
   return (
-    <section className="my-8 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-6">
+    <section className="my-6 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-4 sm:p-5">
       <h3 className="text-lg font-bold text-[color:var(--foreground)]">
         Example: move the inputs, watch the forecast
       </h3>
-      <p className="mt-2 max-w-prose text-sm leading-relaxed text-[color:var(--muted)]">
+      <p className="mt-2 max-w-prose text-base leading-relaxed text-[color:var(--muted)]">
         The line is fit on eight weeks of history. Weeks 9 and 10 were held back before anyone
         looked at the forecast (a reality check, not used to draw the line). Drag ad spend and
         email volume to see predicted orders and revenue.
       </p>
 
       <div className="mt-5 grid gap-3 sm:grid-cols-3">
-        <div className="rounded-lg border border-black bg-black px-4 py-3 text-white">
+        <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] px-4 py-3 text-[color:var(--foreground)]">
           <p className="text-xs font-bold uppercase tracking-[0.1em] opacity-80">Forecast orders</p>
           <p className="mt-1 text-3xl font-black tabular-nums">{predicted}</p>
         </div>
@@ -232,7 +232,7 @@ export default function RegressionExplorer() {
             </button>
           </div>
           {includeOutlier && (
-            <p className="mt-3 rounded-lg border border-[color:var(--border)] bg-[color:var(--surface-strong)] px-4 py-3 text-sm text-[color:var(--muted)]">
+            <p className="mt-3 rounded-lg border border-[color:var(--border)] bg-[color:var(--surface-strong)] px-4 py-3 text-base text-[color:var(--muted)]">
               With the outlier in the fit, your plan shifts by{" "}
               <span className="font-bold text-[color:var(--foreground)]">
                 {outlierShift >= 0 ? "+" : ""}

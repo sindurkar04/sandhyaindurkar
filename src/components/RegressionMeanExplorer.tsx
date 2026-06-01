@@ -51,11 +51,11 @@ export default function RegressionMeanExplorer() {
     groupAverage(performers, "bottom", "week2") - groupAverage(performers, "bottom", "week1");
 
   return (
-    <section className="my-8 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-6">
+    <section className="my-6 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-4 sm:p-5">
       <h3 className="text-lg font-bold text-[color:var(--foreground)]">
         Example: star performers next period
       </h3>
-      <p className="mt-2 max-w-prose text-sm leading-relaxed text-[color:var(--muted)]">
+      <p className="mt-2 max-w-prose text-base leading-relaxed text-[color:var(--muted)]">
         Week 1 identifies the top and bottom five. Week 2 is a fresh draw with the same underlying
         skill. Watch extremes move toward the team average without any coaching change.
       </p>
@@ -79,7 +79,7 @@ export default function RegressionMeanExplorer() {
       <p className="mt-2 text-sm text-[color:var(--muted)]">{scenario.context}</p>
 
       <div className="mt-5 grid gap-3 sm:grid-cols-3">
-        <div className="rounded-lg border border-black bg-black px-4 py-3 text-white">
+        <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] px-4 py-3 text-[color:var(--foreground)]">
           <p className="text-xs font-bold uppercase tracking-[0.1em] opacity-80">Top group drop</p>
           <p className="mt-1 text-2xl font-black tabular-nums">
             {topDrop >= 0 ? "−" : "+"}
@@ -162,13 +162,13 @@ export default function RegressionMeanExplorer() {
               </g>
             );
           })}
-          <text fill="#6b7280" fontSize="10" x={padLeft} y={padTop - 8}>
+          <text fill="#6b7280" fontSize="12" x={padLeft} y={padTop - 8}>
             Week 1 (black) vs week 2 (gray)
           </text>
         </svg>
       </div>
 
-      <p className="mt-4 rounded-lg border border-[color:var(--border)] bg-[color:var(--surface-strong)] px-4 py-3 text-sm text-[color:var(--muted)]">
+      <p className="mt-4 rounded-lg border border-[color:var(--border)] bg-[color:var(--surface-strong)] px-4 py-3 text-base text-[color:var(--muted)]">
         Top week-1 scores often fall in week 2. Bottom scores often rise. That is regression to the
         mean, not proof that praise failed or punishment worked.
       </p>

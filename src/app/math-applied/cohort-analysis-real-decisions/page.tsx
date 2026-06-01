@@ -1,4 +1,5 @@
 import CohortAnalysisExplorer from "@/components/CohortAnalysisExplorer";
+import BusinessCaseExplorer from "@/components/BusinessCaseExplorer";
 import MathBlock from "@/components/MathBlock";
 import RelatedPosts from "@/components/RelatedPosts";
 import Image from "next/image";
@@ -8,8 +9,8 @@ export const metadata = mathPostMetadata("cohort-analysis-real-decisions");
 
 export default function CohortAnalysisPostPage() {
   return (
-    <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">
-      <article className="space-y-7">
+    <main className="mx-auto w-full max-w-[1100px] space-y-5 px-2 py-7 sm:px-3">
+      <article className="space-y-5">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           Math, Applied
         </p>
@@ -28,7 +29,7 @@ export default function CohortAnalysisPostPage() {
           </div>
         </div>
 
-        <div className="space-y-5 text-[17px] leading-8 text-[color:var(--muted)]">
+        <div className="space-y-5 text-lg leading-8 text-[color:var(--muted)]">
           <h2 className="text-xl font-bold text-[color:var(--foreground)]">The idea</h2>
           <p>
             Headline retention is a blend. It mixes users who signed up last week with users who
@@ -43,7 +44,9 @@ export default function CohortAnalysisPostPage() {
             Cohort analysis groups users by when they started, then tracks each group on the same
             clock. Did January signups retain better than December signups at day 30? That is a
             product question. Did overall retention fall because January brought twice as many
-            signups? That is a mix question.
+            signups? That is a mix question. A retention heatmap makes the pattern visible: each
+            row is a signup month, each column is weeks since signup, and the color is how many
+            users are still active.
           </p>
           <p className="font-bold text-[color:var(--foreground)]">
             Cohort analysis answers: Is the metric moving because behavior changed, or because who
@@ -93,6 +96,8 @@ export default function CohortAnalysisPostPage() {
             a product regression. If cohort rows are flat but January doubled signups, the headline
             drop is a mix story, not necessarily a broken feature.
           </p>
+          <BusinessCaseExplorer slug="cohort-analysis-real-decisions" />
+
           <p>
             The habit: publish a cohort table beside every headline retention metric. Flag mix
             shifts after launches and campaigns. Pair with segment tables when experiments change

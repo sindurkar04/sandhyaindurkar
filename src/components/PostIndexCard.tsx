@@ -21,8 +21,8 @@ export default function PostIndexCard({
       href={href}
     >
       <div
-        className={`border-b border-[color:var(--border)] bg-[#f5f1eb] transition group-hover:bg-[#efe9e0] ${
-          imageCover ? "h-48 overflow-hidden" : "flex h-48 items-center justify-center p-5"
+        className={`border-b border-[color:var(--border)] bg-[color:var(--surface-strong)] transition group-hover:bg-[color:var(--border)] ${
+          imageCover ? "h-44 overflow-hidden" : "flex h-44 items-center justify-center p-4"
         }`}
       >
         <img
@@ -33,11 +33,11 @@ export default function PostIndexCard({
           src={image}
         />
       </div>
-      <div className="space-y-4 p-5">
+      <div className="space-y-3 p-4">
         <h2 className="text-xl font-bold leading-snug tracking-tight text-[color:var(--foreground)] transition group-hover:underline sm:text-2xl">
           {title}
         </h2>
-        <p className="text-sm leading-relaxed text-[color:var(--muted)]">{description}</p>
+        <p className="text-base leading-relaxed text-[color:var(--muted)]">{description}</p>
         <span className="inline-flex rounded-lg bg-black px-5 py-2.5 text-sm font-bold text-white transition group-hover:bg-[#222222]">
           Read more
         </span>

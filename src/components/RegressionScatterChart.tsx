@@ -146,12 +146,12 @@ export default function RegressionScatterChart({
           y1={padTop + plotHeight}
           y2={padTop + plotHeight}
         />
-        <text fill="#6b7280" fontSize="10" textAnchor="middle" x={width / 2} y={height - 8}>
+        <text fill="#6b7280" fontSize="12" textAnchor="middle" x={width / 2} y={height - 8}>
           {xLabel}
         </text>
         <text
           fill="#6b7280"
-          fontSize="10"
+          fontSize="12"
           textAnchor="middle"
           transform={`rotate(-90, 14, ${height / 2})`}
           x={14}

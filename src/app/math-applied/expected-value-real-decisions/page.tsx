@@ -1,4 +1,5 @@
 import DataTable from "@/components/DataTable";
+import BusinessCaseExplorer from "@/components/BusinessCaseExplorer";
 import ExpectedValueExplorer from "@/components/ExpectedValueExplorer";
 import MathBlock from "@/components/MathBlock";
 import RelatedPosts from "@/components/RelatedPosts";
@@ -26,8 +27,8 @@ export default function ExpectedValuePostPage() {
   const rows = buildComparisonRows(DEFAULT_OPTION_A, DEFAULT_OPTION_B);
 
   return (
-    <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">
-      <article className="space-y-7">
+    <main className="mx-auto w-full max-w-[1100px] space-y-5 px-2 py-7 sm:px-3">
+      <article className="space-y-5">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           Math, Applied
         </p>
@@ -46,7 +47,7 @@ export default function ExpectedValuePostPage() {
           </div>
         </div>
 
-        <div className="space-y-5 text-[17px] leading-8 text-[color:var(--muted)]">
+        <div className="space-y-5 text-lg leading-8 text-[color:var(--muted)]">
           <h2 className="text-xl font-bold text-[color:var(--foreground)]">The idea</h2>
           <p>
             Expected value is a weighted average of outcomes. You combine upside, chance, and cost
@@ -114,6 +115,8 @@ export default function ExpectedValuePostPage() {
             Compare a high-cost brand campaign with low hit rate against a cheaper always-on test
             with modest upside. Finance asks which spends more per expected dollar returned.
           </p>
+          <BusinessCaseExplorer slug="expected-value-real-decisions" />
+
           <p>
             <span className="font-bold text-[color:var(--foreground)]">Product bets.</span>{" "}
             Build a major feature with uncertain adoption vs ship a smaller improvement with clearer

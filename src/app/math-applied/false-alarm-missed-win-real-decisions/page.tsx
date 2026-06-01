@@ -1,4 +1,5 @@
 import MathBlock from "@/components/MathBlock";
+import BusinessCaseExplorer from "@/components/BusinessCaseExplorer";
 import FalseAlarmExplorer from "@/components/FalseAlarmExplorer";
 import RelatedPosts from "@/components/RelatedPosts";
 import Image from "next/image";
@@ -8,8 +9,8 @@ export const metadata = mathPostMetadata("false-alarm-missed-win-real-decisions"
 
 export default function FalseAlarmMissedWinPostPage() {
   return (
-    <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">
-      <article className="space-y-7">
+    <main className="mx-auto w-full max-w-[1100px] space-y-5 px-2 py-7 sm:px-3">
+      <article className="space-y-5">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           Math, Applied
         </p>
@@ -28,7 +29,7 @@ export default function FalseAlarmMissedWinPostPage() {
           </div>
         </div>
 
-        <div className="space-y-5 text-[17px] leading-8 text-[color:var(--muted)]">
+        <div className="space-y-5 text-lg leading-8 text-[color:var(--muted)]">
           <h2 className="text-xl font-bold text-[color:var(--foreground)]">The idea</h2>
           <p>
             Every test decision has two mistakes. A false alarm is shipping when there is no real
@@ -85,6 +86,8 @@ export default function FalseAlarmMissedWinPostPage() {
             means waiting longer. Feature launches with high build cost sit in the middle: missed
             wins waste engineering, false alarms waste trust.
           </p>
+          <BusinessCaseExplorer slug="false-alarm-missed-win-real-decisions" />
+
           <p>
             Write the policy before the test finishes. Name which mistake hurts more, then set
             sample size and ship rules to match. That turns significance talk into a business choice.

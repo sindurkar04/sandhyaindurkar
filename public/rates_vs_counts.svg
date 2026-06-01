@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#f5f5f5"/>
+  <rect x="80" y="60" width="640" height="380" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="400" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="800" fill="#111111">Counts vs Rates</text>
+
+  <!-- Left panel: total count rising -->
+  <rect x="110" y="95" width="270" height="300" rx="8" fill="#faf8f5" stroke="#e5e7eb"/>
+  <text x="245" y="125" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="800" fill="#111111">Total count</text>
+  <rect x="150" y="280" width="48" height="70" rx="4" fill="#9ca3af"/>
+  <rect x="210" y="260" width="48" height="90" rx="4" fill="#9ca3af"/>
+  <rect x="270" y="230" width="48" height="120" rx="4" fill="#374151"/>
+  <rect x="330" y="200" width="48" height="150" rx="4" fill="#111111"/>
+  <text x="174" y="365" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#6b7280">Q1</text>
+  <text x="234" y="365" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#6b7280">Q2</text>
+  <text x="294" y="365" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#6b7280">Q3</text>
+  <text x="354" y="365" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#6b7280">Q4</text>
+  <rect x="300" y="110" width="72" height="36" rx="6" fill="#111111"/>
+  <text x="336" y="133" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="800" fill="#ffffff">+30%</text>
+
+  <!-- Right panel: per-user rate flat -->
+  <rect x="420" y="95" width="270" height="300" rx="8" fill="#faf8f5" stroke="#e5e7eb"/>
+  <text x="555" y="125" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="800" fill="#111111">Per-user rate</text>
+  <line x1="450" y1="290" x2="660" y2="290" stroke="#e5e7eb" stroke-width="1"/>
+  <polyline points="470,290 530,288 590,291 650,289" fill="none" stroke="#111111" stroke-width="3"/>
+  <circle cx="470" cy="290" r="5" fill="#111111"/>
+  <circle cx="530" cy="288" r="5" fill="#111111"/>
+  <circle cx="590" cy="291" r="5" fill="#111111"/>
+  <circle cx="650" cy="289" r="5" fill="#111111"/>
+  <text x="470" y="320" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#6b7280">Q1</text>
+  <text x="530" y="320" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#6b7280">Q2</text>
+  <text x="590" y="320" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#6b7280">Q3</text>
+  <text x="650" y="320" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#6b7280">Q4</text>
+  <rect x="580" y="170" width="88" height="36" rx="6" fill="#6b7280"/>
+  <text x="624" y="193" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="800" fill="#ffffff">Flat</text>
+
+  <text x="400" y="420" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#6b7280">Volume up because users grew, not because each user changed</text>
+</svg>

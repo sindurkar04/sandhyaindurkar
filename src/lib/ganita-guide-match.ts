@@ -87,7 +87,19 @@ const SYNONYMS: Record<string, string[]> = {
   significant: ["significance"],
   skew: ["outlier", "outliers"],
   stats: ["statistics", "data"],
-  test: ["experiment", "ab"],
+  season: ["seasonality", "seasonal"],
+  seasonal: ["seasonality", "season"],
+  seasonality: ["seasonal", "yoy"],
+  yoy: ["seasonality", "year"],
+  overfit: ["overfitting", "holdout"],
+  overfitting: ["overfit", "holdout"],
+  holdout: ["overfitting", "validation"],
+  power: ["underpowered", "mde"],
+  underpowered: ["power", "sample"],
+  mde: ["power", "lift"],
+  denominator: ["rate", "count"],
+  count: ["rate", "volume"],
+  volume: ["count", "rate"],
 };
 
 function normalize(text: string): string {
@@ -237,4 +249,8 @@ export const GANITA_GUIDE_EXAMPLES = [
   "Should we ship this A/B test",
   "Retention dropped after signup surge",
   "Correlation between two dashboard metrics",
+  "Model perfect on training bad on holdout",
+  "Was the test underpowered",
+  "Down vs last month but up vs last year",
+  "Total tickets up but per user flat",
 ];

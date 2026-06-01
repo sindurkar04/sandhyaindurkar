@@ -11,8 +11,8 @@ export const metadata = buildPageMetadata({
 
 export default function RasmalaiPostPage() {
   return (
-    <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">
-      <article className="space-y-7">
+    <main className="mx-auto w-full max-w-[880px] space-y-5 px-3 py-7 sm:px-4">
+      <article className="space-y-5">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           Learning Through Food
         </p>
@@ -29,7 +29,7 @@ export default function RasmalaiPostPage() {
           />
         </div>
 
-        <div className="space-y-5 text-[17px] leading-8 text-[color:var(--muted)]">
+        <div className="space-y-5 text-lg leading-8 text-[color:var(--muted)]">
           <h2 className="text-xl font-bold text-[color:var(--foreground)]">The moment</h2>
           <p>
             I always thought rasmalai was something you buy, not something you make. It belonged in sweet boxes from Indian stores, brought home for celebrations. It did not feel like something that could come out of your own kitchen without going wrong somewhere.

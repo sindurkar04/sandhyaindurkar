@@ -54,7 +54,7 @@ export default function RootLayout({
         </Script>
 
         <header className="sticky top-0 z-50 border-b border-white/15 bg-black">
-          <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-5 sm:px-6 lg:px-8">
+          <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-4 sm:px-6 lg:px-8">
             <p className="text-base font-bold tracking-[0.08em] text-white">Sandhya Indurkar</p>
             <nav className="flex flex-wrap gap-1 text-[15px]">
               {navLinks.map((link) => (
@@ -72,7 +72,7 @@ export default function RootLayout({
 
         {children}
 
-        <footer className="mt-16 border-t border-white/15 bg-black">
+        <footer className="mt-10 border-t border-white/15 bg-black">
           <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-4 py-6 sm:px-6 lg:px-8">
             <div className="flex flex-wrap items-center justify-between gap-4">
               <p className="text-gray-300">© 2026 Sandhya Indurkar</p>
@@ -98,7 +98,7 @@ export default function RootLayout({
               className="inline-flex items-center gap-3 text-sm text-gray-300 transition hover:text-white"
               href="/math-applied#ganita"
             >
-              <span className="h-8 w-8 shrink-0 overflow-hidden rounded-md border border-white/20 bg-[#f5f1eb]">
+              <span className="h-8 w-8 shrink-0 overflow-hidden rounded-md border border-white/20 bg-white">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   alt=""

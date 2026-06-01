@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "dev:clean": "rm -rf .next && next dev",
+    "dev": "bash scripts/dev.sh",
+    "dev:next": "next dev",
+    "dev:clean": "CLEAN_CACHE=1 bash scripts/dev.sh --clean",
+    "kill-dev": "bash scripts/kill-dev.sh",
+    "check-dev": "bash scripts/check-dev.sh",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

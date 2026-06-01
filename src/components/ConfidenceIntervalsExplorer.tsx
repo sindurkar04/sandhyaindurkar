@@ -20,8 +20,8 @@ export default function ConfidenceIntervalsExplorer() {
     [rate, sampleSize],
   );
 
-  const width = 400;
-  const height = 160;
+  const width = 520;
+  const height = 200;
   const padX = 36;
   const plotWidth = width - padX * 2;
   const maxRate = Math.max(interval.high * 1.15, rate * 1.15, 10);
@@ -39,11 +39,11 @@ export default function ConfidenceIntervalsExplorer() {
   }
 
   return (
-    <section className="my-8 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-6">
+    <section className="my-6 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-4 sm:p-5">
       <h3 className="text-lg font-bold text-[color:var(--foreground)]">
         Example: how wide is the range?
       </h3>
-      <p className="mt-2 max-w-prose text-sm leading-relaxed text-[color:var(--muted)]">
+      <p className="mt-2 max-w-prose text-base leading-relaxed text-[color:var(--muted)]">
         A point estimate is the center. A 95% confidence interval is the range where the true rate
         likely lives given your sample size. Drag rate and n to see the band widen or tighten.
       </p>
@@ -66,7 +66,7 @@ export default function ConfidenceIntervalsExplorer() {
       </div>
 
       <div className="mt-5 grid gap-3 sm:grid-cols-3">
-        <div className="rounded-lg border border-black bg-black px-4 py-3 text-white sm:col-span-1">
+        <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] px-4 py-3 text-[color:var(--foreground)] sm:col-span-1">
           <p className="text-xs font-bold uppercase tracking-[0.1em] opacity-80">Point estimate</p>
           <p className="mt-1 text-3xl font-black">{formatRate(rate)}</p>
         </div>
@@ -136,10 +136,10 @@ export default function ConfidenceIntervalsExplorer() {
           <line stroke="#111111" strokeWidth="3" x1={pointX} x2={pointX} y1="60" y2="120" />
           <circle cx={pointX} cy="90" fill="#111111" r="6" />
           <line stroke="#9ca3af" strokeDasharray="4 4" strokeWidth="1.5" x1={scaleX(scenario.populationRate)} x2={scaleX(scenario.populationRate)} y1="60" y2="120" />
-          <text fill="#6b7280" fontSize="10" x={padX} y={height - 12}>
+          <text fill="#6b7280" fontSize="12" x={padX} y={height - 12}>
             0%
           </text>
-          <text fill="#6b7280" fontSize="10" textAnchor="end" x={width - padX} y={height - 12}>
+          <text fill="#6b7280" fontSize="12" textAnchor="end" x={width - padX} y={height - 12}>
             {Math.ceil(maxRate)}%
           </text>
         </svg>
@@ -159,7 +159,7 @@ export default function ConfidenceIntervalsExplorer() {
         </ul>
       </div>
 
-      <p className="mt-4 rounded-lg border border-[color:var(--border)] bg-[color:var(--surface-strong)] px-4 py-3 text-sm text-[color:var(--muted)]">
+      <p className="mt-4 rounded-lg border border-[color:var(--border)] bg-[color:var(--surface-strong)] px-4 py-3 text-base text-[color:var(--muted)]">
         {insight}
       </p>
     </section>

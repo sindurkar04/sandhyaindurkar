@@ -1,6 +1,8 @@
 "use client";
 
+import CohortRetentionHeatmap from "@/components/CohortRetentionHeatmap";
 import {
+  HEATMAP_BY_SCENARIO,
   SCENARIOS,
   applyWeights,
   cohortRead,
@@ -29,13 +31,14 @@ export default function CohortAnalysisExplorer() {
 
   const overall = weightedRetention(cohorts);
   const insight = cohortRead(scenarioKey, cohorts, overall);
+  const heatmap = HEATMAP_BY_SCENARIO[scenarioKey];
 
   return (
-    <section className="my-8 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-6">
+    <section className="my-6 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-4 sm:p-5">
       <h3 className="text-lg font-bold text-[color:var(--foreground)]">
         Example: headline retention vs signup cohorts
       </h3>
-      <p className="mt-2 max-w-prose text-sm leading-relaxed text-[color:var(--muted)]">
+      <p className="mt-2 max-w-prose text-base leading-relaxed text-[color:var(--muted)]">
         Each row is day-30 retention for users who signed up in that month. The headline number is
         a weighted blend of those cohorts.
       </p>
@@ -83,7 +86,7 @@ export default function CohortAnalysisExplorer() {
         </div>
       ) : null}
 
-      <div className="mt-5 rounded-lg border border-black bg-black px-4 py-3 text-white">
+      <div className="mt-5 rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] px-4 py-3 text-[color:var(--foreground)]">
         <p className="text-xs font-bold uppercase tracking-[0.1em] opacity-80">Headline retention</p>
         <p className="mt-1 text-3xl font-black">{formatRate(overall)}</p>
         <p className="mt-1 text-xs opacity-80">Weighted blend of cohort rows below</p>
@@ -129,7 +132,9 @@ export default function CohortAnalysisExplorer() {
         </table>
       </div>
 
-      <p className="mt-4 rounded-lg border border-[color:var(--border)] bg-[color:var(--surface-strong)] px-4 py-3 text-sm leading-relaxed text-[color:var(--muted)]">
+      <CohortRetentionHeatmap data={heatmap} />
+
+      <p className="mt-4 rounded-lg border border-[color:var(--border)] bg-[color:var(--surface-strong)] px-4 py-3 text-base leading-relaxed text-[color:var(--muted)]">
         {insight}
       </p>
     </section>

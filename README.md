@@ -8,20 +8,21 @@ Next.js app deployed on [Vercel](https://vercel.com).
 
 Use Node.js 20+ (this repo includes a portable Node under [`.tools/node-v22.14.0`](./.tools/node-v22.14.0) used for agent/bootstrap installs; add `.tools/` to your PATH or install Node from [nodejs.org](https://nodejs.org)).
 
-**If `npm` is not found** in your terminal, use the project script (uses portable Node in `.tools/`):
+**Recommended:**
 
 ```bash
-./scripts/dev.sh
-```
-
-**If you have Node installed globally:**
-
-```bash
-npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+**If pages 500 or links fail** (stale cache — run this, not another tab of `dev`):
+
+```bash
+npm run dev:clean
+```
+
+That kills every old server, clears `.next`, and starts fresh on **port 3000 only**.
+
+Open [http://localhost:3000](http://localhost:3000). Do not use port 3001 — if you see that, run `npm run kill-dev` first.
 
 ## Recipe finder (Spoonacular)
 

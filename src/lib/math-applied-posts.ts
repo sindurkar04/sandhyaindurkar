@@ -153,6 +153,36 @@ export const MATH_POSTS: MathPost[] = [
     ],
   },
   {
+    slug: "rates-vs-counts-real-decisions",
+    href: "/math-applied/rates-vs-counts-real-decisions",
+    title: "More Tickets, Same Workload? Rates vs Counts in Real Data",
+    description: "Total volume vs per-user rate: when headline counts rise because the base grew.",
+    image: "/rates_vs_counts.svg",
+    category: "summarize",
+    tags: ["rate", "count", "denominator", "volume"],
+    problemPhrases: [
+      "total tickets up but per user flat",
+      "count went up is it actually worse",
+      "headline number hides the denominator",
+      "more events because users grew",
+    ],
+  },
+  {
+    slug: "seasonality-real-decisions",
+    href: "/math-applied/seasonality-real-decisions",
+    title: "Up From Last Month: Is That Normal for March? Seasonality",
+    description: "Month-over-month vs same month last year when the calendar drives the metric.",
+    image: "/seasonality.svg",
+    category: "summarize",
+    tags: ["seasonality", "yoy", "mom", "calendar"],
+    problemPhrases: [
+      "down vs last month but up vs last year",
+      "is this normal for the season",
+      "december looks bad after november",
+      "compare to same month last year",
+    ],
+  },
+  {
     slug: "sample-size-real-decisions",
     href: "/math-applied/sample-size-real-decisions",
     title: "Twelve Data Points Isn't a Trend: Sample Size in Real Decisions",
@@ -166,6 +196,21 @@ export const MATH_POSTS: MathPost[] = [
       "how much data before we decide",
       "conversion went up is it noise",
       "not enough visitors in the test",
+    ],
+  },
+  {
+    slug: "statistical-power-real-decisions",
+    href: "/math-applied/statistical-power-real-decisions",
+    title: "We Ran the Test: Could We Even See a Win? Statistical Power",
+    description: "Detectability before you launch: sample size, baseline, and minimum lift together.",
+    image: "/statistical_power.svg",
+    category: "experiments",
+    tags: ["power", "mde", "ab-test", "sample-size"],
+    problemPhrases: [
+      "was the test underpowered",
+      "could we detect this lift",
+      "not enough power to see a winner",
+      "how big a sample to detect lift",
     ],
   },
   {
@@ -361,6 +406,21 @@ export const MATH_POSTS: MathPost[] = [
     ],
   },
   {
+    slug: "overfitting-real-decisions",
+    href: "/math-applied/overfitting-real-decisions",
+    title: "The Model Looked Perfect on Past Data: Overfitting in Real Decisions",
+    description: "Train vs holdout: when forecasts memorize history instead of predicting new weeks.",
+    image: "/overfitting.svg",
+    category: "traps",
+    tags: ["overfitting", "holdout", "forecast", "model"],
+    problemPhrases: [
+      "model perfect on training bad on holdout",
+      "forecast worked in history failed live",
+      "too many variables for short history",
+      "memorized past data not predicting",
+    ],
+  },
+  {
     slug: "regression-real-decisions",
     href: "/math-applied/regression-real-decisions",
     title: "Regression for Prediction: Data to Decisions",
@@ -383,14 +443,14 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "percentiles-quartiles-real-data",
   ],
   "mean-vs-median-real-data": [
+    "rates-vs-counts-real-decisions",
     "variance-spread-real-data",
     "percentiles-quartiles-real-data",
-    "sample-size-real-decisions",
   ],
   "percent-change-real-decisions": [
     "benchmarks-baselines-real-decisions",
+    "seasonality-real-decisions",
     "regression-to-the-mean-real-decisions",
-    "sample-size-real-decisions",
   ],
   "variance-spread-real-data": [
     "mean-vs-median-real-data",
@@ -408,14 +468,24 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "sample-size-real-decisions",
   ],
   "sample-size-real-decisions": [
+    "statistical-power-real-decisions",
     "confidence-intervals-real-decisions",
     "ab-test-readouts-real-decisions",
-    "probability-real-decisions",
+  ],
+  "statistical-power-real-decisions": [
+    "sample-size-real-decisions",
+    "false-alarm-missed-win-real-decisions",
+    "ab-test-readouts-real-decisions",
   ],
   "regression-real-decisions": [
+    "overfitting-real-decisions",
     "correlation-vs-causation-real-decisions",
     "confidence-intervals-real-decisions",
+  ],
+  "overfitting-real-decisions": [
+    "regression-real-decisions",
     "sample-size-real-decisions",
+    "confidence-intervals-real-decisions",
   ],
   "regression-to-the-mean-real-decisions": [
     "goodhart-law-real-decisions",
@@ -468,9 +538,9 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "ab-test-readouts-real-decisions",
   ],
   "false-alarm-missed-win-real-decisions": [
+    "statistical-power-real-decisions",
     "ab-test-readouts-real-decisions",
     "many-ab-tests-real-decisions",
-    "sample-size-real-decisions",
   ],
   "weighted-averages-real-data": [
     "cohort-analysis-real-decisions",
@@ -478,14 +548,24 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "mean-vs-median-real-data",
   ],
   "benchmarks-baselines-real-decisions": [
+    "seasonality-real-decisions",
     "percent-change-real-decisions",
     "cohort-analysis-real-decisions",
+  ],
+  "seasonality-real-decisions": [
+    "benchmarks-baselines-real-decisions",
+    "percent-change-real-decisions",
+    "cohort-analysis-real-decisions",
+  ],
+  "rates-vs-counts-real-decisions": [
+    "cohort-analysis-real-decisions",
     "weighted-averages-real-data",
+    "mean-vs-median-real-data",
   ],
   "cohort-analysis-real-decisions": [
+    "rates-vs-counts-real-decisions",
     "weighted-averages-real-data",
     "simpsons-paradox-real-decisions",
-    "benchmarks-baselines-real-decisions",
   ],
   "expected-value-real-decisions": [
     "probability-real-decisions",

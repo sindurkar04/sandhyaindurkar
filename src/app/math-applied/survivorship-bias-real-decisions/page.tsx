@@ -1,4 +1,5 @@
 import MathBlock from "@/components/MathBlock";
+import BusinessCaseExplorer from "@/components/BusinessCaseExplorer";
 import RelatedPosts from "@/components/RelatedPosts";
 import SurvivorshipBiasExplorer from "@/components/SurvivorshipBiasExplorer";
 import Image from "next/image";
@@ -8,8 +9,8 @@ export const metadata = mathPostMetadata("survivorship-bias-real-decisions");
 
 export default function SurvivorshipBiasPostPage() {
   return (
-    <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">
-      <article className="space-y-7">
+    <main className="mx-auto w-full max-w-[1100px] space-y-5 px-2 py-7 sm:px-3">
+      <article className="space-y-5">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           Math, Applied
         </p>
@@ -28,7 +29,7 @@ export default function SurvivorshipBiasPostPage() {
           </div>
         </div>
 
-        <div className="space-y-5 text-[17px] leading-8 text-[color:var(--muted)]">
+        <div className="space-y-5 text-lg leading-8 text-[color:var(--muted)]">
           <h2 className="text-xl font-bold text-[color:var(--foreground)]">The idea</h2>
           <p>
             Survivorship bias is selection bias after the fact. The dataset keeps the winners and
@@ -84,6 +85,8 @@ export default function SurvivorshipBiasPostPage() {
             active enough to post. Leaders benchmark against peers still in the league table. In
             each case, failures left the dataset before the analysis began.
           </p>
+          <BusinessCaseExplorer slug="survivorship-bias-real-decisions" />
+
           <p>
             Ask for the full cohort: how many started, how many remain, and what happened to the
             rest. Pair visible success rates with exit data, churn, or closed-book records before

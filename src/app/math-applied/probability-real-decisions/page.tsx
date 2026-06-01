@@ -1,4 +1,5 @@
 import MathBlock from "@/components/MathBlock";
+import BusinessCaseExplorer from "@/components/BusinessCaseExplorer";
 import ProbabilityExplorer from "@/components/ProbabilityExplorer";
 import RelatedPosts from "@/components/RelatedPosts";
 import Image from "next/image";
@@ -10,8 +11,8 @@ export const metadata = mathPostMetadata("probability-real-decisions");
 
 export default function ProbabilityPostPage() {
   return (
-    <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">
-      <article className="space-y-7">
+    <main className="mx-auto w-full max-w-[1100px] space-y-5 px-2 py-7 sm:px-3">
+      <article className="space-y-5">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           Math, Applied
         </p>
@@ -30,7 +31,7 @@ export default function ProbabilityPostPage() {
           </div>
         </div>
 
-        <div className="space-y-5 text-[17px] leading-8 text-[color:var(--muted)]">
+        <div className="space-y-5 text-lg leading-8 text-[color:var(--muted)]">
           <h2 className="text-xl font-bold text-[color:var(--foreground)]">The idea</h2>
           <p>
             Probability is how often something happens out of all the chances you gave it. In
@@ -86,6 +87,8 @@ export default function ProbabilityPostPage() {
             by segment. Product teams read adoption from rollouts. The habit is writing down
             successes and trials, then stating the rate with sample size in the same breath.
           </p>
+          <BusinessCaseExplorer slug="probability-real-decisions" />
+
           <p>
             When the estimate is shaky, gather more trials or widen your planning range. When it is
             stable, you can feed it into expected value, forecasting, or experiment design with more

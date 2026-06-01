@@ -31,11 +31,11 @@ export default function BaseRatesExplorer() {
   }
 
   return (
-    <section className="my-8 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-6">
+    <section className="my-6 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-4 sm:p-5">
       <h3 className="text-lg font-bold text-[color:var(--foreground)]">
         Example: update a belief after a positive signal
       </h3>
-      <p className="mt-2 max-w-prose text-sm leading-relaxed text-[color:var(--muted)]">
+      <p className="mt-2 max-w-prose text-base leading-relaxed text-[color:var(--muted)]">
         A strong alert is not the same as a near-certain hit when the underlying rate is rare.
         Adjust base rate and test accuracy to see the updated chance after a positive signal.
       </p>
@@ -67,7 +67,7 @@ export default function BaseRatesExplorer() {
           </p>
           <p className="mt-1 text-xs text-[color:var(--muted)]">{scenario.baseLabel}</p>
         </div>
-        <div className="rounded-lg border border-black bg-black px-4 py-3 text-white">
+        <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] px-4 py-3 text-[color:var(--foreground)]">
           <p className="text-xs font-bold uppercase tracking-[0.1em] opacity-80">
             After positive signal
           </p>
@@ -124,7 +124,7 @@ export default function BaseRatesExplorer() {
         </div>
       </div>
 
-      <p className="mt-4 rounded-lg border border-[color:var(--border)] bg-[color:var(--surface-strong)] px-4 py-3 text-sm text-[color:var(--muted)]">
+      <p className="mt-4 rounded-lg border border-[color:var(--border)] bg-[color:var(--surface-strong)] px-4 py-3 text-base text-[color:var(--muted)]">
         {insight}
       </p>
     </section>

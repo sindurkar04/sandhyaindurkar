@@ -15,7 +15,7 @@ export default function MathAppliedPage() {
   const groups = getPostsGroupedByCategory();
 
   return (
-    <main className="mx-auto w-full max-w-[1100px] space-y-10 px-4 py-10 sm:px-6 lg:px-8">
+    <main className="mx-auto w-full max-w-[1100px] space-y-10 px-4 py-7 sm:px-6 lg:px-8">
       <header className="space-y-3">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           Math, Applied
@@ -49,7 +49,7 @@ export default function MathAppliedPage() {
       </header>
 
       <section
-        className="space-y-6 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6 sm:p-8"
+        className="space-y-6 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-4 sm:p-5"
         id="ganita"
       >
         <h2 className="text-3xl font-black tracking-tight text-[color:var(--foreground)] sm:text-4xl">
@@ -59,7 +59,7 @@ export default function MathAppliedPage() {
         <GanitaGuide />
       </section>
 
-      <div className="space-y-14">
+      <div className="space-y-10">
         {groups.map(({ category, posts }) => (
           <section className="scroll-mt-24 space-y-6" id={category.id} key={category.id}>
             <div className="space-y-2 border-b border-[color:var(--border)] pb-4">

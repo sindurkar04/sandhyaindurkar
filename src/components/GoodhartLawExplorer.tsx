@@ -42,11 +42,11 @@ export default function GoodhartLawExplorer() {
   const actualHeight = (actual / 100) * plotHeight;
 
   return (
-    <section className="my-8 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-6">
+    <section className="my-6 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-4 sm:p-5">
       <h3 className="text-lg font-bold text-[color:var(--foreground)]">
         Example: watch the dashboard and the real outcome diverge
       </h3>
-      <p className="mt-2 max-w-prose text-sm leading-relaxed text-[color:var(--muted)]">
+      <p className="mt-2 max-w-prose text-base leading-relaxed text-[color:var(--muted)]">
         Drag target pressure: bonuses, reviews, and quotas tied to the metric. The reported number
         rises. The outcome you actually care about often falls.
       </p>
@@ -93,7 +93,7 @@ export default function GoodhartLawExplorer() {
       </div>
 
       <div className="mt-5 grid gap-3 sm:grid-cols-2">
-        <div className="rounded-lg border border-black bg-black px-4 py-3 text-white">
+        <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] px-4 py-3 text-[color:var(--foreground)]">
           <p className="text-xs font-bold uppercase tracking-[0.1em] opacity-80">
             Dashboard: {scenario.metricLabel}
           </p>

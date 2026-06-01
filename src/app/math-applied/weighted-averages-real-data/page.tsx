@@ -1,4 +1,5 @@
 import MathBlock from "@/components/MathBlock";
+import BusinessCaseExplorer from "@/components/BusinessCaseExplorer";
 import RelatedPosts from "@/components/RelatedPosts";
 import WeightedAveragesExplorer from "@/components/WeightedAveragesExplorer";
 import Image from "next/image";
@@ -8,8 +9,8 @@ export const metadata = mathPostMetadata("weighted-averages-real-data");
 
 export default function WeightedAveragesPostPage() {
   return (
-    <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">
-      <article className="space-y-7">
+    <main className="mx-auto w-full max-w-[1100px] space-y-5 px-2 py-7 sm:px-3">
+      <article className="space-y-5">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           Math, Applied
         </p>
@@ -28,7 +29,7 @@ export default function WeightedAveragesPostPage() {
           </div>
         </div>
 
-        <div className="space-y-5 text-[17px] leading-8 text-[color:var(--muted)]">
+        <div className="space-y-5 text-lg leading-8 text-[color:var(--muted)]">
           <h2 className="text-xl font-bold text-[color:var(--foreground)]">The idea</h2>
           <p>
             You have CSAT by region, conversion by channel, or satisfaction by plan tier. A simple
@@ -79,6 +80,8 @@ export default function WeightedAveragesPostPage() {
             satisfaction as if tiers were equal size. Marketing blends channel conversion the same
             way. Each headline can look better or worse than the experience most customers see.
           </p>
+          <BusinessCaseExplorer slug="weighted-averages-real-data" />
+
           <p>
             Report the weighted company number first. Show segment breakdown second. Targets and
             bonuses should track the weighted rollup unless you explicitly care about a small slice.

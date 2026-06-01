@@ -1,4 +1,5 @@
 import MathBlock from "@/components/MathBlock";
+import BusinessCaseExplorer from "@/components/BusinessCaseExplorer";
 import RelatedPosts from "@/components/RelatedPosts";
 import SimpsonsParadoxExplorer from "@/components/SimpsonsParadoxExplorer";
 import Image from "next/image";
@@ -10,8 +11,8 @@ export const metadata = mathPostMetadata("simpsons-paradox-real-decisions");
 
 export default function SimpsonsParadoxPostPage() {
   return (
-    <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">
-      <article className="space-y-7">
+    <main className="mx-auto w-full max-w-[1100px] space-y-5 px-2 py-7 sm:px-3">
+      <article className="space-y-5">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           Math, Applied
         </p>
@@ -30,7 +31,7 @@ export default function SimpsonsParadoxPostPage() {
           </div>
         </div>
 
-        <div className="space-y-5 text-[17px] leading-8 text-[color:var(--muted)]">
+        <div className="space-y-5 text-lg leading-8 text-[color:var(--muted)]">
           <h2 className="text-xl font-bold text-[color:var(--foreground)]">The idea</h2>
           <p>
             An A/B test can show variant winning on mobile and desktop, yet losing overall. That
@@ -81,6 +82,8 @@ export default function SimpsonsParadoxPostPage() {
             delay rollouts until assignment balance is explained or results are analyzed within the
             segments that matter for the decision.
           </p>
+          <BusinessCaseExplorer slug="simpsons-paradox-real-decisions" />
+
           <p>
             The habit is simple: report slices, then aggregate. If stories disagree, trust the
             slices you care about operationally and fix the mix before you call a winner.

@@ -138,7 +138,7 @@ export default function PercentilesDistributionChart({
           y1={padTop + plotHeight}
           y2={padTop + plotHeight}
         />
-        <text fill="#6b7280" fontSize="10" textAnchor="middle" x={width / 2} y={height - 8}>
+        <text fill="#6b7280" fontSize="12" textAnchor="middle" x={width / 2} y={height - 8}>
           Value ({unit})
         </text>
       </svg>

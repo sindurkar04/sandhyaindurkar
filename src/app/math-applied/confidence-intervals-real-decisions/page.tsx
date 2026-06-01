@@ -1,4 +1,5 @@
 import DataTable from "@/components/DataTable";
+import BusinessCaseExplorer from "@/components/BusinessCaseExplorer";
 import ConfidenceIntervalsExplorer from "@/components/ConfidenceIntervalsExplorer";
 import MathBlock from "@/components/MathBlock";
 import RelatedPosts from "@/components/RelatedPosts";
@@ -32,8 +33,8 @@ export default function ConfidenceIntervalsPostPage() {
   });
 
   return (
-    <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">
-      <article className="space-y-7">
+    <main className="mx-auto w-full max-w-[1100px] space-y-5 px-2 py-7 sm:px-3">
+      <article className="space-y-5">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           Math, Applied
         </p>
@@ -52,7 +53,7 @@ export default function ConfidenceIntervalsPostPage() {
           </div>
         </div>
 
-        <div className="space-y-5 text-[17px] leading-8 text-[color:var(--muted)]">
+        <div className="space-y-5 text-lg leading-8 text-[color:var(--muted)]">
           <h2 className="text-xl font-bold text-[color:var(--foreground)]">The idea</h2>
           <p>
             A conversion rate, CSAT score, or defect rate from one sample is a point estimate. It is
@@ -136,6 +137,8 @@ export default function ConfidenceIntervalsPostPage() {
             decision threshold, wait or gather more data. If the band clears the bar with room to
             spare, you have a stronger case to ship or scale.
           </p>
+          <BusinessCaseExplorer slug="confidence-intervals-real-decisions" />
+
           <p>
             The habit is showing a range next to every rate. The math above explains why that
             range widens or tightens.

@@ -36,11 +36,11 @@ export default function SelectionBiasExplorer() {
   const barHeight = (rate: number) => (rate / maxRate) * plotHeight;
 
   return (
-    <section className="my-8 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-6">
+    <section className="my-6 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-4 sm:p-5">
       <h3 className="text-lg font-bold text-[color:var(--foreground)]">
         Example: who is in the sample?
       </h3>
-      <p className="mt-2 max-w-prose text-sm leading-relaxed text-[color:var(--muted)]">
+      <p className="mt-2 max-w-prose text-base leading-relaxed text-[color:var(--muted)]">
         Compare the group you measured with the full population. When the sample is self-selected,
         the headline rate can look much better than reality.
       </p>
@@ -65,7 +65,7 @@ export default function SelectionBiasExplorer() {
       <p className="mt-3 text-sm font-bold text-[color:var(--foreground)]">{scenario.headline}</p>
 
       <div className="mt-5 grid gap-3 sm:grid-cols-3">
-        <div className="rounded-lg border border-black bg-black px-4 py-3 text-white">
+        <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] px-4 py-3 text-[color:var(--foreground)]">
           <p className="text-xs font-bold uppercase tracking-[0.1em] opacity-80">Selected sample</p>
           <p className="mt-1 text-3xl font-black">{formatPercent(scenario.selectedPositiveRate)}</p>
           <p className="mt-1 text-xs opacity-80">n = {formatCount(scenario.selectedSize)}</p>
@@ -164,7 +164,7 @@ export default function SelectionBiasExplorer() {
         </p>
       </div>
 
-      <p className="mt-4 rounded-lg border border-[color:var(--border)] bg-[color:var(--surface-strong)] px-4 py-3 text-sm text-[color:var(--muted)]">
+      <p className="mt-4 rounded-lg border border-[color:var(--border)] bg-[color:var(--surface-strong)] px-4 py-3 text-base text-[color:var(--muted)]">
         <span className="font-bold text-[color:var(--foreground)]">Who is missing:</span>{" "}
         {scenario.missingGroup}. {scenario.businessRead}
       </p>

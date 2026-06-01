@@ -54,11 +54,11 @@ export default function MeanMedianExplorer() {
   const showMedian = highlight === "median" || highlight === "both";
 
   return (
-    <section className="my-8 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-6">
+    <section className="my-6 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-4 sm:p-5">
       <h3 className="text-lg font-bold text-[color:var(--foreground)]">
         Example: customer orders
       </h3>
-      <p className="mt-2 text-sm leading-relaxed text-[color:var(--muted)]">
+      <p className="mt-2 text-base leading-relaxed text-[color:var(--muted)]">
         Toggle the outlier and switch what you highlight. Watch how the mean moves more than the
         median.
       </p>
@@ -241,7 +241,7 @@ export default function MeanMedianExplorer() {
                 </text>
                 <text
                   fill="#6b7280"
-                  fontSize="10"
+                  fontSize="12"
                   textAnchor="middle"
                   x={x + barWidth / 2}
                   y={chartHeight + 18}

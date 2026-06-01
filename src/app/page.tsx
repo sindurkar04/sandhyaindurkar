@@ -14,8 +14,9 @@ const storyParagraphs = [
 
 export default function Home() {
   return (
-    <main className="mx-auto w-full max-w-[1100px] space-y-14 px-4 py-10 sm:px-6 lg:px-8">
-      <section className="grid gap-10 lg:grid-cols-[minmax(0,280px)_1fr] lg:items-center lg:gap-12">
+    <main className="mx-auto w-full max-w-[1200px] space-y-12 px-3 py-8 sm:px-5 lg:px-8">
+      <section className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-7">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,280px)_1fr] lg:items-center lg:gap-12">
         <div className="mx-auto w-full max-w-[280px] lg:mx-0">
           <div className="overflow-hidden rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] shadow-sm">
             <Image
@@ -29,34 +30,49 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="space-y-4 text-center lg:text-left">
+          <div className="space-y-5 text-center lg:text-left">
           <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
             Sandhya Indurkar
           </p>
-          <h1 className="text-4xl font-black tracking-tight text-[color:var(--foreground)] sm:text-5xl">
+            <h1 className="text-4xl font-black tracking-tight text-[color:var(--foreground)] sm:text-5xl lg:text-6xl">
             Math and food, applied in real life.
           </h1>
-          <p className="max-w-xl text-lg leading-relaxed text-[color:var(--muted)] lg:max-w-none">
+            <p className="max-w-2xl text-lg leading-relaxed text-[color:var(--body)] lg:max-w-none">
             I write about how data shapes decisions at work, and what cooking teaches about
             learning by doing.
           </p>
+            <div className="flex flex-wrap items-center justify-center gap-3 lg:justify-start">
+              <a
+                className="inline-flex items-center rounded-lg bg-black px-5 py-2.5 text-sm font-bold text-white transition hover:bg-[#222222]"
+                href="/math-applied"
+              >
+                Explore Math, Applied
+              </a>
+              <a
+                className="inline-flex items-center rounded-lg border border-[color:var(--border-strong)] px-5 py-2.5 text-sm font-bold text-[color:var(--foreground)] transition hover:bg-[#f9fafb]"
+                href="/learning-through-food"
+              >
+                Explore Learning Through Food
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="space-y-6 border-t border-[color:var(--border)] pt-12">
+      <section className="space-y-6 rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-7">
         <div className="space-y-2">
           <h2 className="text-2xl font-black tracking-tight text-[color:var(--foreground)] sm:text-3xl">
             My story
           </h2>
         </div>
-        <div className="space-y-5 text-base leading-relaxed text-[color:var(--muted)]">
+        <div className="max-w-[900px] space-y-5 text-base leading-relaxed text-[color:var(--body)]">
           {storyParagraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
       </section>
 
-      <section className="space-y-6 border-t border-[color:var(--border)] pt-12">
+      <section className="space-y-6 rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-7">
         <div className="space-y-2">
           <h2 className="text-2xl font-black tracking-tight text-[color:var(--foreground)] sm:text-3xl">
             Start here
@@ -84,10 +100,10 @@ export default function Home() {
         </div>
 
         <a
-          className="flex items-center gap-4 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 transition hover:border-[color:var(--border-strong)] hover:shadow-sm"
+          className="flex items-center gap-4 rounded-xl border border-[color:var(--border)] bg-[#fafafa] p-5 transition hover:border-[color:var(--border-strong)] hover:shadow-sm"
           href="/math-applied#ganita"
         >
-          <div className="h-12 w-12 shrink-0 overflow-hidden rounded-lg border border-[color:var(--border)] bg-[#f5f1eb]">
+          <div className="h-12 w-12 shrink-0 overflow-hidden rounded-lg border border-[color:var(--border)] bg-[color:var(--surface-strong)]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               alt=""

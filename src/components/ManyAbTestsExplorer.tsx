@@ -42,11 +42,11 @@ export default function ManyAbTestsExplorer() {
   const barWidth = Math.max(8, (width - padX * 2 - gap * (barCount - 1)) / barCount);
 
   return (
-    <section className="my-8 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-6">
+    <section className="my-6 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-4 sm:p-5">
       <h3 className="text-lg font-bold text-[color:var(--foreground)]">
         Example: how many false wins should you expect?
       </h3>
-      <p className="mt-2 max-w-prose text-sm leading-relaxed text-[color:var(--muted)]">
+      <p className="mt-2 max-w-prose text-base leading-relaxed text-[color:var(--muted)]">
         Assume every test is a true null (no real lift). At 5% confidence per test, running many
         tests still produces winners by luck. Drag test count and threshold to see the odds.
       </p>
@@ -71,7 +71,7 @@ export default function ManyAbTestsExplorer() {
       <p className="mt-3 text-sm font-bold text-[color:var(--foreground)]">{scenario.headline}</p>
 
       <div className="mt-5 grid gap-3 sm:grid-cols-3">
-        <div className="rounded-lg border border-black bg-black px-4 py-3 text-white">
+        <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] px-4 py-3 text-[color:var(--foreground)]">
           <p className="text-xs font-bold uppercase tracking-[0.1em] opacity-80">
             Chance of ≥1 false win
           </p>
@@ -157,7 +157,7 @@ export default function ManyAbTestsExplorer() {
         </p>
       </div>
 
-      <p className="mt-4 rounded-lg border border-[color:var(--border)] bg-[color:var(--surface-strong)] px-4 py-3 text-sm text-[color:var(--muted)]">
+      <p className="mt-4 rounded-lg border border-[color:var(--border)] bg-[color:var(--surface-strong)] px-4 py-3 text-base text-[color:var(--muted)]">
         {insight}
       </p>
     </section>

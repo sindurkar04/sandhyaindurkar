@@ -259,12 +259,12 @@ function ScatterPanel({
             />
           );
         })}
-        <text fill="#6b7280" fontSize="10" textAnchor="middle" x={width / 2} y={height - 8}>
+        <text fill="#6b7280" fontSize="12" textAnchor="middle" x={width / 2} y={height - 8}>
           {xLabel}
         </text>
         <text
           fill="#6b7280"
-          fontSize="10"
+          fontSize="12"
           textAnchor="middle"
           transform={`rotate(-90, 14, ${height / 2})`}
           x={14}
@@ -322,11 +322,11 @@ export default function CorrelationCausationExplorer() {
 
   return (
     <>
-      <section className="my-8 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-6">
+      <section className="my-6 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-4 sm:p-5">
         <h3 className="text-lg font-bold text-[color:var(--foreground)]">
           Example: correlation is not causation
         </h3>
-        <p className="mt-2 text-sm leading-relaxed text-[color:var(--muted)]">
+        <p className="mt-2 text-base leading-relaxed text-[color:var(--muted)]">
           Pick a real-world pattern, read the correlation, then reveal the hidden factor. The
           scatter plot stays the same — the interpretation changes.
         </p>
@@ -398,7 +398,7 @@ export default function CorrelationCausationExplorer() {
         <p className="mt-4 text-sm font-bold text-[color:var(--foreground)]">
           {showConfounder ? scenario.confounderHeadline : scenario.naiveHeadline}
         </p>
-        <p className="mt-2 text-sm leading-relaxed text-[color:var(--muted)]">
+        <p className="mt-2 text-base leading-relaxed text-[color:var(--muted)]">
           {showConfounder ? scenario.confounderDetail : scenario.naiveDetail}
         </p>
 
@@ -417,11 +417,11 @@ export default function CorrelationCausationExplorer() {
         </p>
       </section>
 
-      <section className="my-8 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-6">
+      <section className="my-6 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-4 sm:p-5">
         <h3 className="text-lg font-bold text-[color:var(--foreground)]">
           Checklist: what supports a causal claim?
         </h3>
-        <p className="mt-2 text-sm leading-relaxed text-[color:var(--muted)]">
+        <p className="mt-2 text-base leading-relaxed text-[color:var(--muted)]">
           Strong correlation is only the starting point. Toggle what you would need before acting
           on a causal story in a product or policy decision.
         </p>

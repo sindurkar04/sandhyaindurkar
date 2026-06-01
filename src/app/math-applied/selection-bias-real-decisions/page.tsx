@@ -1,4 +1,5 @@
 import DataTable from "@/components/DataTable";
+import BusinessCaseExplorer from "@/components/BusinessCaseExplorer";
 import MathBlock from "@/components/MathBlock";
 import RelatedPosts from "@/components/RelatedPosts";
 import SelectionBiasExplorer from "@/components/SelectionBiasExplorer";
@@ -31,8 +32,8 @@ const rows = (Object.keys(SCENARIOS) as (keyof typeof SCENARIOS)[]).map((key) =>
 
 export default function SelectionBiasPostPage() {
   return (
-    <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">
-      <article className="space-y-7">
+    <main className="mx-auto w-full max-w-[1100px] space-y-5 px-2 py-7 sm:px-3">
+      <article className="space-y-5">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           Math, Applied
         </p>
@@ -51,7 +52,7 @@ export default function SelectionBiasPostPage() {
           </div>
         </div>
 
-        <div className="space-y-5 text-[17px] leading-8 text-[color:var(--muted)]">
+        <div className="space-y-5 text-lg leading-8 text-[color:var(--muted)]">
           <h2 className="text-xl font-bold text-[color:var(--foreground)]">The idea</h2>
           <p>
             Selection bias happens when the sample you measure is not the population you care about.
@@ -132,6 +133,15 @@ export default function SelectionBiasPostPage() {
             A high score from a biased sample is still data. It is just data about the selected
             group. Treat it that way before you set roadmaps or revenue targets.
           </p>
+
+          <h2 className="text-xl font-bold text-[color:var(--foreground)]">
+            A simple application: survey bias
+          </h2>
+          <p>
+            Lower response rate and happy-user bias. See when reported satisfaction overshoots the
+            true population.
+          </p>
+          <BusinessCaseExplorer slug="selection-bias-real-decisions" />
         </div>
 
         <RelatedPosts slug="selection-bias-real-decisions" />

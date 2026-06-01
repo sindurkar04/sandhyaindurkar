@@ -1,4 +1,5 @@
 import DataTable from "@/components/DataTable";
+import BusinessCaseExplorer from "@/components/BusinessCaseExplorer";
 import MathBlock from "@/components/MathBlock";
 import PrimeFactorizationExplorer from "@/components/PrimeFactorizationExplorer";
 import RelatedPosts from "@/components/RelatedPosts";
@@ -31,8 +32,8 @@ export default function PrimeFactorizationPostPage() {
   const factorization = formatFactorizationPlain(10_000);
 
   return (
-    <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">
-      <article className="space-y-7">
+    <main className="mx-auto w-full max-w-[1100px] space-y-5 px-2 py-7 sm:px-3">
+      <article className="space-y-5">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           Math, Applied
         </p>
@@ -51,7 +52,7 @@ export default function PrimeFactorizationPostPage() {
           </div>
         </div>
 
-        <div className="space-y-5 text-[17px] leading-8 text-[color:var(--muted)]">
+        <div className="space-y-5 text-lg leading-8 text-[color:var(--muted)]">
           <h2 className="text-xl font-bold text-[color:var(--foreground)]">The idea</h2>
           <p>
             Prime factorization is usually taught as a mechanical exercise. You take a number and
@@ -125,6 +126,8 @@ export default function PrimeFactorizationPostPage() {
             structure, you might choose arbitrary batch sizes like 300, 700, or 1,200. That often
             leaves a partial batch at the end, uneven worker load, and extra scheduling overhead.
           </p>
+          <BusinessCaseExplorer slug="prime-factorization-real-problems" />
+
           <p>
             Factorization tells you that clean sizes exist: 100, 200, 250, and 500 all divide 10,000
             with nothing left over. Those are not random picks. They come from how the number is

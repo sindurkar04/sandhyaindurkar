@@ -1,4 +1,5 @@
 import AbTestReadoutsExplorer from "@/components/AbTestReadoutsExplorer";
+import BusinessCaseExplorer from "@/components/BusinessCaseExplorer";
 import MathBlock from "@/components/MathBlock";
 import RelatedPosts from "@/components/RelatedPosts";
 import Image from "next/image";
@@ -10,8 +11,8 @@ export const metadata = mathPostMetadata("ab-test-readouts-real-decisions");
 
 export default function AbTestReadoutsPostPage() {
   return (
-    <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">
-      <article className="space-y-7">
+    <main className="mx-auto w-full max-w-[1100px] space-y-5 px-2 py-7 sm:px-3">
+      <article className="space-y-5">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           Math, Applied
         </p>
@@ -30,7 +31,7 @@ export default function AbTestReadoutsPostPage() {
           </div>
         </div>
 
-        <div className="space-y-5 text-[17px] leading-8 text-[color:var(--muted)]">
+        <div className="space-y-5 text-lg leading-8 text-[color:var(--muted)]">
           <h2 className="text-xl font-bold text-[color:var(--foreground)]">The idea</h2>
           <p>
             Experiment readouts often hide behind words like significant or not significant. You do
@@ -89,6 +90,8 @@ export default function AbTestReadoutsPostPage() {
             instead of a lone p-value. Ops sets reversible rollouts when separation is thin. Leadership
             asks for the minimum lift bar up front so debates happen before data arrives, not after.
           </p>
+          <BusinessCaseExplorer slug="ab-test-readouts-real-decisions" />
+
           <p>
             When you report overlap clearly, the next step is obvious: ship, wait for more traffic,
             or slice the result before trusting the aggregate. That last step matters when segment

@@ -30,11 +30,11 @@ export default function ProbabilityExplorer() {
   const maxSuccesses = Math.max(1, trials);
 
   return (
-    <section className="my-8 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-6">
+    <section className="my-6 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-4 sm:p-5">
       <h3 className="text-lg font-bold text-[color:var(--foreground)]">
         Example: estimate a win rate from past trials
       </h3>
-      <p className="mt-2 max-w-prose text-sm leading-relaxed text-[color:var(--muted)]">
+      <p className="mt-2 max-w-prose text-base leading-relaxed text-[color:var(--muted)]">
         Probability from data is successes divided by trials. Drag both to see how the estimate
         shifts and how stable it feels at different sample sizes.
       </p>
@@ -59,7 +59,7 @@ export default function ProbabilityExplorer() {
       <p className="mt-4 text-sm text-[color:var(--muted)]">{scenario.context}</p>
 
       <div className="mt-5 grid gap-3 sm:grid-cols-3">
-        <div className="rounded-lg border border-black bg-black px-4 py-3 text-white">
+        <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] px-4 py-3 text-[color:var(--foreground)]">
           <p className="text-xs font-bold uppercase tracking-[0.1em] opacity-80">Estimated rate</p>
           <p className="mt-1 text-3xl font-black">{formatPercent(p)}</p>
         </div>
@@ -117,7 +117,7 @@ export default function ProbabilityExplorer() {
         </div>
       </div>
 
-      <p className="mt-4 rounded-lg border border-[color:var(--border)] bg-[color:var(--surface-strong)] px-4 py-3 text-sm text-[color:var(--muted)]">
+      <p className="mt-4 rounded-lg border border-[color:var(--border)] bg-[color:var(--surface-strong)] px-4 py-3 text-base text-[color:var(--muted)]">
         {insight}
       </p>
     </section>

@@ -1,3 +1,62 @@
+export type HeatmapData = {
+  businessLabel: string;
+  cohortLabels: string[];
+  periodLabels: string[];
+  /** Retention % still active; rows are signup cohorts, columns are periods since signup. */
+  rates: number[][];
+  readout: string;
+};
+
+export const HEATMAP_BY_SCENARIO: Record<ScenarioKey, HeatmapData> = {
+  mix_shift: {
+    businessLabel: "Self-serve SaaS: % of signup cohort still active each week",
+    cohortLabels: ["Oct signup", "Nov signup", "Dec signup", "Jan signup"],
+    periodLabels: ["Week 0", "Week 1", "Week 2", "Week 3", "Week 4"],
+    rates: [
+      [100, 73, 60, 52, 46],
+      [100, 71, 58, 49, 43],
+      [100, 69, 55, 46, 40],
+      [100, 67, 52, 43, 37],
+    ],
+    readout:
+      "Read across a row for one cohort's decay curve. Compare rows at the same week column: Jan is not worse at week 4 because of mix alone, each cohort has its own row.",
+  },
+  cohort_decline: {
+    businessLabel: "Product analytics tool: weekly retention by signup month",
+    cohortLabels: ["Oct signup", "Nov signup", "Dec signup", "Jan signup"],
+    periodLabels: ["Week 0", "Week 1", "Week 2", "Week 3", "Week 4"],
+    rates: [
+      [100, 74, 62, 54, 48],
+      [100, 72, 59, 51, 45],
+      [100, 70, 56, 48, 42],
+      [100, 68, 53, 45, 39],
+    ],
+    readout:
+      "Each new row is lighter left to right and weaker than the row above. That pattern is a product slide, not a spreadsheet artifact.",
+  },
+  signup_surge: {
+    businessLabel: "Mobile app: activation cohorts after a January ad campaign",
+    cohortLabels: ["Oct signup", "Nov signup", "Dec signup", "Jan signup"],
+    periodLabels: ["Week 0", "Week 1", "Week 2", "Week 3", "Week 4"],
+    rates: [
+      [100, 75, 63, 55, 47],
+      [100, 74, 62, 54, 46],
+      [100, 73, 61, 53, 45],
+      [100, 62, 46, 38, 36],
+    ],
+    readout:
+      "Jan's row drops fast after week 0. Older cohort rows stay steady. A surge of low-quality signups shows up as one dark row, not a faded whole chart.",
+  },
+};
+
+/** Map retention % to site palette for heatmap cells (high = dark). */
+export function heatmapCellStyle(rate: number): { backgroundColor: string; color: string } {
+  const clamped = Math.max(0, Math.min(100, rate));
+  const backgroundColor = `color-mix(in srgb, #111111 ${clamped}%, var(--surface-strong))`;
+  const color = clamped >= 58 ? "#ffffff" : "#111111";
+  return { backgroundColor, color };
+}
+
 export type ScenarioKey = "mix_shift" | "cohort_decline" | "signup_surge";
 
 export type CohortRow = {

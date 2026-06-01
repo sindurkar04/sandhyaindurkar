@@ -51,11 +51,11 @@ export default function AbTestReadoutsExplorer() {
   const scaleX = (value: number) => padX + (value / maxRate) * plotWidth;
 
   return (
-    <section className="my-8 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-6">
+    <section className="my-6 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-4 sm:p-5">
       <h3 className="text-lg font-bold text-[color:var(--foreground)]">
         Example: read an A/B test without p-value jargon
       </h3>
-      <p className="mt-2 max-w-prose text-sm leading-relaxed text-[color:var(--muted)]">
+      <p className="mt-2 max-w-prose text-base leading-relaxed text-[color:var(--muted)]">
         Compare observed lift to your minimum bar and check whether the 95% bands overlap. Overlap
         means the result is still compatible with no real difference.
       </p>
@@ -100,7 +100,7 @@ export default function AbTestReadoutsExplorer() {
             {formatRate(variantInterval.low)} to {formatRate(variantInterval.high)}
           </p>
         </div>
-        <div className="rounded-lg border border-black bg-black px-4 py-3 text-white">
+        <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] px-4 py-3 text-[color:var(--foreground)]">
           <p className="text-xs font-bold uppercase tracking-[0.1em] opacity-80">Lift</p>
           <p className="mt-1 text-2xl font-black">
             {lift >= 0 ? "+" : ""}
@@ -214,7 +214,7 @@ export default function AbTestReadoutsExplorer() {
         </p>
       </div>
 
-      <div className="mt-4 rounded-lg border border-black bg-black px-4 py-3 text-white">
+      <div className="mt-4 rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] px-4 py-3 text-[color:var(--foreground)]">
         <p className="text-sm font-bold">{readout.verdict}</p>
         <p className="mt-1 text-sm opacity-90">{readout.detail}</p>
       </div>

@@ -1,24 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
-  <rect width="800" height="500" fill="#f5f1eb"/>
+  <rect width="800" height="500" fill="#f5f5f5"/>
   <rect x="80" y="60" width="640" height="380" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-  <text x="400" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="#111111">Headline vs Cohorts</text>
-  <rect x="120" y="100" width="200" height="64" rx="8" fill="#111111"/>
-  <text x="220" y="128" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Overall retention</text>
-  <text x="220" y="154" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="#ffffff">44%</text>
-  <rect x="360" y="95" width="320" height="220" rx="8" fill="#f9fafb" stroke="#e5e7eb" stroke-width="2"/>
-  <text x="380" y="125" font-family="system-ui, sans-serif" font-size="13" font-weight="800" fill="#111111">Signup cohort (D30)</text>
-  <rect x="380" y="140" width="280" height="28" rx="4" fill="#e5e7eb"/>
-  <rect x="380" y="140" width="252" height="28" rx="4" fill="#111111"/>
-  <text x="390" y="159" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Oct  46%</text>
-  <rect x="380" y="178" width="280" height="28" rx="4" fill="#e5e7eb"/>
-  <rect x="380" y="178" width="235" height="28" rx="4" fill="#374151"/>
-  <text x="390" y="197" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Nov  43%</text>
-  <rect x="380" y="216" width="280" height="28" rx="4" fill="#e5e7eb"/>
-  <rect x="380" y="216" width="218" height="28" rx="4" fill="#6b7280"/>
-  <text x="390" y="235" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Dec  40%</text>
-  <rect x="380" y="254" width="280" height="28" rx="4" fill="#e5e7eb"/>
-  <rect x="380" y="254" width="196" height="28" rx="4" fill="#9ca3af"/>
-  <text x="390" y="273" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#111111">Jan  37%</text>
-  <text x="400" y="360" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#6b7280">Same users, different story when you split by signup month</text>
-  <path d="M330 132 L350 180" stroke="#111111" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="400" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="#111111">Cohort Retention Heatmap</text>
+  <text x="120" y="108" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6b7280">Cohort</text>
+  <text x="260" y="108" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6b7280">W0</text>
+  <text x="360" y="108" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6b7280">W1</text>
+  <text x="460" y="108" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6b7280">W2</text>
+  <text x="560" y="108" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6b7280">W3</text>
+  <text x="660" y="108" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6b7280">W4</text>
+  <text x="120" y="155" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#111111">Oct</text>
+  <rect x="220" y="132" width="80" height="36" rx="4" fill="#111111"/><text x="260" y="155" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#ffffff">100</text>
+  <rect x="320" y="132" width="80" height="36" rx="4" fill="#374151"/><text x="360" y="155" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#ffffff">74</text>
+  <rect x="420" y="132" width="80" height="36" rx="4" fill="#6b7280"/><text x="460" y="155" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#ffffff">62</text>
+  <rect x="520" y="132" width="80" height="36" rx="4" fill="#9ca3af"/><text x="560" y="155" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#111111">54</text>
+  <rect x="620" y="132" width="80" height="36" rx="4" fill="#d1d5db"/><text x="660" y="155" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#111111">48</text>
+  <text x="120" y="215" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#111111">Nov</text>
+  <rect x="220" y="192" width="80" height="36" rx="4" fill="#111111"/><text x="260" y="215" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#ffffff">100</text>
+  <rect x="320" y="192" width="80" height="36" rx="4" fill="#4b5563"/><text x="360" y="215" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#ffffff">72</text>
+  <rect x="420" y="192" width="80" height="36" rx="4" fill="#6b7280"/><text x="460" y="215" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#ffffff">59</text>
+  <rect x="520" y="192" width="80" height="36" rx="4" fill="#9ca3af"/><text x="560" y="215" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#111111">51</text>
+  <rect x="620" y="192" width="80" height="36" rx="4" fill="#9ca3af"/><text x="660" y="215" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#111111">45</text>
+  <text x="120" y="275" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#111111">Jan</text>
+  <rect x="220" y="252" width="80" height="36" rx="4" fill="#111111"/><text x="260" y="275" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#ffffff">100</text>
+  <rect x="320" y="252" width="80" height="36" rx="4" fill="#9ca3af"/><text x="360" y="275" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#111111">62</text>
+  <rect x="420" y="252" width="80" height="36" rx="4" fill="#d1d5db"/><text x="460" y="275" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#111111">46</text>
+  <rect x="520" y="252" width="80" height="36" rx="4" fill="#e5e7eb"/><text x="560" y="275" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#111111">38</text>
+  <rect x="620" y="252" width="80" height="36" rx="4" fill="#f5f5f5" stroke="#e5e7eb"/><text x="660" y="275" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#111111">36</text>
+  <text x="400" y="360" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#6b7280">Darker = more users still active that week</text>
 </svg>

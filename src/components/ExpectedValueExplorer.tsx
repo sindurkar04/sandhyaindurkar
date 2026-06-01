@@ -100,11 +100,11 @@ export default function ExpectedValueExplorer() {
   const aWins = evA >= evB;
 
   return (
-    <section className="my-8 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-6">
+    <section className="my-6 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-4 sm:p-5">
       <h3 className="text-lg font-bold text-[color:var(--foreground)]">
         Example: compare two bets
       </h3>
-      <p className="mt-2 max-w-prose text-sm leading-relaxed text-[color:var(--muted)]">
+      <p className="mt-2 max-w-prose text-base leading-relaxed text-[color:var(--muted)]">
         Expected value blends upside, chance, and cost. A big swing can lose on average even when
         the jackpot sounds exciting. Drag the sliders on each option.
       </p>
@@ -114,7 +114,7 @@ export default function ExpectedValueExplorer() {
         <OptionCard highlight={!aWins} onChange={setOptionB} option={optionB} />
       </div>
 
-      <p className="mt-4 rounded-lg border border-[color:var(--border)] bg-[color:var(--surface-strong)] px-4 py-3 text-sm text-[color:var(--muted)]">
+      <p className="mt-4 rounded-lg border border-[color:var(--border)] bg-[color:var(--surface-strong)] px-4 py-3 text-base text-[color:var(--muted)]">
         {compareRead(evA, evB)}
       </p>
     </section>

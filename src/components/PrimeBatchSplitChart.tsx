@@ -33,7 +33,7 @@ export default function PrimeBatchSplitChart({ total, plan, unitLabel }: Props) 
     <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--surface-strong)] p-4 sm:p-5">
       <div className="flex flex-wrap items-baseline justify-between gap-2">
         <p className="text-xs font-bold uppercase tracking-[0.12em] text-[color:var(--muted)]">
-          Batch split
+          Batch split (full vs partial)
         </p>
         <p className="text-sm font-bold text-[color:var(--foreground)]">
           {plan.isClean
@@ -42,7 +42,7 @@ export default function PrimeBatchSplitChart({ total, plan, unitLabel }: Props) 
         </p>
       </div>
 
-      <div className="mt-4 flex h-14 w-full overflow-hidden rounded-md border border-[color:var(--border)] bg-white">
+      <div className="mt-4 flex h-20 w-full overflow-hidden rounded-md border border-[color:var(--border)] bg-white">
         {condensed.map((segment, index) => {
           const widthPercent = (segment.size / total) * 100;
           return (

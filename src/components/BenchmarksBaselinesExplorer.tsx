@@ -26,11 +26,11 @@ export default function BenchmarksBaselinesExplorer() {
   const verdict = useMemo(() => baselineVerdict(scenario), [scenario]);
 
   return (
-    <section className="my-8 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-6">
+    <section className="my-6 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-4 sm:p-5">
       <h3 className="text-lg font-bold text-[color:var(--foreground)]">
         Example: one number, four baselines
       </h3>
-      <p className="mt-2 max-w-prose text-sm leading-relaxed text-[color:var(--muted)]">
+      <p className="mt-2 max-w-prose text-base leading-relaxed text-[color:var(--muted)]">
         The current metric stays fixed. Change the baseline and the story changes. Up vs last month
         can still be down vs last year or below plan.
       </p>
@@ -54,7 +54,7 @@ export default function BenchmarksBaselinesExplorer() {
 
       <p className="mt-3 text-sm font-bold text-[color:var(--foreground)]">{scenario.headline}</p>
 
-      <div className="mt-5 rounded-lg border border-black bg-black px-4 py-3 text-white">
+      <div className="mt-5 rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] px-4 py-3 text-[color:var(--foreground)]">
         <p className="text-xs font-bold uppercase tracking-[0.1em] opacity-80">
           Current {scenario.metricLabel.toLowerCase()}
         </p>

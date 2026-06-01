@@ -62,11 +62,11 @@ export default function VarianceSpreadExplorer() {
     chartHeight - ((value - chartMin) / chartSpan) * chartHeight;
 
   return (
-    <section className="my-8 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-5 sm:p-6">
+    <section className="my-6 rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] p-4 sm:p-5">
       <h3 className="text-lg font-bold text-[color:var(--foreground)]">
         Example: same average, different spread
       </h3>
-      <p className="mt-2 text-sm leading-relaxed text-[color:var(--muted)]">
+      <p className="mt-2 text-base leading-relaxed text-[color:var(--muted)]">
         Two delivery teams can share the same mean time while feeling very different to customers.
         Increase spread to see variance rise even when the mean stays similar.
       </p>
@@ -147,7 +147,7 @@ export default function VarianceSpreadExplorer() {
           width={chartWidth}
         >
           <rect
-            fill="#f5f1eb"
+            fill="var(--surface-strong)"
             height={scaleY(meanValue - stdDev) - scaleY(meanValue + stdDev)}
             width={chartWidth - 48}
             x="32"
@@ -195,7 +195,7 @@ export default function VarianceSpreadExplorer() {
                 </text>
                 <text
                   fill="#6b7280"
-                  fontSize="10"
+                  fontSize="12"
                   textAnchor="middle"
                   x={x + barWidth / 2}
                   y={chartHeight + 18}

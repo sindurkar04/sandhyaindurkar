@@ -1,4 +1,5 @@
 import DataTable from "@/components/DataTable";
+import BusinessCaseExplorer from "@/components/BusinessCaseExplorer";
 import MathBlock from "@/components/MathBlock";
 import RegressionExplorerLoader from "@/components/RegressionExplorerLoader";
 import RelatedPosts from "@/components/RelatedPosts";
@@ -54,8 +55,8 @@ export default function RegressionPostPage() {
   const leverRows = buildLeverRows(PRIMARY_MODEL);
 
   return (
-    <main className="mx-auto w-full max-w-[768px] space-y-7 px-3 py-10 sm:px-4">
-      <article className="space-y-7">
+    <main className="mx-auto w-full max-w-[1100px] space-y-5 px-2 py-7 sm:px-3">
+      <article className="space-y-5">
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-[color:var(--muted)]">
           Math, Applied
         </p>
@@ -74,7 +75,7 @@ export default function RegressionPostPage() {
           </div>
         </div>
 
-        <div className="space-y-5 text-[17px] leading-8 text-[color:var(--muted)]">
+        <div className="space-y-5 text-lg leading-8 text-[color:var(--muted)]">
           <h2 className="text-xl font-bold text-[color:var(--foreground)]">The idea</h2>
           <p>
             In business data work, regression usually means building a rule that turns inputs
@@ -234,6 +235,14 @@ export default function RegressionPostPage() {
             data back to test, watch how outliers pull the line, then use predictions for
             planning. That workflow is what regression is for in real work.
           </p>
+
+          <h2 className="text-xl font-bold text-[color:var(--foreground)]">
+            A simple application: spend forecast
+          </h2>
+          <p>
+            Move weekly ad spend. See predicted orders and holdout error before you lock budget.
+          </p>
+          <BusinessCaseExplorer slug="regression-real-decisions" />
         </div>
 
         <RelatedPosts slug="regression-real-decisions" />

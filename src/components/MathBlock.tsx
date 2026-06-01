@@ -14,11 +14,11 @@ export default function MathBlock({ label, formula, children }: MathBlockProps) 
           {label}
         </p>
       )}
-      <div className="text-[17px] font-bold leading-relaxed tracking-tight text-[color:var(--foreground)] sm:text-lg">
+      <div className="text-lg font-bold leading-relaxed tracking-tight text-[color:var(--foreground)] sm:text-lg">
         {formula}
       </div>
       {children && (
-        <div className="space-y-2 border-t border-[color:var(--border)] pt-3 text-sm leading-relaxed text-[color:var(--muted)]">
+        <div className="space-y-2 border-t border-[color:var(--border)] pt-3 text-base leading-relaxed text-[color:var(--muted)]">
           {children}
         </div>
       )}
