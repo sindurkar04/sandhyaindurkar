@@ -556,4 +556,85 @@ export const EXPERIMENTS_APPLICATION_CASES: ApplicationCaseConfig[] = [
       };
     },
   },
+  {
+    slug: "stockout-probability-real-decisions",
+    title: "Reorder point: balance stockout risk and inventory drag",
+    intro: "Move demand, lead time, and reorder point. See how fast stockout risk drops as you add buffer.",
+    sliders: [
+      {
+        id: "dailyDemand",
+        label: "Average daily demand",
+        min: 40,
+        max: 220,
+        step: 5,
+        default: 95,
+      },
+      {
+        id: "leadDays",
+        label: "Supplier lead time (days)",
+        min: 3,
+        max: 21,
+        step: 1,
+        default: 9,
+      },
+      {
+        id: "reorderPoint",
+        label: "Reorder point",
+        min: 400,
+        max: 2200,
+        step: 20,
+        default: 980,
+      },
+    ],
+    compute: (state) => {
+      const dailyDemand = n(state, "dailyDemand", 95);
+      const leadDays = n(state, "leadDays", 9);
+      const reorderPoint = n(state, "reorderPoint", 980);
+      const meanLeadDemand = dailyDemand * leadDays;
+      const stdLeadDemand = 0.28 * dailyDemand * Math.sqrt(leadDays);
+      const z = (reorderPoint - meanLeadDemand) / Math.max(stdLeadDemand, 1);
+      const service = clamp(50 + z * 18, 5, 99);
+      const stockoutRisk = 100 - service;
+      const safetyStock = reorderPoint - meanLeadDemand;
+      const carryingIndex = clamp((reorderPoint / Math.max(meanLeadDemand, 1)) * 100, 40, 220);
+
+      return {
+        headline: `Reorder ${reorderPoint.toLocaleString()} gives ~${service.toFixed(0)}% service level (${stockoutRisk.toFixed(0)}% stockout risk)`,
+        readout:
+          stockoutRisk > 20
+            ? "Risk is high for customer-facing SKUs. Raise reorder point or shorten lead time."
+            : "Risk is in a workable band. Monitor forecast drift and supplier reliability.",
+        charts: [
+          {
+            id: "risk-curve",
+            title: "Stockout risk by reorder point (%)",
+            kind: "line",
+            labels: ["-20%", "-10%", "Current", "+10%", "+20%"],
+            values: [stockoutRisk * 1.6, stockoutRisk * 1.25, stockoutRisk, stockoutRisk * 0.75, stockoutRisk * 0.55].map((v) =>
+              clamp(v, 1, 95),
+            ),
+            valueFormat: (v) => `${v.toFixed(0)}%`,
+          },
+          {
+            id: "buffer-vs-demand",
+            title: "Demand vs reorder buffer",
+            kind: "bar",
+            labels: ["Lead-time demand", "Reorder point", "Safety stock"],
+            values: [meanLeadDemand, reorderPoint, Math.max(safetyStock, 0)],
+            valueFormat: (v) => Math.round(v).toLocaleString(),
+          },
+        ],
+        stats: [
+          { label: "Stockout risk", value: `${stockoutRisk.toFixed(0)}%`, emphasis: stockoutRisk <= 12 },
+          { label: "Safety stock", value: `${Math.max(0, Math.round(safetyStock)).toLocaleString()} units` },
+          { label: "Carrying index", value: `${carryingIndex.toFixed(0)}` },
+        ],
+        actions: {
+          optimize: ["Set reorder points by target service level per SKU tier", "Review supplier lead-time variability monthly"],
+          hold: ["One reorder rule for every SKU regardless of volatility"],
+          escalateIf: ["Stockout risk > 20% on revenue-driving items"],
+        },
+      };
+    },
+  },
 ];

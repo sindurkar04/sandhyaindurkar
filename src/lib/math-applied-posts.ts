@@ -228,6 +228,21 @@ export const MATH_POSTS: MathPost[] = [
     ],
   },
   {
+    slug: "stockout-probability-real-decisions",
+    href: "/math-applied/stockout-probability-real-decisions",
+    title: "Will We Run Out? Probability of Stockout in Real Inventory Decisions",
+    description: "Set reorder points using explicit stockout risk instead of gut feel.",
+    image: "/stockout_probability.svg",
+    category: "experiments",
+    tags: ["probability", "inventory", "stockout", "reorder-point", "service-level"],
+    problemPhrases: [
+      "how likely are we to stock out",
+      "set reorder point from risk",
+      "inventory risk during lead time",
+      "stockout probability before restock",
+    ],
+  },
+  {
     slug: "confidence-intervals-real-decisions",
     href: "/math-applied/confidence-intervals-real-decisions",
     title: "One Number Is Not Enough: Confidence Intervals",
@@ -516,6 +531,11 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "base-rates-real-decisions",
     "confidence-intervals-real-decisions",
     "sample-size-real-decisions",
+  ],
+  "stockout-probability-real-decisions": [
+    "probability-real-decisions",
+    "expected-value-real-decisions",
+    "confidence-intervals-real-decisions",
   ],
   "base-rates-real-decisions": [
     "probability-real-decisions",

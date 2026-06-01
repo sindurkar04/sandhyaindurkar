@@ -97,6 +97,10 @@ const SYNONYMS: Record<string, string[]> = {
   power: ["underpowered", "mde"],
   underpowered: ["power", "sample"],
   mde: ["power", "lift"],
+  inventory: ["stockout", "reorder", "demand"],
+  stockout: ["inventory", "reorder", "service"],
+  reorder: ["stockout", "inventory"],
+  demand: ["inventory", "stockout"],
   denominator: ["rate", "count"],
   count: ["rate", "volume"],
   volume: ["count", "rate"],
@@ -253,4 +257,5 @@ export const GANITA_GUIDE_EXAMPLES = [
   "Was the test underpowered",
   "Down vs last month but up vs last year",
   "Total tickets up but per user flat",
+  "How likely are we to stock out before restock",
 ];
