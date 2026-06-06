@@ -28,6 +28,9 @@ fi
 kill_next_for_repo() {
   pkill -9 -f "$ROOT/node_modules/.bin/next dev" 2>/dev/null || true
   pkill -9 -f "$ROOT/node_modules/next/dist/bin/next dev" 2>/dev/null || true
+  pkill -9 -f "$ROOT/node_modules/next/dist/server/lib/start-server" 2>/dev/null || true
+  pkill -9 -f "next dev --port 3000" 2>/dev/null || true
+  pkill -9 -f "next dev --port 3001" 2>/dev/null || true
 }
 
 stop_port() {
@@ -71,25 +74,14 @@ wait_for_no_next() {
   done
 }
 
-# Clear stale lock from crashed session (or force-restart when --clean)
-if [[ -d "$LOCK_DIR" ]]; then
-  if [[ -f "$LOCK_DIR/pid" ]]; then
-    old_pid="$(cat "$LOCK_DIR/pid" 2>/dev/null || true)"
-    if [[ "$CLEAN_CACHE" == "1" ]] && [[ -n "$old_pid" ]] && kill -0 "$old_pid" 2>/dev/null; then
-      echo "Stopping existing dev server (pid $old_pid) for clean restart..."
-      kill -9 "$old_pid" 2>/dev/null || true
-      rm -rf "$LOCK_DIR"
-    elif [[ -z "$old_pid" ]] || ! kill -0 "$old_pid" 2>/dev/null; then
-      rm -rf "$LOCK_DIR"
-    else
-      echo "Dev server already running (pid $old_pid) at http://localhost:$PORT"
-      echo "Stop it with: npm run kill-dev"
-      echo "Or force clean restart: npm run dev:clean"
-      exit 1
-    fi
-  else
-    rm -rf "$LOCK_DIR"
+# Stop any previous dev session (always restart — never block on stale lock).
+if [[ -d "$LOCK_DIR" ]] && [[ -f "$LOCK_DIR/pid" ]]; then
+  old_pid="$(cat "$LOCK_DIR/pid" 2>/dev/null || true)"
+  if [[ -n "$old_pid" ]] && kill -0 "$old_pid" 2>/dev/null; then
+    echo "Stopping previous dev session (pid $old_pid)..."
+    kill -9 "$old_pid" 2>/dev/null || true
   fi
+  rm -rf "$LOCK_DIR"
 fi
 
 mkdir "$LOCK_DIR"
@@ -109,19 +101,20 @@ sleep 1
 wait_for_no_next
 wait_for_port_free "$PORT"
 
-if [[ "$CLEAN_CACHE" == "1" ]] || [[ ! -f .next/routes-manifest.json ]]; then
-  if [[ -d .next ]]; then
-    echo "Clearing .next cache..."
-    rm -rf .next
-  fi
+# Always clear build cache on dev start — prevents stale chunk 500s after HMR.
+if [[ -d .next ]]; then
+  echo "Clearing .next cache..."
+  rm -rf .next
 fi
 
 echo ""
 echo "============================================"
 echo "  Dev server: http://localhost:$PORT"
 echo "  Math index: http://localhost:$PORT/math-applied"
-echo "  If pages 500: npm run dev:clean"
+echo "  Always use: npm run dev"
+echo "  If stuck:   npm run kill-dev && npm run dev"
 echo "============================================"
 echo ""
 
+export NEXT_DISABLE_DEVTOOLS=1
 exec npm run dev:next -- --port "$PORT"

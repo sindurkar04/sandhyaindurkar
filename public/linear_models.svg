@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#ffffff"/>
+  <rect x="96" y="72" width="608" height="356" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+  <text x="400" y="52" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="#111111">Linear Models</text>
+  <line x1="140" y1="340" x2="660" y2="340" stroke="#9ca3af" stroke-width="2"/>
+  <line x1="140" y1="340" x2="140" y2="120" stroke="#9ca3af" stroke-width="2"/>
+  <line x1="160" y1="300" x2="620" y2="150" stroke="#2563eb" stroke-width="4"/>
+  <circle cx="220" cy="270" r="7" fill="#111111"/>
+  <circle cx="320" cy="235" r="7" fill="#111111"/>
+  <circle cx="420" cy="205" r="7" fill="#111111"/>
+  <circle cx="520" cy="175" r="7" fill="#111111"/>
+  <text x="400" y="390" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#374151">y = a + bx</text>
+</svg>

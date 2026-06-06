@@ -1,3 +1,4 @@
+import ContactSubscribeSection from "@/components/ContactSubscribeSection";
 import Image from "next/image";
 import PostIndexCard from "@/components/PostIndexCard";
 import { homeMetadata } from "@/lib/metadata";
@@ -122,6 +123,8 @@ export default function Home() {
           </div>
         </a>
       </section>
+
+      <ContactSubscribeSection />
     </main>
   );
 }

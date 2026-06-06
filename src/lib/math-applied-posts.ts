@@ -1,4 +1,4 @@
-export type MathCategoryId = "summarize" | "experiments" | "traps";
+export type MathCategoryId = "foundations" | "summarize" | "experiments" | "traps";
 
 export type MathCategory = {
   id: MathCategoryId;
@@ -19,6 +19,11 @@ export type MathPost = {
 
 export const MATH_CATEGORIES: MathCategory[] = [
   {
+    id: "foundations",
+    label: "Math foundations",
+    description: "Core probability, distributions, EV, and lines that unlock the business posts.",
+  },
+  {
     id: "summarize",
     label: "Summarize the data",
     description: "Means, spread, percentiles, and when one number misleads.",
@@ -36,6 +41,62 @@ export const MATH_CATEGORIES: MathCategory[] = [
 ];
 
 export const MATH_POSTS: MathPost[] = [
+  {
+    slug: "probability-basics-events-independence",
+    href: "/math-applied/probability-basics-events-independence",
+    title: "Probability Basics: Events, Joint Probability, and Independence",
+    description: "Pure probability building blocks before win rates, base rates, and screening.",
+    image: "/probability_basics.svg",
+    category: "foundations",
+    tags: ["probability", "events", "independence", "foundation"],
+    problemPhrases: [
+      "what does independent events mean",
+      "joint probability versus separate probability",
+      "when can i multiply probabilities",
+    ],
+  },
+  {
+    slug: "reading-distributions-percentiles-quartiles",
+    href: "/math-applied/reading-distributions-percentiles-quartiles",
+    title: "Reading Distributions: Percentiles and Quartiles from Scratch",
+    description: "Sort data, read cutoffs, and understand P90 and quartiles before SLA metrics.",
+    image: "/reading_distributions.svg",
+    category: "foundations",
+    tags: ["percentile", "quartile", "distribution", "foundation"],
+    problemPhrases: [
+      "how to read percentiles from data",
+      "what is p90 in plain math",
+      "quartiles from sorted values",
+    ],
+  },
+  {
+    slug: "expected-value-pure-definition",
+    href: "/math-applied/expected-value-pure-definition",
+    title: "Expected Value: The Pure Definition",
+    description: "EV as probability-weighted average before campaign and pipeline decisions.",
+    image: "/expected_value_pure.svg",
+    category: "foundations",
+    tags: ["expected-value", "probability", "foundation"],
+    problemPhrases: [
+      "expected value formula in plain math",
+      "probability times payoff definition",
+      "how to compute ev from outcomes",
+    ],
+  },
+  {
+    slug: "linear-models-slope-intuition",
+    href: "/math-applied/linear-models-slope-intuition",
+    title: "Linear Models: y = a + bx in Plain Math",
+    description: "Intercept, slope, and residuals before regression forecasting posts.",
+    image: "/linear_models.svg",
+    category: "foundations",
+    tags: ["linear-model", "slope", "intercept", "foundation"],
+    problemPhrases: [
+      "what does slope mean in y equals a plus bx",
+      "intercept and slope intuition",
+      "residual distance from a line",
+    ],
+  },
   {
     slug: "prime-factorization-real-problems",
     href: "/math-applied/prime-factorization-real-problems",
@@ -452,6 +513,26 @@ export const MATH_POSTS: MathPost[] = [
 ];
 
 const RELATED_BY_SLUG: Record<string, string[]> = {
+  "probability-basics-events-independence": [
+    "probability-real-decisions",
+    "base-rates-real-decisions",
+    "false-alarm-missed-win-real-decisions",
+  ],
+  "reading-distributions-percentiles-quartiles": [
+    "percentiles-quartiles-real-data",
+    "variance-spread-real-data",
+    "mean-vs-median-real-data",
+  ],
+  "expected-value-pure-definition": [
+    "expected-value-real-decisions",
+    "probability-real-decisions",
+    "stockout-probability-real-decisions",
+  ],
+  "linear-models-slope-intuition": [
+    "regression-real-decisions",
+    "correlation-vs-causation-real-decisions",
+    "benchmarks-baselines-real-decisions",
+  ],
   "prime-factorization-real-problems": [
     "sample-size-real-decisions",
     "mean-vs-median-real-data",

@@ -7,7 +7,7 @@ LOCK_DIR="$ROOT/.next-dev.lock"
 kill_next_for_repo() {
   pkill -9 -f "$ROOT/node_modules/.bin/next dev" 2>/dev/null || true
   pkill -9 -f "$ROOT/node_modules/next/dist/bin/next dev" 2>/dev/null || true
-  pkill -9 -f "$ROOT/.next" 2>/dev/null || true
+  pkill -9 -f "$ROOT/node_modules/next/dist/server/lib/start-server" 2>/dev/null || true
 }
 
 stop_port() {

@@ -104,6 +104,16 @@ const SYNONYMS: Record<string, string[]> = {
   denominator: ["rate", "count"],
   count: ["rate", "volume"],
   volume: ["count", "rate"],
+  independent: ["independence", "joint"],
+  independence: ["independent", "joint"],
+  joint: ["independence", "independent"],
+  percentile: ["quartile", "p90", "distribution"],
+  quartile: ["percentile", "median", "distribution"],
+  expected: ["ev", "value"],
+  ev: ["expected", "value"],
+  slope: ["linear", "intercept", "regression"],
+  intercept: ["slope", "linear"],
+  linear: ["slope", "regression"],
 };
 
 function normalize(text: string): string {

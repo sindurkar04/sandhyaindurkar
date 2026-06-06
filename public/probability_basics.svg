@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#ffffff"/>
+  <rect x="96" y="72" width="608" height="356" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+  <text x="400" y="52" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="#111111">Probability Basics</text>
+  <circle cx="280" cy="220" r="70" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+  <circle cx="380" cy="220" r="70" fill="#ecfdf5" stroke="#059669" stroke-width="3"/>
+  <path d="M330 220 C350 180, 310 180, 330 220" fill="#bfdbfe"/>
+  <text x="280" y="225" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#1d4ed8">A</text>
+  <text x="380" y="225" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#047857">B</text>
+  <text x="330" y="320" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#374151">P(A and B)</text>
+</svg>
