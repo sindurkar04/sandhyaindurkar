@@ -8,6 +8,8 @@
     "dev:clean": "CLEAN_CACHE=1 bash scripts/dev.sh --clean",
     "kill-dev": "bash scripts/kill-dev.sh",
     "check-dev": "bash scripts/check-dev.sh",
+    "generate-sitemap": "node scripts/generate-sitemap.mjs",
+    "prebuild": "npm run generate-sitemap",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
