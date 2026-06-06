@@ -1,4 +1,4 @@
-export type MathCategoryId = "foundations" | "summarize" | "experiments" | "traps";
+export type MathCategoryId = "case-studies" | "foundations" | "summarize" | "experiments" | "traps";
 
 export type MathCategory = {
   id: MathCategoryId;
@@ -38,9 +38,29 @@ export const MATH_CATEGORIES: MathCategory[] = [
     label: "Traps and causation",
     description: "Bias, confounders, and conclusions that look right but are not.",
   },
+  {
+    id: "case-studies",
+    label: "Case studies",
+    description: "Long decision stories with tradeoffs, explorers, and links to the underlying math.",
+  },
 ];
 
 export const MATH_POSTS: MathPost[] = [
+  {
+    slug: "case-study-northside-weekend-reorder",
+    href: "/math-applied/case-study-northside-weekend-reorder",
+    title: "Company X: The Weekend Reorder Decision",
+    description:
+      "A full case walkthrough at Company X: festival demand, three teams, reorder points, and explicit stockout risk.",
+    image: "/case_study_northside_stockout.svg",
+    category: "case-studies",
+    tags: ["case-study", "inventory", "stockout", "reorder-point"],
+    problemPhrases: [
+      "inventory case study reorder point",
+      "weekend stockout festival retail",
+      "how to decide reorder level with probability",
+    ],
+  },
   {
     slug: "probability-basics-events-independence",
     href: "/math-applied/probability-basics-events-independence",
@@ -513,6 +533,11 @@ export const MATH_POSTS: MathPost[] = [
 ];
 
 const RELATED_BY_SLUG: Record<string, string[]> = {
+  "case-study-northside-weekend-reorder": [
+    "stockout-probability-real-decisions",
+    "expected-value-real-decisions",
+    "reading-distributions-percentiles-quartiles",
+  ],
   "probability-basics-events-independence": [
     "probability-real-decisions",
     "base-rates-real-decisions",
@@ -614,6 +639,7 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "sample-size-real-decisions",
   ],
   "stockout-probability-real-decisions": [
+    "case-study-northside-weekend-reorder",
     "probability-real-decisions",
     "expected-value-real-decisions",
     "confidence-intervals-real-decisions",
@@ -679,7 +705,7 @@ export function getPostsGroupedByCategory(): { category: MathCategory; posts: Ma
   return MATH_CATEGORIES.map((category) => ({
     category,
     posts: MATH_POSTS.filter((post) => post.category === category.id),
-  }));
+  })).filter((group) => group.posts.length > 0);
 }
 
 export function getRelatedPosts(slug: string, limit = 3): MathPost[] {

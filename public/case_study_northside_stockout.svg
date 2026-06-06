@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#ffffff"/>
+  <rect x="96" y="72" width="608" height="356" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+  <text x="400" y="52" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="800" fill="#111111">Case Study: Weekend Reorder</text>
+  <rect x="140" y="280" width="520" height="12" fill="#e5e7eb"/>
+  <rect x="140" y="280" width="340" height="12" fill="#93c5fd"/>
+  <line x1="480" y1="260" x2="480" y2="310" stroke="#dc2626" stroke-dasharray="6 4" stroke-width="3"/>
+  <text x="492" y="255" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#991b1b">Reorder</text>
+  <text x="400" y="340" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#374151">Inventory vs festival demand</text>
+  <text x="400" y="390" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#111111">Company X</text>
+</svg>
