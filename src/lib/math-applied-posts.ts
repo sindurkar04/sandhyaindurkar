@@ -352,6 +352,40 @@ export const MATH_POSTS: MathPost[] = [
     ],
   },
   {
+    slug: "model-calibration-real-decisions",
+    href: "/math-applied/model-calibration-real-decisions",
+    title: "The Model Says 90%: Can You Trust the Score?",
+    description:
+      "Reliability diagrams, overconfident scores, and why accuracy can look fine while auto-block rules fail.",
+    image: "/model_calibration.svg",
+    category: "experiments",
+    tags: ["ai", "ml", "calibration", "classifier", "fraud", "probability"],
+    problemPhrases: [
+      "model says 90 percent can I trust it",
+      "calibration reliability diagram",
+      "scores overconfident",
+      "auto block threshold fraud model",
+      "probability score not matching reality",
+    ],
+  },
+  {
+    slug: "concept-drift-real-decisions",
+    href: "/math-applied/concept-drift-real-decisions",
+    title: "Last Quarter's Model, This Quarter's Data: Concept Drift",
+    description:
+      "When live behavior shifts but training accuracy still looks fine — and auto-decisions start misfiring.",
+    image: "/concept_drift.svg",
+    category: "traps",
+    tags: ["ai", "ml", "concept-drift", "model", "fraud", "monitoring"],
+    problemPhrases: [
+      "model worked in training fails live",
+      "concept drift distribution shift",
+      "live false positive rate climbed",
+      "retrain model after product launch",
+      "training accuracy fine but production bad",
+    ],
+  },
+  {
     slug: "ab-test-readouts-real-decisions",
     href: "/math-applied/ab-test-readouts-real-decisions",
     title: "A/B Test Readouts: Significance Without Jargon",
@@ -604,9 +638,9 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "confidence-intervals-real-decisions",
   ],
   "overfitting-real-decisions": [
+    "concept-drift-real-decisions",
     "regression-real-decisions",
-    "sample-size-real-decisions",
-    "confidence-intervals-real-decisions",
+    "model-calibration-real-decisions",
   ],
   "regression-to-the-mean-real-decisions": [
     "goodhart-law-real-decisions",
@@ -631,7 +665,7 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
   "confidence-intervals-real-decisions": [
     "sample-size-real-decisions",
     "ab-test-readouts-real-decisions",
-    "probability-real-decisions",
+    "model-calibration-real-decisions",
   ],
   "probability-real-decisions": [
     "base-rates-real-decisions",
@@ -645,9 +679,9 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "confidence-intervals-real-decisions",
   ],
   "base-rates-real-decisions": [
+    "model-calibration-real-decisions",
     "probability-real-decisions",
-    "selection-bias-real-decisions",
-    "expected-value-real-decisions",
+    "false-alarm-missed-win-real-decisions",
   ],
   "ab-test-readouts-real-decisions": [
     "confidence-intervals-real-decisions",
@@ -665,9 +699,19 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "ab-test-readouts-real-decisions",
   ],
   "false-alarm-missed-win-real-decisions": [
+    "model-calibration-real-decisions",
     "statistical-power-real-decisions",
-    "ab-test-readouts-real-decisions",
-    "many-ab-tests-real-decisions",
+    "base-rates-real-decisions",
+  ],
+  "model-calibration-real-decisions": [
+    "base-rates-real-decisions",
+    "confidence-intervals-real-decisions",
+    "concept-drift-real-decisions",
+  ],
+  "concept-drift-real-decisions": [
+    "overfitting-real-decisions",
+    "model-calibration-real-decisions",
+    "benchmarks-baselines-real-decisions",
   ],
   "weighted-averages-real-data": [
     "cohort-analysis-real-decisions",
@@ -675,9 +719,9 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "mean-vs-median-real-data",
   ],
   "benchmarks-baselines-real-decisions": [
+    "concept-drift-real-decisions",
     "seasonality-real-decisions",
     "percent-change-real-decisions",
-    "cohort-analysis-real-decisions",
   ],
   "seasonality-real-decisions": [
     "benchmarks-baselines-real-decisions",

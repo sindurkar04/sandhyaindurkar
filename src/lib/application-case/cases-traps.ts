@@ -538,4 +538,87 @@ export const TRAPS_APPLICATION_CASES: ApplicationCaseConfig[] = [
       };
     },
   },
+  {
+    slug: "concept-drift-real-decisions",
+    title: "Fraud model review: train vs live after a launch",
+    intro: "Increase drift severity. Training accuracy holds while live accuracy and false positives worsen.",
+    sliders: [
+      {
+        id: "drift",
+        label: "Concept drift severity",
+        min: 0,
+        max: 100,
+        step: 1,
+        default: 55,
+        lowLabel: "Stable",
+        highLabel: "Severe shift",
+      },
+      {
+        id: "autoBlock",
+        label: "Auto-block share (%)",
+        min: 0,
+        max: 15,
+        step: 1,
+        default: 6,
+        format: (v) => `${v}%`,
+      },
+    ],
+    compute: (state) => {
+      const drift = n(state, "drift", 55);
+      const autoBlock = n(state, "autoBlock", 6) / 100;
+      const trainAcc = clamp(94 - drift * 0.04, 88, 96);
+      const liveAcc = clamp(trainAcc - drift * 0.28, 52, 94);
+      const fpRate = clamp(4 + drift * 0.38, 4, 42);
+      const dailyVolume = 5000;
+      const falseBlocks = Math.round(dailyVolume * autoBlock * (fpRate / 100));
+      const gap = trainAcc - liveAcc;
+      const curve = [0, 30, 60, 90, 100].map((d) => {
+        const t = clamp(94 - d * 0.04, 88, 96);
+        return clamp(t - d * 0.28, 52, 96);
+      });
+      return {
+        headline: `Train ${trainAcc.toFixed(0)}% vs live ${liveAcc.toFixed(0)}% — ~${falseBlocks} false blocks/day`,
+        readout:
+          gap >= 15
+            ? "Pause or narrow automation. Retrain on recent labeled data before trusting auto-block."
+            : gap >= 8
+              ? "Schedule retraining and replot calibration. Threshold tweaks may buy time."
+              : "Drift is manageable — keep monitoring score distributions monthly.",
+        charts: [
+          {
+            id: "accuracy",
+            title: "Accuracy (%)",
+            kind: "bar",
+            labels: ["Train", "Live"],
+            values: [trainAcc, liveAcc],
+            valueFormat: (v) => `${v.toFixed(0)}%`,
+          },
+          {
+            id: "drift-curve",
+            title: "Live accuracy vs drift",
+            kind: "line",
+            labels: ["0", "30", "60", "90", "100"],
+            values: curve,
+            valueFormat: (v) => `${v.toFixed(0)}%`,
+          },
+        ],
+        stats: [
+          { label: "Train accuracy", value: `${trainAcc.toFixed(0)}%` },
+          { label: "Live accuracy", value: `${liveAcc.toFixed(0)}%`, emphasis: true },
+          { label: "False blocks / day", value: `~${falseBlocks}` },
+        ],
+        actions: {
+          optimize: [
+            "Monitor live labeled accuracy weekly after launches",
+            "Retrain on rolling 90-day window when gap opens",
+          ],
+          hold: ["Trusting training accuracy after product or fraud pattern changes"],
+          escalateIf: [
+            "Train vs live accuracy gap exceeds 15 pp",
+            "Live false-positive rate above 25%",
+          ],
+        },
+      };
+    },
+  },
 ];

@@ -114,6 +114,11 @@ const SYNONYMS: Record<string, string[]> = {
   slope: ["linear", "intercept", "regression"],
   intercept: ["slope", "linear"],
   linear: ["slope", "regression"],
+  calibration: ["reliability", "score", "overconfident"],
+  overconfident: ["calibration", "score"],
+  drift: ["concept-drift", "distribution"],
+  "concept-drift": ["drift", "retrain", "live"],
+  retrain: ["drift", "concept-drift"],
 };
 
 function normalize(text: string): string {
@@ -264,6 +269,8 @@ export const GANITA_GUIDE_EXAMPLES = [
   "Retention dropped after signup surge",
   "Correlation between two dashboard metrics",
   "Model perfect on training bad on holdout",
+  "Model says 90 percent can I trust the score",
+  "Live false positive rate climbed after launch",
   "Was the test underpowered",
   "Down vs last month but up vs last year",
   "Total tickets up but per user flat",

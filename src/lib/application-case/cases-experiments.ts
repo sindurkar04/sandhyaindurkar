@@ -1,3 +1,4 @@
+import { actualRateForPredicted } from "@/lib/calibration-data";
 import { clamp } from "./chart-utils";
 import type { ApplicationCaseConfig, ApplicationCaseState } from "./types";
 
@@ -633,6 +634,102 @@ export const EXPERIMENTS_APPLICATION_CASES: ApplicationCaseConfig[] = [
           optimize: ["Set reorder points by target service level per SKU tier", "Review supplier lead-time variability monthly"],
           hold: ["One reorder rule for every SKU regardless of volatility"],
           escalateIf: ["Stockout risk > 20% on revenue-driving items"],
+        },
+      };
+    },
+  },
+  {
+    slug: "model-calibration-real-decisions",
+    title: "Auto-block policy: threshold vs score reliability",
+    intro:
+      "Move block threshold, review capacity, and calibration quality. Overconfident scores inflate overturns even when ranking is fine.",
+    sliders: [
+      {
+        id: "threshold",
+        label: "Auto-block threshold",
+        min: 65,
+        max: 95,
+        step: 1,
+        default: 85,
+        format: (v) => `${v}%`,
+      },
+      {
+        id: "capacity",
+        label: "Review capacity (orders/day)",
+        min: 50,
+        max: 400,
+        step: 10,
+        default: 180,
+        format: (v) => v.toLocaleString(),
+      },
+      {
+        id: "quality",
+        label: "Calibration quality",
+        min: 0,
+        max: 100,
+        step: 1,
+        default: 25,
+        lowLabel: "Overconfident",
+        highLabel: "Well calibrated",
+      },
+    ],
+    compute: (state) => {
+      const threshold = n(state, "threshold", 85) / 100;
+      const capacity = n(state, "capacity", 180);
+      const quality = n(state, "quality", 25);
+      const dailyVolume = 5000;
+      const baseRate = 0.02;
+      const blockedFraction = clamp(Math.pow(1 - threshold, 1.4) * 0.42, 0.008, 0.12);
+      const blocked = Math.round(dailyVolume * blockedFraction);
+      const avgPredicted = clamp(threshold + 0.06, 0.7, 0.98);
+      const trueFraudRate = actualRateForPredicted(avgPredicted, quality, baseRate);
+      const overturnRate = (1 - trueFraudRate) * 100;
+      const overturns = Math.round(blocked * (1 - trueFraudRate));
+      const overflow = Math.max(0, blocked - capacity);
+      const qualityCurve = [0, 25, 50, 75, 100].map((q) => {
+        const rate = actualRateForPredicted(avgPredicted, q, baseRate);
+        return (1 - rate) * 100;
+      });
+      return {
+        headline: `${blocked} auto-blocks/day → ~${overturnRate.toFixed(0)}% overturn rate (${overturns} clean orders)`,
+        readout:
+          quality < 45
+            ? `Scores run hot at ${(avgPredicted * 100).toFixed(0)}% predicted but ~${(trueFraudRate * 100).toFixed(0)}% truly fraud. Recalibrate before tightening threshold.`
+            : quality <= 55
+              ? "Calibration is workable. Threshold tradeoffs dominate — tune block bar vs review load."
+              : "Conservative scores: fewer false blocks, but more fraud may slip below threshold.",
+        charts: [
+          {
+            id: "blocks",
+            title: "Daily auto-blocks vs capacity",
+            kind: "bar",
+            labels: ["Blocked", "Capacity"],
+            values: [blocked, capacity],
+          },
+          {
+            id: "overturn-curve",
+            title: "Overturn rate vs calibration",
+            kind: "line",
+            labels: ["0", "25", "50", "75", "100"],
+            values: qualityCurve,
+            valueFormat: (v) => `${v.toFixed(0)}%`,
+          },
+        ],
+        stats: [
+          { label: "Auto-blocks / day", value: blocked.toLocaleString(), emphasis: true },
+          { label: "Overturn rate", value: `${overturnRate.toFixed(0)}%` },
+          { label: "Queue overflow", value: overflow > 0 ? `+${overflow}` : "None" },
+        ],
+        actions: {
+          optimize: [
+            "Plot reliability before wiring scores to auto-block",
+            "Recalibrate (Platt/isotonic) when overturn rate spikes",
+          ],
+          hold: ["Lowering threshold alone when scores are overconfident"],
+          escalateIf: [
+            "Review queue overflow exceeds 50 orders/day",
+            "Overturn rate above 45% after auto-block",
+          ],
         },
       };
     },
