@@ -69,12 +69,44 @@ export default function LearningThroughFoodPage() {
         </div>
         <div className="grid gap-6 md:grid-cols-2">
           <PostIndexCard
+            alt="Homemade rasmalai cake with saffron frosting and rose petals"
+            description="My first bake: a rasmalai-inspired cake for my son's second birthday."
+            href="/learning-through-food/rasmalai-cake"
+            image="/rasmalai_cake.jpg"
+            imageCover
+            title="Rasmalai Cake"
+          />
+          <PostIndexCard
             alt="Homemade rasmalai in cardamom milk"
             description="Soft cheese dumplings in milk: what the process taught me about timing and texture."
             href="/learning-through-food/rasmalai"
             image="/rasmalai.jpg"
             imageCover
             title="Rasmalai"
+          />
+          <PostIndexCard
+            alt="Akki rotti with onion and herbs, charred from the tawa"
+            description="Rice flour flatbread: heat, hydration, and when to stop handling the dough."
+            href="/learning-through-food/akki-rotti"
+            image="/akki_rotti.jpg"
+            imageCover
+            title="Akki Rotti"
+          />
+          <PostIndexCard
+            alt="Malai kofta in creamy tomato gravy"
+            description="Paneer koftas in cream sauce: building flavor in stages."
+            href="/learning-through-food/malai-kofta"
+            image="/malai_kofta.jpg"
+            imageCover
+            title="Malai Kofta"
+          />
+          <PostIndexCard
+            alt="Milk burfi squares topped with almond slivers"
+            description="Simple milk fudge: stirring, timing, and knowing when to stop."
+            href="/learning-through-food/milk-burfi"
+            image="/milk_burfi.jpg"
+            imageCover
+            title="Milk Burfi"
           />
         </div>
       </section>

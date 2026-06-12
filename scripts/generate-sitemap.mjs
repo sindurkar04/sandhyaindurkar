@@ -8,6 +8,10 @@ const STATIC_ENTRIES = [
   { path: "/math-applied", priority: 0.9, changeFrequency: "weekly" },
   { path: "/learning-through-food", priority: 0.9, changeFrequency: "weekly" },
   { path: "/learning-through-food/rasmalai", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/learning-through-food/rasmalai-cake", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/learning-through-food/akki-rotti", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/learning-through-food/malai-kofta", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/learning-through-food/milk-burfi", priority: 0.7, changeFrequency: "monthly" },
 ];
 
 const postsSource = readFileSync(
