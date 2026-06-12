@@ -391,7 +391,7 @@ export const MATH_POSTS: MathPost[] = [
     title: "How Many Labels Before You Trust the Metric?",
     description:
       "Labeled-set size for precision, recall, and F1 — when the eval band is too wide to ship.",
-    image: "/eval_sample_size.svg",
+    image: "/ml_label_sample_size.svg",
     category: "experiments",
     tags: ["ai", "ml", "eval", "precision", "recall", "sample-size", "labels"],
     problemPhrases: [

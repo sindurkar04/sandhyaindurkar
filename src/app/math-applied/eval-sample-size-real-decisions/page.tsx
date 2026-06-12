@@ -2,6 +2,7 @@ import BusinessCaseExplorer from "@/components/BusinessCaseExplorer";
 import EvalSampleSizeExplorer from "@/components/EvalSampleSizeExplorer";
 import MathBlock from "@/components/MathBlock";
 import RelatedPosts from "@/components/RelatedPosts";
+import Image from "next/image";
 import { mathPostMetadata } from "@/lib/math-post-metadata";
 
 export const metadata = mathPostMetadata("eval-sample-size-real-decisions");
@@ -17,12 +18,12 @@ export default function EvalSampleSizePostPage() {
           How Many Labels Before You Trust the Metric?
         </h1>
         <div className="overflow-hidden rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] p-3">
-          <div className="mx-auto flex max-w-[360px] min-h-[200px] items-center justify-center">
-            <img
-              alt="95% confidence band around 68% precision on a thin eval set"
+          <div className="mx-auto max-w-[360px]">
+            <Image
+              alt="95% confidence band around 68% precision on a thin labeled set"
               className="h-auto w-full object-contain"
               height={500}
-              src="/eval_sample_size.svg"
+              src="/ml_label_sample_size.svg"
               width={800}
             />
           </div>

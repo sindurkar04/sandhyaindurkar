@@ -75,7 +75,7 @@ export default function RootLayout({
         <footer className="mt-10 border-t border-white/15 bg-black">
           <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-4 py-6 sm:px-6 lg:px-8">
             <div className="flex flex-wrap items-center justify-between gap-4">
-              <p className="text-gray-300">© 2026 Sandhya Indurkar</p>
+              <p className="text-gray-300">© 2024 Sandhya Indurkar</p>
               <a
                 aria-label="LinkedIn profile"
                 className="inline-flex items-center gap-2 rounded border border-white/25 px-3.5 py-2 text-sm font-bold text-white transition hover:bg-white hover:text-black"
