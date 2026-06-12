@@ -21,14 +21,18 @@ export default function PostIndexCard({
       href={href}
     >
       <div
-        className={`border-b border-[color:var(--border)] bg-[color:var(--surface-strong)] transition group-hover:bg-[color:var(--border)] ${
-          imageCover ? "h-44 overflow-hidden" : "flex h-44 items-center justify-center p-4"
+        className={`border-b border-[color:var(--border)] bg-[#f3f3f3] transition group-hover:bg-[color:var(--border)] ${
+          imageCover
+            ? "aspect-[4/3] overflow-hidden"
+            : "flex h-44 items-center justify-center p-4"
         }`}
       >
         <img
           alt={alt}
           className={
-            imageCover ? "h-full w-full object-cover" : "max-h-full max-w-full object-contain"
+            imageCover
+              ? "h-full w-full object-cover object-center"
+              : "max-h-full max-w-full object-contain"
           }
           src={image}
         />

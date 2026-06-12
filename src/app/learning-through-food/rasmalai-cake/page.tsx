@@ -97,8 +97,7 @@ export default function RasmalaiCakePostPage() {
 
           <p className="font-semibold text-[color:var(--foreground)]">For the frosting</p>
           <ul className="list-inside list-disc space-y-1">
-            <li>8 oz cream cheese, softened</li>
-            <li>1 cup heavy cream</li>
+            <li>2 cups whipping cream, chilled</li>
             <li>½ cup powdered sugar, or to taste</li>
             <li>¼ teaspoon cardamom powder</li>
             <li>Pinch of saffron soaked in warm milk</li>
@@ -110,7 +109,7 @@ export default function RasmalaiCakePostPage() {
             <li>Mix dry ingredients. Whisk wet ingredients separately, then combine until just smooth. Pour into a greased round pan.</li>
             <li>Bake at 350°F (175°C) for about 30 to 35 minutes until a toothpick comes out clean. Cool completely on a rack.</li>
             <li>Warm the soak ingredients until sugar dissolves. Poke holes in the cooled cake and spoon the milk over slowly, letting it absorb.</li>
-            <li>Beat cream cheese and powdered sugar until smooth. Whip cream to soft peaks and fold in with cardamom and saffron milk.</li>
+            <li>Whip cream to soft peaks with powdered sugar, cardamom, and saffron milk.</li>
             <li>Frost the cake. Chill at least one hour before serving. Garnish with rose petals and pistachios.</li>
           </ol>
 
@@ -126,9 +125,9 @@ export default function RasmalaiCakePostPage() {
             automatically teach the other. You still have to try.
           </p>
           <p>
-            For his second birthday, that was enough. A cake that connected something familiar to
-            something new. That is what I want to keep doing in the kitchen: not waiting until I feel
-            like an expert, but building on what I already know one dish at a time.
+            A cake that connected something familiar to something new. That is what I want to keep
+            doing in the kitchen: not waiting until I feel like an expert, but building on what I
+            already know one dish at a time.
           </p>
         </div>
       </article>
