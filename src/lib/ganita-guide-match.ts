@@ -119,6 +119,14 @@ const SYNONYMS: Record<string, string[]> = {
   drift: ["concept-drift", "distribution"],
   "concept-drift": ["drift", "retrain", "live"],
   retrain: ["drift", "concept-drift"],
+  precision: ["recall", "threshold", "classifier"],
+  recall: ["precision", "threshold", "classifier"],
+  threshold: ["precision", "recall", "cutoff"],
+  cutoff: ["threshold", "precision"],
+  classifier: ["model", "ml", "score"],
+  eval: ["labels", "metric", "holdout"],
+  labels: ["eval", "labeled", "annotation"],
+  f1: ["precision", "recall", "metric"],
 };
 
 function normalize(text: string): string {

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#f5f5f5"/>
+  <rect x="100" y="70" width="600" height="360" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="400" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" font-weight="800" fill="#111111">Threshold Tradeoffs</text>
+  <text x="400" y="115" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#6b7280">Lower cutoff catches more fraud</text>
+  <rect x="200" y="145" width="400" height="32" rx="6" fill="#f3f4f6"/>
+  <rect x="200" y="145" width="280" height="32" rx="6" fill="#d1d5db"/>
+  <rect x="200" y="145" width="95" height="32" rx="6" fill="#111111"/>
+  <text x="400" y="205" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#111111">142 flagged today - 58 are clean</text>
+  <rect x="240" y="235" width="140" height="90" rx="8" fill="#111111"/>
+  <rect x="420" y="235" width="140" height="90" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+  <text x="310" y="275" text-anchor="middle" font-family="system-ui, sans-serif" font-size="32" font-weight="800" fill="#ffffff">41%</text>
+  <text x="310" y="305" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#d1d5db">precision</text>
+  <text x="490" y="275" text-anchor="middle" font-family="system-ui, sans-serif" font-size="32" font-weight="800" fill="#111111">78%</text>
+  <text x="490" y="305" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6b7280">recall</text>
+  <text x="400" y="420" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#6b7280">You cannot maximize both at once</text>
+</svg>

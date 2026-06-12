@@ -369,6 +369,40 @@ export const MATH_POSTS: MathPost[] = [
     ],
   },
   {
+    slug: "threshold-tradeoffs-real-decisions",
+    href: "/math-applied/threshold-tradeoffs-real-decisions",
+    title: "Where Do You Draw the Line? Threshold Tradeoffs in Real Decisions",
+    description:
+      "Precision vs recall, review capacity, and dollar cost when you pick a classifier cutoff.",
+    image: "/threshold_tradeoffs.svg",
+    category: "experiments",
+    tags: ["ai", "ml", "threshold", "precision", "recall", "classifier", "fraud"],
+    problemPhrases: [
+      "precision recall tradeoff threshold",
+      "where to set classifier cutoff",
+      "auto block threshold review queue",
+      "lower threshold more false positives",
+      "capacity cost precision recall",
+    ],
+  },
+  {
+    slug: "eval-sample-size-real-decisions",
+    href: "/math-applied/eval-sample-size-real-decisions",
+    title: "How Many Labels Before You Trust the Metric?",
+    description:
+      "Labeled-set size for precision, recall, and F1 — when the eval band is too wide to ship.",
+    image: "/eval_sample_size.svg",
+    category: "experiments",
+    tags: ["ai", "ml", "eval", "precision", "recall", "sample-size", "labels"],
+    problemPhrases: [
+      "how many labels for model eval",
+      "precision eval set too small",
+      "trust ml metric sample size",
+      "labeled data for recall estimate",
+      "eval band too wide to ship",
+    ],
+  },
+  {
     slug: "concept-drift-real-decisions",
     href: "/math-applied/concept-drift-real-decisions",
     title: "Last Quarter's Model, This Quarter's Data: Concept Drift",
@@ -704,9 +738,20 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "base-rates-real-decisions",
   ],
   "model-calibration-real-decisions": [
+    "threshold-tradeoffs-real-decisions",
+    "eval-sample-size-real-decisions",
     "base-rates-real-decisions",
-    "confidence-intervals-real-decisions",
     "concept-drift-real-decisions",
+  ],
+  "threshold-tradeoffs-real-decisions": [
+    "model-calibration-real-decisions",
+    "base-rates-real-decisions",
+    "false-alarm-missed-win-real-decisions",
+  ],
+  "eval-sample-size-real-decisions": [
+    "sample-size-real-decisions",
+    "confidence-intervals-real-decisions",
+    "threshold-tradeoffs-real-decisions",
   ],
   "concept-drift-real-decisions": [
     "overfitting-real-decisions",

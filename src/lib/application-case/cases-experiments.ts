@@ -1,4 +1,6 @@
 import { actualRateForPredicted } from "@/lib/calibration-data";
+import { evalMetrics, SCENARIOS as EVAL_SCENARIOS } from "@/lib/eval-sample-size-data";
+import { metricsAtThreshold, SCENARIOS as THRESHOLD_SCENARIOS } from "@/lib/threshold-tradeoffs-data";
 import { clamp } from "./chart-utils";
 import type { ApplicationCaseConfig, ApplicationCaseState } from "./types";
 
@@ -729,6 +731,172 @@ export const EXPERIMENTS_APPLICATION_CASES: ApplicationCaseConfig[] = [
           escalateIf: [
             "Review queue overflow exceeds 50 orders/day",
             "Overturn rate above 45% after auto-block",
+          ],
+        },
+      };
+    },
+  },
+  {
+    slug: "threshold-tradeoffs-real-decisions",
+    title: "Fraud policy: threshold vs precision, recall, and cost",
+    intro:
+      "Move block threshold and review capacity. Watch precision and recall trade off — and daily false-alarm vs miss cost.",
+    sliders: [
+      {
+        id: "threshold",
+        label: "Auto-block threshold",
+        min: 60,
+        max: 95,
+        step: 1,
+        default: 82,
+        format: (v) => `${v}%`,
+      },
+      {
+        id: "capacity",
+        label: "Review capacity / day",
+        min: 50,
+        max: 400,
+        step: 10,
+        default: 200,
+        format: (v) => v.toLocaleString(),
+      },
+      {
+        id: "fpCost",
+        label: "Cost per false block ($)",
+        min: 20,
+        max: 120,
+        step: 5,
+        default: 45,
+        format: (v) => `$${v}`,
+      },
+    ],
+    compute: (state) => {
+      const scenario = THRESHOLD_SCENARIOS.fraud_block;
+      const threshold = n(state, "threshold", 82);
+      const capacity = n(state, "capacity", 200);
+      const fpCost = n(state, "fpCost", 45);
+      const adjusted = { ...scenario, fpCost };
+      const m = metricsAtThreshold(threshold, capacity, adjusted);
+      const curveP = [60, 70, 80, 90, 95].map((t) =>
+        metricsAtThreshold(t, capacity, adjusted).precision * 100,
+      );
+      const curveR = [60, 70, 80, 90, 95].map((t) =>
+        metricsAtThreshold(t, capacity, adjusted).recall * 100,
+      );
+      return {
+        headline: `Precision ${(m.precision * 100).toFixed(0)}% · recall ${(m.recall * 100).toFixed(0)}% · ${m.flagged} flagged/day`,
+        readout:
+          m.overflow > 0
+            ? `Queue exceeds capacity by ${m.overflow}. Raise threshold or add reviewers before tightening policy.`
+            : m.precision < 0.4
+              ? "Most flagged orders are clean. Lower false-alarm cost or raise threshold before auto-block."
+              : "Compare total cost to a miss — threshold is a capacity and dollar problem, not accuracy alone.",
+        charts: [
+          {
+            id: "precision-curve",
+            title: "Precision vs threshold",
+            kind: "line",
+            labels: ["60", "70", "80", "90", "95"],
+            values: curveP,
+            valueFormat: (v) => `${v.toFixed(0)}%`,
+          },
+          {
+            id: "recall-curve",
+            title: "Recall vs threshold",
+            kind: "line",
+            labels: ["60", "70", "80", "90", "95"],
+            values: curveR,
+            valueFormat: (v) => `${v.toFixed(0)}%`,
+          },
+        ],
+        stats: [
+          { label: "Flagged / day", value: m.flagged.toLocaleString(), emphasis: true },
+          { label: "Daily cost", value: `$${m.totalCost.toLocaleString()}` },
+          { label: "Queue overflow", value: m.overflow > 0 ? `+${m.overflow}` : "None" },
+        ],
+        actions: {
+          optimize: [
+            "Plot precision-recall across thresholds before auto-policy",
+            "Weight FP vs FN cost explicitly in the cutoff choice",
+          ],
+          hold: ["Lowering threshold when review queue is already full"],
+          escalateIf: [
+            "Review overflow exceeds 50 cases/day",
+            "Precision below 35% at chosen threshold",
+          ],
+        },
+      };
+    },
+  },
+  {
+    slug: "eval-sample-size-real-decisions",
+    title: "Model eval: how many labels for a tight precision read?",
+    intro:
+      "Move labeled-set size. Watch the 95% band on precision shrink — effective n is flagged rows, not total labels.",
+    sliders: [
+      {
+        id: "evalN",
+        label: "Labeled eval rows",
+        min: 100,
+        max: 4000,
+        step: 100,
+        default: 500,
+        format: (v) => v.toLocaleString(),
+      },
+      {
+        id: "flagRate",
+        label: "Share flagged in eval (%)",
+        min: 2,
+        max: 12,
+        step: 0.5,
+        default: 4,
+        format: (v) => `${v}%`,
+      },
+    ],
+    compute: (state) => {
+      const evalN = n(state, "evalN", 500);
+      const flagRate = n(state, "flagRate", 4) / 100;
+      const scenario = { ...EVAL_SCENARIOS.fraud_precision, flagRate };
+      const m = evalMetrics(scenario, evalN);
+      const curve = [200, 500, 1000, 2000, 3000, 4000].map((size) => ({
+        size,
+        moe: evalMetrics(scenario, size).marginOfError * 100,
+      }));
+      return {
+        headline: `Precision ${(scenario.trueMetric * 100).toFixed(0)}% ±${(m.marginOfError * 100).toFixed(0)} pp on ${m.effectiveN} flagged rows`,
+        readout:
+          m.reliability === "thin"
+            ? "Band is too wide to change auto-block policy. Label more flagged cases first."
+            : m.reliability === "directional"
+              ? "Enough for monitoring and model comparison — not for irreversible policy."
+              : "Metric band is tight enough to support a threshold decision with calibration checks.",
+        charts: [
+          {
+            id: "moe-curve",
+            title: "Margin of error vs eval size",
+            kind: "line",
+            labels: curve.map((p) => p.size.toLocaleString()),
+            values: curve.map((p) => p.moe),
+            valueFormat: (v) => `±${v.toFixed(1)} pp`,
+          },
+        ],
+        stats: [
+          { label: "Effective n", value: m.effectiveN.toLocaleString(), emphasis: true },
+          {
+            label: "95% band",
+            value: `${(m.low * 100).toFixed(0)}–${(m.high * 100).toFixed(0)}%`,
+          },
+          { label: "Verdict", value: m.reliability === "thin" ? "Label more" : "Directional+" },
+        ],
+        actions: {
+          optimize: [
+            "Report effective n next to every precision/recall slide",
+            "Stratified labeling on rare positives before launch",
+          ],
+          hold: ["Shipping auto-policy on thin flagged-count evals"],
+          escalateIf: [
+            "Fewer than 30 flagged rows in eval",
+            "Precision band wider than ±12 pp",
           ],
         },
       };

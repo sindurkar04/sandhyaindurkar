@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#f5f5f5"/>
+  <rect x="100" y="70" width="600" height="360" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="400" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" font-weight="800" fill="#111111">Eval Sample Size</text>
+  <text x="400" y="115" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#6b7280">500 rows - only 20 flagged for precision</text>
+  <rect x="180" y="180" width="440" height="48" rx="4" fill="#ebe6de" stroke="#d1d5db"/>
+  <rect x="220" y="180" width="360" height="48" rx="4" fill="#d1d5db"/>
+  <rect x="310" y="180" width="80" height="48" rx="4" fill="#111111"/>
+  <line x1="350" x2="350" y1="160" y2="248" stroke="#111111" stroke-width="2"/>
+  <text x="350" y="150" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#111111">68%</text>
+  <text x="210" y="270" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#6b7280">48%</text>
+  <text x="490" y="270" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#6b7280">88%</text>
+  <text x="400" y="330" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#111111">95% band still ±20 pp wide</text>
+  <text x="400" y="420" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#6b7280">Label more before you ship policy</text>
+</svg>
