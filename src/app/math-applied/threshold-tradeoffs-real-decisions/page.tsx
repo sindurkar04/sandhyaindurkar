@@ -34,7 +34,7 @@ export default function ThresholdTradeoffsPostPage() {
           <p>
             A classifier outputs a score. Policy turns that score into an action: auto-block, flag for
             review, advance a candidate. The cutoff is where math meets operations. Lower it and you
-            catch more true positives — but you also flag more false positives, fill review queues, and
+            catch more true positives, but you also flag more false positives, fill review queues, and
             burn analyst time.
           </p>
           <p className="rounded-lg border border-black bg-black px-4 py-4 text-base font-bold leading-relaxed text-white">
@@ -43,10 +43,10 @@ export default function ThresholdTradeoffsPostPage() {
           </p>
           <p>
             Calibration asks whether 90% on the score means 90% in reality. Threshold tradeoffs ask:
-            given a workable score, where should we act — and what does each mistake cost?
+            given a workable score, where should we act, and what does each mistake cost?
           </p>
           <p className="font-bold text-[color:var(--foreground)]">
-            Threshold choice answers: Which errors can we afford — false alarms, missed cases, or queue
+            Threshold choice answers: Which errors can we afford: false alarms, missed cases, or queue
             overflow?
           </p>
 
@@ -99,8 +99,8 @@ export default function ThresholdTradeoffsPostPage() {
             A simple application: auto-block policy
           </h2>
           <p>
-            Fraud ops debates raising the block threshold from 0.80 to 0.90. Precision improves —
-            fewer overturned blocks — but recall falls and more fraud slips through. The right cutoff
+            Fraud ops debates raising the block threshold from 0.80 to 0.90. Precision improves:
+            fewer overturned blocks. But recall falls and more fraud slips through. The right cutoff
             depends on dollar costs and how many cases humans can review per day, not on accuracy
             alone.
           </p>
@@ -109,7 +109,7 @@ export default function ThresholdTradeoffsPostPage() {
           <p>
             The habit: plot precision and recall across thresholds before you lock policy. Pair with
             calibration so the scores behind the threshold mean what they say. Report flagged volume
-            alongside rates — a threshold that looks good on a slide can still drown the team.
+            alongside rates. A threshold that looks good on a slide can still drown the team.
           </p>
         </div>
 

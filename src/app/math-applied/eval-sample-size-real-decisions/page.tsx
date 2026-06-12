@@ -33,7 +33,7 @@ export default function EvalSampleSizePostPage() {
           <h2 className="text-xl font-bold text-[color:var(--foreground)]">The idea</h2>
           <p>
             The model team reports 68% precision on a held-out eval set. Leadership wants to auto-block
-            at 0.85 tomorrow. The number sounds solid — until you learn the eval set had 500 rows and
+            at 0.85 tomorrow. The number sounds solid until you learn the eval set had 500 rows and
             only 20 flagged cases. Precision on twenty outcomes is a coin flip with extra decimals.
           </p>
           <p className="rounded-lg border border-black bg-black px-4 py-4 text-base font-bold leading-relaxed text-white">
@@ -57,7 +57,7 @@ export default function EvalSampleSizePostPage() {
           >
             <p>
               p is the observed precision, recall, or F1. n_effective is the count in the denominator
-              you care about — flagged rows for precision, true positives for recall — not always total
+              you care about: flagged rows for precision, true positives for recall. Not always total
               labeled rows.
             </p>
           </MathBlock>
@@ -108,8 +108,8 @@ export default function EvalSampleSizePostPage() {
           <p>
             Before moving a fraud model to auto-block, ask how many flagged eval rows supported the
             precision readout. If the band spans 50%–85%, label another few hundred flagged cases or
-            run a shadow period. Threshold and calibration posts assume you can measure the metric —
-            this post checks whether you have enough labels to do that.
+            run a shadow period. Threshold and calibration posts assume you can measure the metric.
+            This post checks whether you have enough labels to do that.
           </p>
           <BusinessCaseExplorer slug="eval-sample-size-real-decisions" />
 

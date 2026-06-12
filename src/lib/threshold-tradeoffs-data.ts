@@ -18,7 +18,7 @@ export const SCENARIOS: Record<ScenarioKey, Scenario> = {
   fraud_block: {
     key: "fraud_block",
     shortLabel: "Fraud auto-block",
-    headline: "Lower threshold catches more fraud — and floods review with clean orders.",
+    headline: "Lower threshold catches more fraud and floods review with clean orders.",
     dailyVolume: 5000,
     baseRate: 0.02,
     defaultThreshold: 82,
@@ -31,7 +31,7 @@ export const SCENARIOS: Record<ScenarioKey, Scenario> = {
   content_flag: {
     key: "content_flag",
     shortLabel: "Content moderation",
-    headline: "Tight flag rules catch policy violations — human reviewers drown in false flags.",
+    headline: "Tight flag rules catch policy violations. Human reviewers drown in false flags.",
     dailyVolume: 12000,
     baseRate: 0.035,
     defaultThreshold: 78,
@@ -44,7 +44,7 @@ export const SCENARIOS: Record<ScenarioKey, Scenario> = {
   hiring_screen: {
     key: "hiring_screen",
     shortLabel: "Hiring screen",
-    headline: "Lower bar advances more candidates — precision drops and interviews pile up.",
+    headline: "Lower bar advances more candidates. Precision drops and interviews pile up.",
     dailyVolume: 800,
     baseRate: 0.14,
     defaultThreshold: 70,
@@ -132,13 +132,13 @@ export function thresholdReadout(
   scenario: Scenario,
 ): string {
   if (metrics.overflow > 50) {
-    return `At ${threshold}% threshold, ${metrics.flagged} cases/day exceed ${capacity} review slots (+${metrics.overflow} overflow). Precision is ${formatPercent(metrics.precision)} — most flagged cases are false alarms. Raise threshold or add capacity before tightening policy.`;
+    return `At ${threshold}% threshold, ${metrics.flagged} cases/day exceed ${capacity} review slots (+${metrics.overflow} overflow). Precision is ${formatPercent(metrics.precision)}. Most flagged cases are false alarms. Raise threshold or add capacity before tightening policy.`;
   }
   if (metrics.precision < 0.35 && metrics.recall > 0.7) {
     return `Recall is ${formatPercent(metrics.recall)} but precision is only ${formatPercent(metrics.precision)}. You catch most positives but pay ${formatMoney(metrics.fpCostTotal)}/day in ${scenario.fpLabel.toLowerCase()} costs. Pair with calibration or raise the bar.`;
   }
   if (metrics.recall < 0.45) {
-    return `High threshold (${threshold}%) keeps precision at ${formatPercent(metrics.precision)}, but recall is ${formatPercent(metrics.recall)} — ${metrics.fn} ${scenario.fnLabel.toLowerCase()} cases/day slip through (${formatMoney(metrics.fnCostTotal)} cost).`;
+    return `High threshold (${threshold}%) keeps precision at ${formatPercent(metrics.precision)}, but recall is ${formatPercent(metrics.recall)}. ${metrics.fn} ${scenario.fnLabel.toLowerCase()} cases/day slip through (${formatMoney(metrics.fnCostTotal)} cost).`;
   }
   return `Balanced zone: precision ${formatPercent(metrics.precision)}, recall ${formatPercent(metrics.recall)}, daily cost ${formatMoney(metrics.totalCost)}. Tune threshold against ${scenario.fpLabel.toLowerCase()} vs ${scenario.fnLabel.toLowerCase()} dollar weights.`;
 }

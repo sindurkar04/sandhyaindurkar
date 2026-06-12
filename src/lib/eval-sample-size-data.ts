@@ -18,7 +18,7 @@ export const SCENARIOS: Record<ScenarioKey, Scenario> = {
   fraud_precision: {
     key: "fraud_precision",
     shortLabel: "Fraud precision",
-    headline: "500-row eval set, 4% flagged — precision CI is still ±15 pp wide.",
+    headline: "500-row eval set, 4% flagged. Precision CI is still ±15 pp wide.",
     trueMetric: 0.68,
     metricLabel: "Precision on flagged orders",
     metricName: "precision",
@@ -31,7 +31,7 @@ export const SCENARIOS: Record<ScenarioKey, Scenario> = {
   routing_recall: {
     key: "routing_recall",
     shortLabel: "Routing recall",
-    headline: "800 labels but only 64 true escalations — recall band stays noisy.",
+    headline: "800 labels but only 64 true escalations. Recall band stays noisy.",
     trueMetric: 0.74,
     metricLabel: "Recall on true escalations",
     metricName: "recall",
@@ -44,7 +44,7 @@ export const SCENARIOS: Record<ScenarioKey, Scenario> = {
   hiring_f1: {
     key: "hiring_f1",
     shortLabel: "Hiring F1",
-    headline: "Thin positive class in eval — F1 looks solid on 200 rows, interval says wait.",
+    headline: "Thin positive class in eval. F1 looks solid on 200 rows, but the interval says wait.",
     trueMetric: 0.62,
     metricLabel: "F1 on screened candidates",
     metricName: "f1",
@@ -145,7 +145,7 @@ export function evalReadout(scenario: Scenario, metrics: EvalMetrics): string {
     return `${scenario.metricLabel} is ${formatPercent(scenario.trueMetric)} on paper, but ±${moePp} pp at 95% with only ${denom} in the eval set. Label more before changing thresholds or shipping the model.`;
   }
   if (metrics.reliability === "directional") {
-    return `Interval ${formatPercent(metrics.low, 1)}–${formatPercent(metrics.high, 1)} on ${metrics.evalN.toLocaleString()} labels (${denom}). Good for monitoring — not enough to lock auto-policy yet.`;
+    return `Interval ${formatPercent(metrics.low, 1)}–${formatPercent(metrics.high, 1)} on ${metrics.evalN.toLocaleString()} labels (${denom}). Good for monitoring, not enough to lock auto-policy yet.`;
   }
   return `At ${metrics.evalN.toLocaleString()} labels, ${scenario.metricLabel.toLowerCase()} is ${formatPercent(scenario.trueMetric)} ±${moePp} pp. Enough precision to compare model versions or set a threshold band.`;
 }

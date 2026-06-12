@@ -50,7 +50,7 @@ export default function EvalSampleSizeExplorer() {
       </h3>
       <p className="mt-2 max-w-prose text-base leading-relaxed text-[color:var(--muted)]">
         A point estimate is the center. The 95% band is where the true metric likely lives given
-        your labeled count. Drag eval size — effective n is flagged or positive rows, not total labels.
+        your labeled count. Drag eval size. Effective n is flagged or positive rows, not total labels.
       </p>
 
       <div className="mt-5 flex flex-wrap gap-2">

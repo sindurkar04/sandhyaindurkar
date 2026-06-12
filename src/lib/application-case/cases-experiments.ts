@@ -740,7 +740,7 @@ export const EXPERIMENTS_APPLICATION_CASES: ApplicationCaseConfig[] = [
     slug: "threshold-tradeoffs-real-decisions",
     title: "Fraud policy: threshold vs precision, recall, and cost",
     intro:
-      "Move block threshold and review capacity. Watch precision and recall trade off — and daily false-alarm vs miss cost.",
+      "Move block threshold and review capacity. Watch precision and recall trade off, and daily false-alarm vs miss cost.",
     sliders: [
       {
         id: "threshold",
@@ -790,7 +790,7 @@ export const EXPERIMENTS_APPLICATION_CASES: ApplicationCaseConfig[] = [
             ? `Queue exceeds capacity by ${m.overflow}. Raise threshold or add reviewers before tightening policy.`
             : m.precision < 0.4
               ? "Most flagged orders are clean. Lower false-alarm cost or raise threshold before auto-block."
-              : "Compare total cost to a miss — threshold is a capacity and dollar problem, not accuracy alone.",
+              : "Compare total cost to a miss. Threshold is a capacity and dollar problem, not accuracy alone.",
         charts: [
           {
             id: "precision-curve",
@@ -832,7 +832,7 @@ export const EXPERIMENTS_APPLICATION_CASES: ApplicationCaseConfig[] = [
     slug: "eval-sample-size-real-decisions",
     title: "Model eval: how many labels for a tight precision read?",
     intro:
-      "Move labeled-set size. Watch the 95% band on precision shrink — effective n is flagged rows, not total labels.",
+      "Move labeled-set size. Watch the 95% band on precision shrink. Effective n is flagged rows, not total labels.",
     sliders: [
       {
         id: "evalN",
@@ -868,7 +868,7 @@ export const EXPERIMENTS_APPLICATION_CASES: ApplicationCaseConfig[] = [
           m.reliability === "thin"
             ? "Band is too wide to change auto-block policy. Label more flagged cases first."
             : m.reliability === "directional"
-              ? "Enough for monitoring and model comparison — not for irreversible policy."
+              ? "Enough for monitoring and model comparison, not for irreversible policy."
               : "Metric band is tight enough to support a threshold decision with calibration checks.",
         charts: [
           {
