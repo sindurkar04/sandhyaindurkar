@@ -76,6 +76,51 @@ export const MATH_POSTS: MathPost[] = [
     ],
   },
   {
+    slug: "conditional-probability-pure-definition",
+    href: "/math-applied/conditional-probability-pure-definition",
+    title: "Conditional Probability: Given That B Happened",
+    description:
+      "P(A | B) versus P(B | A): restrict the sample space before you read a screen or alert.",
+    image: "/conditional_probability.svg",
+    category: "foundations",
+    tags: ["probability", "conditional", "foundation", "bayes"],
+    problemPhrases: [
+      "what is conditional probability",
+      "p a given b versus p b given a",
+      "positive test does not mean disease",
+    ],
+  },
+  {
+    slug: "dependent-probability-chains-real-decisions",
+    href: "/math-applied/dependent-probability-chains-real-decisions",
+    title: "Dependent Chains: Funnel Math Without Bogus Independence",
+    description:
+      "P(step1) × P(step2 | step1) for funnels, pipelines, and onboarding paths.",
+    image: "/dependent_chains.svg",
+    category: "foundations",
+    tags: ["probability", "funnel", "conditional", "foundation"],
+    problemPhrases: [
+      "funnel conversion multiply steps",
+      "conditional probability product rule",
+      "signup activate joint probability",
+    ],
+  },
+  {
+    slug: "sensitivity-specificity-screening",
+    href: "/math-applied/sensitivity-specificity-screening",
+    title: "Sensitivity, Specificity, and the 2×2 Screening Table",
+    description:
+      "TP, FP, FN, TN and positive predictive value before base rates and thresholds.",
+    image: "/sensitivity_specificity.svg",
+    category: "foundations",
+    tags: ["probability", "screening", "sensitivity", "specificity", "foundation"],
+    problemPhrases: [
+      "sensitivity versus specificity",
+      "positive predictive value screening",
+      "confusion matrix tp fp fn tn",
+    ],
+  },
+  {
     slug: "reading-distributions-percentiles-quartiles",
     href: "/math-applied/reading-distributions-percentiles-quartiles",
     title: "Reading Distributions: Percentiles and Quartiles from Scratch",
@@ -309,6 +354,36 @@ export const MATH_POSTS: MathPost[] = [
     ],
   },
   {
+    slug: "at-least-one-failure-real-decisions",
+    href: "/math-applied/at-least-one-failure-real-decisions",
+    title: "At Least One Failure: When Small Risks Compound",
+    description:
+      "P(at least one) = 1 − (1 − p)^n for deploys, SLA misses, and repeated risky trials.",
+    image: "/at_least_one.svg",
+    category: "experiments",
+    tags: ["probability", "risk", "reliability", "compounding"],
+    problemPhrases: [
+      "at least one failure probability",
+      "small risk many trials",
+      "deploy rollback risk compounded",
+    ],
+  },
+  {
+    slug: "stacking-rare-risks-real-decisions",
+    href: "/math-applied/stacking-rare-risks-real-decisions",
+    title: "Stacking Rare Risks: Alert Fatigue From Many Small False Positives",
+    description:
+      "Many low false-positive checks on one case: system alert rate is 1 − (1 − f)^k.",
+    image: "/stacking_rare_risks.svg",
+    category: "experiments",
+    tags: ["probability", "false-positive", "alerts", "fraud", "rules"],
+    problemPhrases: [
+      "many rules false positive rate",
+      "alert fatigue stacked checks",
+      "system false alert probability",
+    ],
+  },
+  {
     slug: "stockout-probability-real-decisions",
     href: "/math-applied/stockout-probability-real-decisions",
     title: "Will We Run Out? Probability of Stockout in Real Inventory Decisions",
@@ -508,6 +583,21 @@ export const MATH_POSTS: MathPost[] = [
     ],
   },
   {
+    slug: "gamblers-fallacy-real-decisions",
+    href: "/math-applied/gamblers-fallacy-real-decisions",
+    title: "The Gambler's Fallacy: Streaks Do Not Load the Next Trial",
+    description:
+      "Five losses in a row does not make the next independent trial more likely to win.",
+    image: "/gamblers_fallacy.svg",
+    category: "traps",
+    tags: ["probability", "fallacy", "streak", "independence"],
+    problemPhrases: [
+      "gambler's fallacy streak",
+      "due for a win after losses",
+      "hot hand fallacy independent trials",
+    ],
+  },
+  {
     slug: "selection-bias-real-decisions",
     href: "/math-applied/selection-bias-real-decisions",
     title: "Your Best Customers Answered: Selection Bias",
@@ -607,9 +697,24 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "reading-distributions-percentiles-quartiles",
   ],
   "probability-basics-events-independence": [
+    "conditional-probability-pure-definition",
+    "dependent-probability-chains-real-decisions",
     "probability-real-decisions",
+  ],
+  "conditional-probability-pure-definition": [
+    "sensitivity-specificity-screening",
     "base-rates-real-decisions",
-    "false-alarm-missed-win-real-decisions",
+    "dependent-probability-chains-real-decisions",
+  ],
+  "dependent-probability-chains-real-decisions": [
+    "probability-basics-events-independence",
+    "conditional-probability-pure-definition",
+    "probability-real-decisions",
+  ],
+  "sensitivity-specificity-screening": [
+    "conditional-probability-pure-definition",
+    "base-rates-real-decisions",
+    "threshold-tradeoffs-real-decisions",
   ],
   "reading-distributions-percentiles-quartiles": [
     "percentiles-quartiles-real-data",
@@ -703,8 +808,18 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
   ],
   "probability-real-decisions": [
     "base-rates-real-decisions",
+    "at-least-one-failure-real-decisions",
     "confidence-intervals-real-decisions",
-    "sample-size-real-decisions",
+  ],
+  "at-least-one-failure-real-decisions": [
+    "stacking-rare-risks-real-decisions",
+    "probability-real-decisions",
+    "stockout-probability-real-decisions",
+  ],
+  "stacking-rare-risks-real-decisions": [
+    "at-least-one-failure-real-decisions",
+    "base-rates-real-decisions",
+    "threshold-tradeoffs-real-decisions",
   ],
   "stockout-probability-real-decisions": [
     "case-study-northside-weekend-reorder",
@@ -713,9 +828,14 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "confidence-intervals-real-decisions",
   ],
   "base-rates-real-decisions": [
+    "sensitivity-specificity-screening",
+    "conditional-probability-pure-definition",
     "model-calibration-real-decisions",
-    "probability-real-decisions",
-    "false-alarm-missed-win-real-decisions",
+  ],
+  "gamblers-fallacy-real-decisions": [
+    "regression-to-the-mean-real-decisions",
+    "probability-basics-events-independence",
+    "sample-size-real-decisions",
   ],
   "ab-test-readouts-real-decisions": [
     "confidence-intervals-real-decisions",

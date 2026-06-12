@@ -621,4 +621,60 @@ export const TRAPS_APPLICATION_CASES: ApplicationCaseConfig[] = [
       };
     },
   },
+  {
+    slug: "gamblers-fallacy-real-decisions",
+    title: "Sales quota: streak vs stable win rate",
+    intro: "Move streak length. The next week stays at the baseline win rate unless the process actually changed.",
+    sliders: [
+      {
+        id: "pWin",
+        label: "Weekly hit rate (%)",
+        min: 20,
+        max: 70,
+        step: 2,
+        default: 42,
+        format: (v) => `${v}%`,
+      },
+      {
+        id: "streak",
+        label: "Miss streak (weeks)",
+        min: 2,
+        max: 8,
+        step: 1,
+        default: 4,
+        format: (v) => String(v),
+      },
+    ],
+    compute: (state) => {
+      const p = n(state, "pWin", 42) / 100;
+      const streak = n(state, "streak", 4);
+      const streakP = Math.pow(1 - p, streak) * 100;
+      const nextP = p * 100;
+      return {
+        headline: `${streak}-week miss streak: ${streakP.toFixed(1)}% likely · next week still ${nextP.toFixed(0)}% hit rate`,
+        readout:
+          "A slump feels like a rebound is due. On independent weeks, the baseline rate has not changed. Check for real process shifts before punitive targets.",
+        charts: [
+          {
+            id: "rates",
+            title: "Probabilities (%)",
+            kind: "bar",
+            labels: ["Miss streak", "Next week"],
+            values: [streakP, nextP],
+            valueFormat: (v) => `${v.toFixed(1)}%`,
+          },
+        ],
+        stats: [
+          { label: "Baseline hit rate", value: `${nextP.toFixed(0)}%`, emphasis: true },
+          { label: "Miss streak odds", value: `${streakP.toFixed(1)}%` },
+          { label: "Streak length", value: `${streak} wks` },
+        ],
+        actions: {
+          optimize: ["Separate streak stories from measured win-rate shifts", "Pair with sample size on weekly KPIs"],
+          hold: ["Expecting automatic rebound after a miss streak"],
+          escalateIf: ["Hit rate drops 15+ pp vs trailing quarter baseline"],
+        },
+      };
+    },
+  },
 ];

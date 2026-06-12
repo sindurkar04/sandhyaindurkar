@@ -1,5 +1,7 @@
+import { atLeastOne } from "@/lib/at-least-one-data";
 import { actualRateForPredicted } from "@/lib/calibration-data";
 import { evalMetrics, SCENARIOS as EVAL_SCENARIOS } from "@/lib/eval-sample-size-data";
+import { anyAlert } from "@/lib/stacking-rare-risks-data";
 import { metricsAtThreshold, SCENARIOS as THRESHOLD_SCENARIOS } from "@/lib/threshold-tradeoffs-data";
 import { clamp } from "./chart-utils";
 import type { ApplicationCaseConfig, ApplicationCaseState } from "./types";
@@ -898,6 +900,123 @@ export const EXPERIMENTS_APPLICATION_CASES: ApplicationCaseConfig[] = [
             "Fewer than 30 flagged rows in eval",
             "Precision band wider than ±12 pp",
           ],
+        },
+      };
+    },
+  },
+  {
+    slug: "at-least-one-failure-real-decisions",
+    title: "Release planning: at-least-one rollback risk",
+    intro: "Move per-deploy rollback rate and release count. See system risk rise faster than the per-deploy number.",
+    sliders: [
+      {
+        id: "p",
+        label: "Rollback risk per deploy (%)",
+        min: 0.5,
+        max: 10,
+        step: 0.5,
+        default: 2,
+        format: (v) => `${v}%`,
+      },
+      {
+        id: "n",
+        label: "Deploys in sprint",
+        min: 1,
+        max: 30,
+        step: 1,
+        default: 10,
+        format: (v) => String(v),
+      },
+    ],
+    compute: (state) => {
+      const p = n(state, "p", 2) / 100;
+      const deploys = n(state, "n", 10);
+      const risk = atLeastOne(p, deploys);
+      const curve = [1, 5, 10, 15, 20, 25, 30].map((d) => atLeastOne(p, d) * 100);
+      return {
+        headline: `${(risk * 100).toFixed(0)}% chance of at least one rollback in ${deploys} deploys`,
+        readout:
+          risk > 0.15
+            ? "Per-deploy risk looks small, but sprint-level risk is material. Plan rollbacks and comms."
+            : "System risk still exceeds per-deploy rate. Report both when promising stability.",
+        charts: [
+          {
+            id: "risk-curve",
+            title: "At-least-one risk vs deploy count",
+            kind: "line",
+            labels: ["1", "5", "10", "15", "20", "25", "30"],
+            values: curve,
+            valueFormat: (v) => `${v.toFixed(0)}%`,
+          },
+        ],
+        stats: [
+          { label: "Per-deploy risk", value: `${(p * 100).toFixed(1)}%` },
+          { label: "Sprint risk", value: `${(risk * 100).toFixed(0)}%`, emphasis: true },
+          { label: "Deploys", value: String(deploys) },
+        ],
+        actions: {
+          optimize: ["Report sprint-level risk alongside per-deploy rate", "Batch risky changes with rollback drills"],
+          hold: ["Promising zero incidents from a 2% per-deploy rate over many releases"],
+          escalateIf: ["At-least-one risk exceeds 20% for the release train"],
+        },
+      };
+    },
+  },
+  {
+    slug: "stacking-rare-risks-real-decisions",
+    title: "Fraud rules: system false alert rate",
+    intro: "Move rule count and per-rule false positive rate. See clean orders trigger any rule more often than each rule alone.",
+    sliders: [
+      {
+        id: "rules",
+        label: "Rules stacked",
+        min: 5,
+        max: 40,
+        step: 1,
+        default: 20,
+        format: (v) => String(v),
+      },
+      {
+        id: "fp",
+        label: "False positive per rule (%)",
+        min: 0.1,
+        max: 5,
+        step: 0.1,
+        default: 0.5,
+        format: (v) => `${v}%`,
+      },
+    ],
+    compute: (state) => {
+      const rules = n(state, "rules", 20);
+      const fp = n(state, "fp", 0.5) / 100;
+      const systemRate = anyAlert(fp, rules);
+      const volume = 10000;
+      const falseAlerts = Math.round(volume * systemRate);
+      return {
+        headline: `${(systemRate * 100).toFixed(1)}% of clean orders hit any rule (${falseAlerts.toLocaleString()} / ${volume.toLocaleString()})`,
+        readout:
+          systemRate > 0.1
+            ? "Rule sprawl is loading the review queue. Consolidate or tighten per-rule specificity."
+            : "Even rare per-rule false positives add up. Estimate system rate before adding another gate.",
+        charts: [
+          {
+            id: "system-rate",
+            title: "System false alert rate (%)",
+            kind: "bar",
+            labels: ["Per rule", "Any rule"],
+            values: [fp * 100, systemRate * 100],
+            valueFormat: (v) => `${v.toFixed(2)}%`,
+          },
+        ],
+        stats: [
+          { label: "Rules stacked", value: String(rules), emphasis: true },
+          { label: "System FP rate", value: `${(systemRate * 100).toFixed(1)}%` },
+          { label: "False alerts / 10k", value: falseAlerts.toLocaleString() },
+        ],
+        actions: {
+          optimize: ["List system FP rate when proposing a new rule", "Route through one calibrated scorer"],
+          hold: ["Adding rules without estimating queue impact"],
+          escalateIf: ["System false alert rate exceeds 15% on clean traffic"],
         },
       };
     },

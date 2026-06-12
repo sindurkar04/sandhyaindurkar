@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#f5f5f5"/>
+  <text x="400" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" font-weight="800" fill="#111111">Dependent Chains</text>
+  <rect x="140" y="180" width="120" height="60" rx="8" fill="#111" />
+  <text x="200" y="218" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#fff">Step 1</text>
+  <path d="M260 210 H340" stroke="#111" stroke-width="3"/>
+  <rect x="340" y="180" width="120" height="60" rx="8" fill="#6b7280" />
+  <text x="400" y="218" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#fff">Step 2</text>
+  <text x="300" y="165" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#6b7280">given step 1</text>
+  <text x="400" y="320" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#111">P(A) x P(B | A)</text>
+</svg>

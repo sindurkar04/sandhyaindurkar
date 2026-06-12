@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#f5f5f5"/>
+  <text x="400" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" font-weight="800" fill="#111111">Sensitivity and Specificity</text>
+  <rect x="200" y="120" width="400" height="240" rx="8" fill="#fff" stroke="#e5e7eb" stroke-width="2"/>
+  <line x1="400" y1="120" x2="400" y2="360" stroke="#e5e7eb" stroke-width="2"/>
+  <line x1="200" y1="240" x2="600" y2="240" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="300" y="190" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#111">TP</text>
+  <text x="500" y="190" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#6b7280">FP</text>
+  <text x="300" y="310" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#6b7280">FN</text>
+  <text x="500" y="310" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#111">TN</text>
+  <text x="400" y="420" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#6b7280">2x2 table behind every screen</text>
+</svg>
