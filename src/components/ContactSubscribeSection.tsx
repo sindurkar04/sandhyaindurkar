@@ -117,11 +117,7 @@ export default function ContactSubscribeSection() {
           <div className="space-y-1">
             <h3 className="text-lg font-black text-[color:var(--foreground)]">Contact</h3>
             <p className="text-sm leading-relaxed text-[color:var(--muted)]">
-              Questions, feedback, or collaboration ideas. Messages go to{" "}
-              <a className="font-bold text-[color:var(--foreground)] underline" href="mailto:sandhya.indurkar@gmail.com">
-                sandhya.indurkar@gmail.com
-              </a>
-              .
+              Questions, feedback, or collaboration ideas.
             </p>
           </div>
 
