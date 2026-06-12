@@ -2,7 +2,6 @@ import BusinessCaseExplorer from "@/components/BusinessCaseExplorer";
 import MathBlock from "@/components/MathBlock";
 import RelatedPosts from "@/components/RelatedPosts";
 import ThresholdTradeoffsExplorer from "@/components/ThresholdTradeoffsExplorer";
-import Image from "next/image";
 import { mathPostMetadata } from "@/lib/math-post-metadata";
 
 export const metadata = mathPostMetadata("threshold-tradeoffs-real-decisions");
@@ -18,9 +17,9 @@ export default function ThresholdTradeoffsPostPage() {
           Where Do You Draw the Line? Threshold Tradeoffs in Real Decisions
         </h1>
         <div className="overflow-hidden rounded-lg border border-[color:var(--border)] bg-[color:var(--surface)] p-3">
-          <div className="mx-auto max-w-[360px]">
-            <Image
-              alt="Precision and recall tradeoff with flagged queue breakdown"
+          <div className="mx-auto flex max-w-[360px] min-h-[200px] items-center justify-center">
+            <img
+              alt="Precision and recall tradeoff when you move the classifier threshold"
               className="h-auto w-full object-contain"
               height={500}
               src="/threshold_tradeoffs.svg"
