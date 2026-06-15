@@ -677,4 +677,53 @@ export const TRAPS_APPLICATION_CASES: ApplicationCaseConfig[] = [
       };
     },
   },
+  {
+    slug: "multicollinearity-real-decisions",
+    title: "Marketing mix: correlated drivers in one regression",
+    intro: "Move overlap between ad spend and branded search. Coefficients become unstable when both rise together.",
+    sliders: [
+      {
+        id: "overlap",
+        label: "Feature overlap (%)",
+        min: 30,
+        max: 98,
+        step: 2,
+        default: 85,
+        format: (v) => `${v}%`,
+      },
+    ],
+    compute: (state) => {
+      const overlap = n(state, "overlap", 85);
+      const r = 0.92 * (overlap / 100);
+      const bAds = 1.2 - 0.9 * r;
+      const bSearch = 0.4 + 1.1 * r;
+      const unstable = r > 0.75;
+      return {
+        headline: `Ad coef ${bAds.toFixed(2)} · Search coef ${bSearch.toFixed(2)} · r ≈ ${(r * 100).toFixed(0)}%`,
+        readout: unstable
+          ? "Driver credit is unreliable. Drop one channel or build a composite before budget slides."
+          : "Overlap is moderate. Still check correlation before causal language on coefficients.",
+        charts: [
+          {
+            id: "coefs",
+            title: "Regression coefficients",
+            kind: "bar",
+            labels: ["Ad spend", "Branded search"],
+            values: [bAds, bSearch],
+            valueFormat: (v) => v.toFixed(2),
+          },
+        ],
+        stats: [
+          { label: "Correlation", value: `${(r * 100).toFixed(0)}%`, emphasis: true },
+          { label: "Stability", value: unstable ? "Unstable" : "OK" },
+          { label: "Overlap", value: `${overlap}%` },
+        ],
+        actions: {
+          optimize: ["Plot feature correlation before driver regression", "Combine collinear channels into one index"],
+          hold: ["Splitting budget by raw coefficients when r > 0.8"],
+          escalateIf: ["Correlation between drivers exceeds 85%", "Coefficient sign flips across weekly refits"],
+        },
+      };
+    },
+  },
 ];

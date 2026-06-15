@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#f5f5f5"/>
+  <text x="400" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" font-weight="800" fill="#111111">PCA Intuition</text>
+  <ellipse cx="400" cy="250" rx="180" ry="60" fill="none" stroke="#e5e7eb" stroke-width="2" transform="rotate(-25 400 250)"/>
+  <line x1="280" y1="310" x2="520" y2="190" stroke="#111" stroke-width="3"/>
+  <line x1="520" y1="310" x2="280" y2="190" stroke="#6b7280" stroke-width="2"/>
+  <text x="400" y="430" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#6b7280">Find axes that capture variance</text>
+</svg>

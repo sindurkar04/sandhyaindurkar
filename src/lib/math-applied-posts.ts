@@ -163,6 +163,66 @@ export const MATH_POSTS: MathPost[] = [
     ],
   },
   {
+    slug: "vectors-and-features-pure-definition",
+    href: "/math-applied/vectors-and-features-pure-definition",
+    title: "Vectors and Features: One Row Is a Point in Space",
+    description:
+      "Spreadsheet rows as feature vectors: dimensions, coordinates, and the design matrix behind ML.",
+    image: "/vectors_features.svg",
+    category: "foundations",
+    tags: ["vector", "features", "linear-algebra", "foundation"],
+    problemPhrases: [
+      "what is a feature vector",
+      "row as vector in machine learning",
+      "design matrix rows and columns",
+    ],
+  },
+  {
+    slug: "dot-product-cosine-similarity-pure-definition",
+    href: "/math-applied/dot-product-cosine-similarity-pure-definition",
+    title: "Dot Product and Cosine Similarity: How Aligned Are Two Vectors?",
+    description:
+      "Dot product vs cosine for search, recommendations, and RAG when vector length varies.",
+    image: "/dot_product_cosine.svg",
+    category: "foundations",
+    tags: ["dot-product", "cosine", "similarity", "linear-algebra", "foundation"],
+    problemPhrases: [
+      "dot product versus cosine similarity",
+      "vector similarity search ranking",
+      "cosine similarity rag retrieval",
+    ],
+  },
+  {
+    slug: "matrices-linear-systems-pure-definition",
+    href: "/math-applied/matrices-linear-systems-pure-definition",
+    title: "Matrices and Linear Systems: Regression Is Ax = b",
+    description:
+      "Normal equations and design matrices: the linear system regression actually solves.",
+    image: "/matrices_systems.svg",
+    category: "foundations",
+    tags: ["matrix", "linear-system", "regression", "linear-algebra", "foundation"],
+    problemPhrases: [
+      "regression as matrix equation",
+      "ax equals b linear system",
+      "normal equations intuition",
+    ],
+  },
+  {
+    slug: "least-squares-geometry-real-decisions",
+    href: "/math-applied/least-squares-geometry-real-decisions",
+    title: "Least Squares: Why Squared Error Picks One Best Line",
+    description:
+      "Sum of squared residuals and why the best-fit line is the unique SSE minimizer.",
+    image: "/least_squares_geometry.svg",
+    category: "foundations",
+    tags: ["least-squares", "regression", "residual", "linear-algebra", "foundation"],
+    problemPhrases: [
+      "why least squares regression",
+      "sum of squared errors line fit",
+      "minimize squared residuals",
+    ],
+  },
+  {
     slug: "prime-factorization-real-problems",
     href: "/math-applied/prime-factorization-real-problems",
     title: "Prime Factorization Isn't Just Math: It's How You Break Down Real Problems",
@@ -218,6 +278,21 @@ export const MATH_POSTS: MathPost[] = [
       "same average different variability",
       "delivery times are inconsistent",
       "how spread out are the numbers",
+    ],
+  },
+  {
+    slug: "pca-intuition-real-decisions",
+    href: "/math-applied/pca-intuition-real-decisions",
+    title: "PCA Intuition: One Axis for a Wall of Correlated KPIs",
+    description:
+      "Principal components as composite scores when dashboard metrics move together.",
+    image: "/pca_intuition.svg",
+    category: "summarize",
+    tags: ["pca", "variance", "kpi", "dimensionality"],
+    problemPhrases: [
+      "pca intuition correlated metrics",
+      "reduce dashboard kpis to one score",
+      "principal component variance explained",
     ],
   },
   {
@@ -583,6 +658,21 @@ export const MATH_POSTS: MathPost[] = [
     ],
   },
   {
+    slug: "multicollinearity-real-decisions",
+    href: "/math-applied/multicollinearity-real-decisions",
+    title: "Multicollinearity: When Two Drivers Share the Same Story",
+    description:
+      "Correlated regression inputs make coefficients unstable and driver credit unreliable.",
+    image: "/multicollinearity.svg",
+    category: "traps",
+    tags: ["multicollinearity", "regression", "correlation", "drivers"],
+    problemPhrases: [
+      "multicollinearity regression coefficients",
+      "correlated predictors unstable betas",
+      "which marketing driver gets credit",
+    ],
+  },
+  {
     slug: "gamblers-fallacy-real-decisions",
     href: "/math-applied/gamblers-fallacy-real-decisions",
     title: "The Gambler's Fallacy: Streaks Do Not Load the Next Trial",
@@ -727,9 +817,29 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "stockout-probability-real-decisions",
   ],
   "linear-models-slope-intuition": [
+    "least-squares-geometry-real-decisions",
+    "matrices-linear-systems-pure-definition",
     "regression-real-decisions",
+  ],
+  "vectors-and-features-pure-definition": [
+    "dot-product-cosine-similarity-pure-definition",
+    "matrices-linear-systems-pure-definition",
+    "linear-models-slope-intuition",
+  ],
+  "dot-product-cosine-similarity-pure-definition": [
+    "vectors-and-features-pure-definition",
+    "model-calibration-real-decisions",
     "correlation-vs-causation-real-decisions",
-    "benchmarks-baselines-real-decisions",
+  ],
+  "matrices-linear-systems-pure-definition": [
+    "linear-models-slope-intuition",
+    "least-squares-geometry-real-decisions",
+    "regression-real-decisions",
+  ],
+  "least-squares-geometry-real-decisions": [
+    "linear-models-slope-intuition",
+    "matrices-linear-systems-pure-definition",
+    "overfitting-real-decisions",
   ],
   "prime-factorization-real-problems": [
     "sample-size-real-decisions",
@@ -747,14 +857,24 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "regression-to-the-mean-real-decisions",
   ],
   "variance-spread-real-data": [
+    "pca-intuition-real-decisions",
     "mean-vs-median-real-data",
     "percentiles-quartiles-real-data",
-    "sample-size-real-decisions",
+  ],
+  "pca-intuition-real-decisions": [
+    "variance-spread-real-data",
+    "multicollinearity-real-decisions",
+    "correlation-vs-causation-real-decisions",
   ],
   "correlation-vs-causation-real-decisions": [
+    "multicollinearity-real-decisions",
     "regression-real-decisions",
     "selection-bias-real-decisions",
-    "sample-size-real-decisions",
+  ],
+  "multicollinearity-real-decisions": [
+    "regression-real-decisions",
+    "overfitting-real-decisions",
+    "correlation-vs-causation-real-decisions",
   ],
   "percentiles-quartiles-real-data": [
     "mean-vs-median-real-data",
@@ -773,8 +893,8 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
   ],
   "regression-real-decisions": [
     "overfitting-real-decisions",
-    "correlation-vs-causation-real-decisions",
-    "confidence-intervals-real-decisions",
+    "multicollinearity-real-decisions",
+    "matrices-linear-systems-pure-definition",
   ],
   "overfitting-real-decisions": [
     "concept-drift-real-decisions",

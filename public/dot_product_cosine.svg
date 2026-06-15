@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#f5f5f5"/>
+  <text x="400" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" font-weight="800" fill="#111111">Dot Product and Cosine</text>
+  <line x1="200" y1="300" x2="520" y2="180" stroke="#111" stroke-width="3"/>
+  <line x1="200" y1="300" x2="450" y2="300" stroke="#6b7280" stroke-width="3"/>
+  <text x="400" y="260" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#111">cos = angle</text>
+  <text x="400" y="430" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#6b7280">Similarity = direction, not just length</text>
+</svg>
