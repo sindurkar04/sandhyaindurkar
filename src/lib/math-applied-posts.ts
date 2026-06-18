@@ -223,6 +223,36 @@ export const MATH_POSTS: MathPost[] = [
     ],
   },
   {
+    slug: "norms-and-distance-pure-definition",
+    href: "/math-applied/norms-and-distance-pure-definition",
+    title: "Norms and Distance: How Far Apart Are Two Feature Vectors?",
+    description:
+      "L1 and L2 distance for anomaly detection, duplicate search, and comparing rows in feature space.",
+    image: "/norms_distance.svg",
+    category: "foundations",
+    tags: ["norm", "distance", "l2", "linear-algebra", "foundation"],
+    problemPhrases: [
+      "euclidean distance feature vector",
+      "l1 versus l2 distance anomaly",
+      "vector norm length machine learning",
+    ],
+  },
+  {
+    slug: "orthogonality-uncorrelated-inputs-pure-definition",
+    href: "/math-applied/orthogonality-uncorrelated-inputs-pure-definition",
+    title: "Orthogonality: When Two Features Carry Separate Signal",
+    description:
+      "Correlation as angle: orthogonal inputs read cleanly in regression; parallel inputs share credit.",
+    image: "/orthogonality.svg",
+    category: "foundations",
+    tags: ["orthogonal", "correlation", "linear-algebra", "foundation"],
+    problemPhrases: [
+      "orthogonal features regression",
+      "uncorrelated inputs coefficient interpretation",
+      "correlation as angle between vectors",
+    ],
+  },
+  {
     slug: "prime-factorization-real-problems",
     href: "/math-applied/prime-factorization-real-problems",
     title: "Prime Factorization Isn't Just Math: It's How You Break Down Real Problems",
@@ -673,6 +703,21 @@ export const MATH_POSTS: MathPost[] = [
     ],
   },
   {
+    slug: "ridge-regularization-real-decisions",
+    href: "/math-applied/ridge-regularization-real-decisions",
+    title: "Ridge Regularization: Shrink Unstable Coefficients Without Dropping Features",
+    description:
+      "Ridge penalty stabilizes collinear regression inputs by shrinking coefficients toward zero.",
+    image: "/ridge_regularization.svg",
+    category: "traps",
+    tags: ["ridge", "regularization", "regression", "multicollinearity"],
+    problemPhrases: [
+      "ridge regression collinear features",
+      "regularization shrink coefficients",
+      "lambda penalty unstable betas",
+    ],
+  },
+  {
     slug: "gamblers-fallacy-real-decisions",
     href: "/math-applied/gamblers-fallacy-real-decisions",
     title: "The Gambler's Fallacy: Streaks Do Not Load the Next Trial",
@@ -828,8 +873,8 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
   ],
   "dot-product-cosine-similarity-pure-definition": [
     "vectors-and-features-pure-definition",
+    "norms-and-distance-pure-definition",
     "model-calibration-real-decisions",
-    "correlation-vs-causation-real-decisions",
   ],
   "matrices-linear-systems-pure-definition": [
     "linear-models-slope-intuition",
@@ -839,7 +884,17 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
   "least-squares-geometry-real-decisions": [
     "linear-models-slope-intuition",
     "matrices-linear-systems-pure-definition",
-    "overfitting-real-decisions",
+    "ridge-regularization-real-decisions",
+  ],
+  "norms-and-distance-pure-definition": [
+    "vectors-and-features-pure-definition",
+    "dot-product-cosine-similarity-pure-definition",
+    "pca-intuition-real-decisions",
+  ],
+  "orthogonality-uncorrelated-inputs-pure-definition": [
+    "multicollinearity-real-decisions",
+    "dot-product-cosine-similarity-pure-definition",
+    "correlation-vs-causation-real-decisions",
   ],
   "prime-factorization-real-problems": [
     "sample-size-real-decisions",
@@ -872,9 +927,14 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "selection-bias-real-decisions",
   ],
   "multicollinearity-real-decisions": [
+    "ridge-regularization-real-decisions",
     "regression-real-decisions",
+    "orthogonality-uncorrelated-inputs-pure-definition",
+  ],
+  "ridge-regularization-real-decisions": [
+    "multicollinearity-real-decisions",
     "overfitting-real-decisions",
-    "correlation-vs-causation-real-decisions",
+    "least-squares-geometry-real-decisions",
   ],
   "percentiles-quartiles-real-data": [
     "mean-vs-median-real-data",

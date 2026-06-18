@@ -726,4 +726,66 @@ export const TRAPS_APPLICATION_CASES: ApplicationCaseConfig[] = [
       };
     },
   },
+  {
+    slug: "ridge-regularization-real-decisions",
+    title: "Marketing mix: ridge vs raw OLS on collinear channels",
+    intro: "Increase λ to shrink ad and search coefficients when both channels correlate. Stabilize forecasts without pretending attribution is clean.",
+    sliders: [
+      {
+        id: "lambda",
+        label: "Ridge penalty λ (%)",
+        min: 0,
+        max: 80,
+        step: 5,
+        default: 35,
+        format: (v) => `${v}%`,
+      },
+      {
+        id: "overlap",
+        label: "Feature overlap (%)",
+        min: 50,
+        max: 98,
+        step: 2,
+        default: 88,
+        format: (v) => `${v}%`,
+      },
+    ],
+    compute: (state) => {
+      const lambda = n(state, "lambda", 35);
+      const overlap = n(state, "overlap", 88);
+      const r = 0.95 * (overlap / 100);
+      const olsAds = 1.4 - 1.1 * r;
+      const olsSearch = 0.3 + 1.2 * r;
+      const shrink = 1 / (1 + (lambda / 100) * 3);
+      const ridgeAds = olsAds * shrink;
+      const ridgeSearch = olsSearch * shrink;
+      const stabilized = lambda >= 25 && Math.abs(ridgeAds - ridgeSearch) < Math.abs(olsAds - olsSearch) * 0.6;
+      return {
+        headline: `Ridge ads ${ridgeAds.toFixed(2)} · search ${ridgeSearch.toFixed(2)} · r ≈ ${(r * 100).toFixed(0)}%`,
+        readout: stabilized
+          ? "Coefficients shrink toward zero. Better for stable forecasts; still not clean causal attribution."
+          : "Low λ or high overlap: coefficients still swing. Increase penalty or drop a collinear channel.",
+        charts: [
+          {
+            id: "coefs",
+            title: "Ridge coefficients",
+            kind: "bar",
+            labels: ["Ad spend", "Branded search"],
+            values: [ridgeAds, ridgeSearch],
+            valueFormat: (v) => v.toFixed(2),
+          },
+        ],
+        stats: [
+          { label: "λ", value: `${lambda}%`, emphasis: true },
+          { label: "Correlation", value: `${(r * 100).toFixed(0)}%` },
+          { label: "Stability", value: stabilized ? "Improved" : "Weak" },
+        ],
+        actions: {
+          optimize: ["Use ridge when you must keep correlated features for prediction", "Cross-validate λ on holdout weeks"],
+          hold: ["Budget splits from ridge coefficients when r > 0.8"],
+          escalateIf: ["λ above 50% and coefficients still flip sign on refit", "Leadership asks for causal driver credit on collinear channels"],
+        },
+      };
+    },
+  },
 ];
