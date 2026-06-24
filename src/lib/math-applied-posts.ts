@@ -532,6 +532,23 @@ export const MATH_POSTS: MathPost[] = [
     ],
   },
   {
+    slug: "classifier-metrics-precision-recall-auc",
+    href: "/math-applied/classifier-metrics-precision-recall-auc",
+    title: "Classifier Metrics: Precision, Recall, Accuracy, and AUC in Plain Language",
+    description:
+      "TP, FP, FN, TN, every major classifier score, precision vs recall tradeoffs, and draggable ROC/AUC charts.",
+    image: "/classifier_metrics.svg",
+    category: "experiments",
+    tags: ["ai", "ml", "precision", "recall", "auc", "roc", "classifier", "confusion-matrix"],
+    problemPhrases: [
+      "precision recall accuracy explained",
+      "confusion matrix tp fp fn tn",
+      "what is auc roc curve",
+      "when to optimize precision vs recall",
+      "classifier metrics business tradeoff",
+    ],
+  },
+  {
     slug: "model-calibration-real-decisions",
     href: "/math-applied/model-calibration-real-decisions",
     title: "The Model Says 90%: Can You Trust the Score?",
@@ -847,7 +864,7 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "probability-real-decisions",
   ],
   "sensitivity-specificity-screening": [
-    "conditional-probability-pure-definition",
+    "classifier-metrics-precision-recall-auc",
     "base-rates-real-decisions",
     "threshold-tradeoffs-real-decisions",
   ],
@@ -1038,19 +1055,23 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "base-rates-real-decisions",
   ],
   "model-calibration-real-decisions": [
+    "classifier-metrics-precision-recall-auc",
     "threshold-tradeoffs-real-decisions",
     "eval-sample-size-real-decisions",
-    "base-rates-real-decisions",
-    "concept-drift-real-decisions",
+  ],
+  "classifier-metrics-precision-recall-auc": [
+    "sensitivity-specificity-screening",
+    "threshold-tradeoffs-real-decisions",
+    "model-calibration-real-decisions",
   ],
   "threshold-tradeoffs-real-decisions": [
+    "classifier-metrics-precision-recall-auc",
     "model-calibration-real-decisions",
-    "base-rates-real-decisions",
     "false-alarm-missed-win-real-decisions",
   ],
   "eval-sample-size-real-decisions": [
+    "classifier-metrics-precision-recall-auc",
     "sample-size-real-decisions",
-    "confidence-intervals-real-decisions",
     "threshold-tradeoffs-real-decisions",
   ],
   "concept-drift-real-decisions": [
