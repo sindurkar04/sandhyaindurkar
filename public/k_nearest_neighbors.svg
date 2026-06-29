@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#f0f9ff"/>
+  <circle cx="280" cy="280" r="14" fill="#3b82f6"/>
+  <circle cx="320" cy="240" r="14" fill="#3b82f6"/>
+  <circle cx="260" cy="220" r="14" fill="#f97316"/>
+  <circle cx="500" cy="200" r="16" fill="#8b5cf6" stroke="#fff" stroke-width="4"/>
+  <line x1="500" y1="200" x2="280" y2="280" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 4"/>
+  <line x1="500" y1="200" x2="320" y2="240" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="400" y="420" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" font-weight="800" fill="#1e293b">k-Nearest Neighbors</text>
+</svg>

@@ -253,6 +253,66 @@ export const MATH_POSTS: MathPost[] = [
     ],
   },
   {
+    slug: "k-nearest-neighbors-classification-pure-definition",
+    href: "/math-applied/k-nearest-neighbors-classification-pure-definition",
+    title: "k-Nearest Neighbors: Classify by the Closest Labeled Examples",
+    description:
+      "Distance-based voting: fraud similarity, routing, and duplicate detection without a training phase.",
+    image: "/k_nearest_neighbors.svg",
+    category: "foundations",
+    tags: ["knn", "classification", "distance", "nearest-neighbor", "foundation"],
+    problemPhrases: [
+      "k nearest neighbors classification",
+      "classify by similar past examples",
+      "distance based fraud detection",
+    ],
+  },
+  {
+    slug: "logistic-regression-classification-pure-definition",
+    href: "/math-applied/logistic-regression-classification-pure-definition",
+    title: "Logistic Regression: Linear Boundary, Probability Score",
+    description:
+      "Sigmoid scores, linear decision boundaries, and the bridge from regression to classification.",
+    image: "/logistic_regression_classification.svg",
+    category: "foundations",
+    tags: ["logistic", "classification", "sigmoid", "probability", "foundation"],
+    problemPhrases: [
+      "logistic regression intuition",
+      "sigmoid probability classifier",
+      "linear decision boundary",
+    ],
+  },
+  {
+    slug: "classification-loss-functions-pure-definition",
+    href: "/math-applied/classification-loss-functions-pure-definition",
+    title: "Classification Loss: What Optimizers Actually Minimize",
+    description:
+      "Cross-entropy, hinge, and 0-1 loss: why training uses smooth penalties, not accuracy.",
+    image: "/classification_loss_functions.svg",
+    category: "foundations",
+    tags: ["loss", "cross-entropy", "classification", "training", "foundation"],
+    problemPhrases: [
+      "cross entropy loss explained",
+      "why not train on accuracy",
+      "classification loss function",
+    ],
+  },
+  {
+    slug: "gradient-descent-optimizers-pure-definition",
+    href: "/math-applied/gradient-descent-optimizers-pure-definition",
+    title: "Gradient Descent: How Classifiers Learn Their Weights",
+    description:
+      "Learning rate, gradient steps, and SGD intuition for fitting logistic and neural models.",
+    image: "/gradient_descent_optimizers.svg",
+    category: "foundations",
+    tags: ["gradient-descent", "optimizer", "learning-rate", "training", "foundation"],
+    problemPhrases: [
+      "gradient descent intuition",
+      "learning rate too high",
+      "how models learn weights",
+    ],
+  },
+  {
     slug: "prime-factorization-real-problems",
     href: "/math-applied/prime-factorization-real-problems",
     title: "Prime Factorization Isn't Just Math: It's How You Break Down Real Problems",
@@ -546,6 +606,21 @@ export const MATH_POSTS: MathPost[] = [
       "what is auc roc curve",
       "when to optimize precision vs recall",
       "classifier metrics business tradeoff",
+    ],
+  },
+  {
+    slug: "decision-trees-classification-real-decisions",
+    href: "/math-applied/decision-trees-classification-real-decisions",
+    title: "Decision Trees: Readable Rules for Classification",
+    description:
+      "Axis-aligned splits, readable if-then policies, and depth tradeoffs for fraud and hiring screens.",
+    image: "/decision_trees_classification.svg",
+    category: "experiments",
+    tags: ["decision-tree", "classification", "rules", "interpretable", "ml"],
+    problemPhrases: [
+      "decision tree classification rules",
+      "interpretable ml policy tree",
+      "tree depth overfitting",
     ],
   },
   {
@@ -904,14 +979,34 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "ridge-regularization-real-decisions",
   ],
   "norms-and-distance-pure-definition": [
+    "k-nearest-neighbors-classification-pure-definition",
     "vectors-and-features-pure-definition",
     "dot-product-cosine-similarity-pure-definition",
-    "pca-intuition-real-decisions",
   ],
   "orthogonality-uncorrelated-inputs-pure-definition": [
+    "logistic-regression-classification-pure-definition",
     "multicollinearity-real-decisions",
-    "dot-product-cosine-similarity-pure-definition",
     "correlation-vs-causation-real-decisions",
+  ],
+  "k-nearest-neighbors-classification-pure-definition": [
+    "norms-and-distance-pure-definition",
+    "dot-product-cosine-similarity-pure-definition",
+    "classifier-metrics-precision-recall-auc",
+  ],
+  "logistic-regression-classification-pure-definition": [
+    "linear-models-slope-intuition",
+    "classification-loss-functions-pure-definition",
+    "classifier-metrics-precision-recall-auc",
+  ],
+  "classification-loss-functions-pure-definition": [
+    "gradient-descent-optimizers-pure-definition",
+    "logistic-regression-classification-pure-definition",
+    "overfitting-real-decisions",
+  ],
+  "gradient-descent-optimizers-pure-definition": [
+    "classification-loss-functions-pure-definition",
+    "least-squares-geometry-real-decisions",
+    "ridge-regularization-real-decisions",
   ],
   "prime-factorization-real-problems": [
     "sample-size-real-decisions",
@@ -1060,9 +1155,14 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "eval-sample-size-real-decisions",
   ],
   "classifier-metrics-precision-recall-auc": [
-    "sensitivity-specificity-screening",
+    "logistic-regression-classification-pure-definition",
     "threshold-tradeoffs-real-decisions",
     "model-calibration-real-decisions",
+  ],
+  "decision-trees-classification-real-decisions": [
+    "logistic-regression-classification-pure-definition",
+    "overfitting-real-decisions",
+    "classifier-metrics-precision-recall-auc",
   ],
   "threshold-tradeoffs-real-decisions": [
     "classifier-metrics-precision-recall-auc",

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#f8fafc"/>
+  <path d="M160 360 C280 360 320 120 480 100 C620 85 640 300 640 300" stroke="#2563eb" stroke-width="4" fill="none"/>
+  <path d="M160 200 L640 200 L640 360 L160 360 Z" stroke="#059669" stroke-width="3" fill="none"/>
+  <path d="M160 360 L640 120" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="400" y="430" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" font-weight="800" fill="#1e293b">Classification Loss</text>
+</svg>

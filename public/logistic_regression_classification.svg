@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#fff7ed"/>
+  <circle cx="220" cy="320" r="12" fill="#3b82f6"/>
+  <circle cx="300" cy="280" r="12" fill="#3b82f6"/>
+  <circle cx="520" cy="200" r="12" fill="#f97316"/>
+  <circle cx="580" cy="260" r="12" fill="#f97316"/>
+  <line x1="180" y1="380" x2="620" y2="140" stroke="#8b5cf6" stroke-width="3" stroke-dasharray="8 5"/>
+  <path d="M480 120 C520 200 560 280 600 340" stroke="#2563eb" stroke-width="3" fill="none"/>
+  <text x="400" y="430" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" font-weight="800" fill="#1e293b">Logistic Regression</text>
+</svg>
