@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#f5f5f5"/>
+  <text x="400" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" font-weight="800" fill="#111111">Combinations</text>
+  <circle cx="240" cy="200" r="36" fill="#2563eb"/>
+  <circle cx="340" cy="200" r="36" fill="#0d9488"/>
+  <circle cx="440" cy="200" r="36" fill="#ea580c"/>
+  <circle cx="540" cy="200" r="36" fill="#d1d5db" stroke="#9ca3af" stroke-width="2"/>
+  <circle cx="290" cy="300" r="36" fill="#d1d5db" stroke="#9ca3af" stroke-width="2"/>
+  <circle cx="390" cy="300" r="36" fill="#d1d5db" stroke="#9ca3af" stroke-width="2"/>
+  <circle cx="490" cy="300" r="36" fill="#d1d5db" stroke="#9ca3af" stroke-width="2"/>
+  <text x="240" y="206" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="800" fill="#ffffff">A</text>
+  <text x="340" y="206" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="800" fill="#ffffff">B</text>
+  <text x="440" y="206" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="800" fill="#ffffff">C</text>
+  <text x="400" y="390" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#6b7280">Same set, any order counts once</text>
+  <text x="400" y="430" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#111111">C(n,k) = n! / (k! (n - k)!)</text>
+</svg>

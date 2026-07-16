@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#f5f5f5"/>
+  <text x="400" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" font-weight="800" fill="#111111">Eigenvectors</text>
+  <line x1="280" y1="300" x2="520" y2="300" stroke="#111" stroke-width="3"/>
+  <line x1="280" y1="300" x2="280" y2="140" stroke="#6b7280" stroke-width="3"/>
+  <line x1="180" y1="380" x2="480" y2="200" stroke="#8b5cf6" stroke-width="3"/>
+  <line x1="120" y1="220" x2="440" y2="360" stroke="#ea580c" stroke-width="3"/>
+  <line x1="280" y1="300" x2="420" y2="220" stroke="#2563eb" stroke-width="4"/>
+  <line x1="280" y1="300" x2="460" y2="260" stroke="#e11d48" stroke-width="4" stroke-dasharray="8 6"/>
+  <text x="400" y="430" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#6b7280">Special directions that only scale</text>
+</svg>

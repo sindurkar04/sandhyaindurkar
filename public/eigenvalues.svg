@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#f5f5f5"/>
+  <text x="400" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" font-weight="800" fill="#111111">Eigenvalues</text>
+  <line x1="280" y1="300" x2="520" y2="300" stroke="#111" stroke-width="3"/>
+  <line x1="280" y1="300" x2="280" y2="140" stroke="#6b7280" stroke-width="3"/>
+  <line x1="280" y1="300" x2="460" y2="180" stroke="#8b5cf6" stroke-width="4"/>
+  <line x1="280" y1="300" x2="340" y2="420" stroke="#ea580c" stroke-width="4"/>
+  <text x="470" y="175" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#8b5cf6">lambda1</text>
+  <text x="345" y="435" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#ea580c">lambda2</text>
+  <text x="400" y="430" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#6b7280">Stretch factors along special directions</text>
+</svg>

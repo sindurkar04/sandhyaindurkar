@@ -313,6 +313,186 @@ export const MATH_POSTS: MathPost[] = [
     ],
   },
   {
+    slug: "permutations-pure-definition",
+    href: "/math-applied/permutations-pure-definition",
+    title: "Permutations: Order Matters When You Count Arrangements",
+    description:
+      "P(n,r) counting when sequence matters: rankings, seatings, and ordered pipelines.",
+    image: "/permutations.svg",
+    category: "foundations",
+    tags: ["permutations", "counting", "factorial", "foundation"],
+    problemPhrases: [
+      "what is a permutation",
+      "n permute r formula",
+      "order matters counting",
+    ],
+  },
+  {
+    slug: "combinations-pure-definition",
+    href: "/math-applied/combinations-pure-definition",
+    title: "Combinations: Choosing a Set When Order Does Not Matter",
+    description:
+      "n choose k for subsets, feature picks, and committees when order does not change the outcome.",
+    image: "/combinations.svg",
+    category: "foundations",
+    tags: ["combinations", "counting", "binomial", "foundation"],
+    problemPhrases: [
+      "what is a combination",
+      "n choose k formula",
+      "order does not matter counting",
+    ],
+  },
+  {
+    slug: "determinants-pure-definition",
+    href: "/math-applied/determinants-pure-definition",
+    title: "Determinants: Area Scale Factor of a Linear Map",
+    description:
+      "det(A) as signed area scale, singularity when det is zero, and invertibility of linear systems.",
+    image: "/determinants.svg",
+    category: "foundations",
+    tags: ["determinant", "matrix", "linear-algebra", "foundation"],
+    problemPhrases: [
+      "what is a determinant",
+      "determinant zero singular matrix",
+      "area scale factor linear map",
+    ],
+  },
+  {
+    slug: "eigenvalues-pure-definition",
+    href: "/math-applied/eigenvalues-pure-definition",
+    title: "Eigenvalues: Stretch Factors Along Special Directions",
+    description:
+      "λ in Av = λv: stretch factors, characteristic equation, and PCA variance along components.",
+    image: "/eigenvalues.svg",
+    category: "foundations",
+    tags: ["eigenvalue", "pca", "linear-algebra", "foundation"],
+    problemPhrases: [
+      "what is an eigenvalue",
+      "stretch factor eigenvector",
+      "eigenvalue pca variance",
+    ],
+  },
+  {
+    slug: "eigenvectors-pure-definition",
+    href: "/math-applied/eigenvectors-pure-definition",
+    title: "Eigenvectors: Directions That Only Stretch, Not Rotate",
+    description:
+      "Directions unchanged in angle under a linear map: principal axes and independent variance.",
+    image: "/eigenvectors.svg",
+    category: "foundations",
+    tags: ["eigenvector", "pca", "linear-algebra", "foundation"],
+    problemPhrases: [
+      "what is an eigenvector",
+      "direction that only stretches",
+      "pca principal axis eigenvector",
+    ],
+  },
+  {
+    slug: "feature-scaling-zscore-pure-definition",
+    href: "/math-applied/feature-scaling-zscore-pure-definition",
+    title: "Feature Scaling: Why Dollars Crush Session Counts Without Z-Scores",
+    description:
+      "Z-scores and min-max scaling so distance, k-NN, and gradients are not dominated by unit choice.",
+    image: "/feature_scaling_zscore.svg",
+    category: "foundations",
+    tags: ["scaling", "z-score", "normalization", "foundation"],
+    problemPhrases: [
+      "why scale features",
+      "z score standardization",
+      "dollars dominate distance",
+    ],
+  },
+  {
+    slug: "bayes-theorem-pure-definition",
+    href: "/math-applied/bayes-theorem-pure-definition",
+    title: "Bayes Theorem: Update Belief When New Evidence Arrives",
+    description:
+      "P(A|B) from prior and likelihood: screening, alerts, and flipping evidence into posteriors.",
+    image: "/bayes_theorem.svg",
+    category: "foundations",
+    tags: ["bayes", "probability", "posterior", "foundation"],
+    problemPhrases: [
+      "bayes theorem explained",
+      "update prior with evidence",
+      "posterior probability screening",
+    ],
+  },
+  {
+    slug: "confusion-matrix-pure-definition",
+    href: "/math-applied/confusion-matrix-pure-definition",
+    title: "Confusion Matrix: The Four Boxes Behind Every Classifier Score",
+    description:
+      "TP, FP, FN, TN and how precision, recall, and accuracy are built from the 2x2 table.",
+    image: "/confusion_matrix.svg",
+    category: "foundations",
+    tags: ["confusion-matrix", "classifier", "precision", "foundation"],
+    problemPhrases: [
+      "what is a confusion matrix",
+      "tp fp fn tn explained",
+      "precision recall from confusion matrix",
+    ],
+  },
+  {
+    slug: "normal-distribution-gaussian-pure-definition",
+    href: "/math-applied/normal-distribution-gaussian-pure-definition",
+    title: "The Normal Distribution: Bell Curves, Mean, and Standard Deviations",
+    description:
+      "Gaussian density, the 68-95-99.7 rule, and when a bell curve is a useful approximation.",
+    image: "/normal_distribution.svg",
+    category: "foundations",
+    tags: ["normal", "gaussian", "distribution", "foundation"],
+    problemPhrases: [
+      "normal distribution explained",
+      "68 95 99.7 rule",
+      "bell curve mean standard deviation",
+    ],
+  },
+  {
+    slug: "logarithms-odds-pure-definition",
+    href: "/math-applied/logarithms-odds-pure-definition",
+    title: "Logarithms and Odds: Why Log-Odds Show Up in Logistic Models",
+    description:
+      "Odds, logit, and log scales that turn multiplication into addition in logistic regression.",
+    image: "/logarithms_odds.svg",
+    category: "foundations",
+    tags: ["logarithm", "odds", "logit", "foundation"],
+    problemPhrases: [
+      "what are log odds",
+      "odds versus probability",
+      "why logistic uses logit",
+    ],
+  },
+  {
+    slug: "covariance-pure-definition",
+    href: "/math-applied/covariance-pure-definition",
+    title: "Covariance: How Two Features Move Together",
+    description:
+      "Cov(X,Y), its units, and the bridge to correlation and the covariance matrix.",
+    image: "/covariance.svg",
+    category: "foundations",
+    tags: ["covariance", "correlation", "features", "foundation"],
+    problemPhrases: [
+      "what is covariance",
+      "covariance versus correlation",
+      "covariance matrix diagonal variance",
+    ],
+  },
+  {
+    slug: "bias-variance-tradeoff-real-decisions",
+    href: "/math-applied/bias-variance-tradeoff-real-decisions",
+    title: "Bias vs Variance: Underfit, Overfit, and the U-Shaped Error Curve",
+    description:
+      "Expected error as bias squared plus variance: complexity sweet spots before you ship.",
+    image: "/bias_variance_tradeoff.svg",
+    category: "experiments",
+    tags: ["bias-variance", "overfitting", "underfitting", "model-selection"],
+    problemPhrases: [
+      "bias variance tradeoff",
+      "underfit versus overfit",
+      "u shaped test error curve",
+    ],
+  },
+  {
     slug: "prime-factorization-real-problems",
     href: "/math-applied/prime-factorization-real-problems",
     title: "Prime Factorization Isn't Just Math: It's How You Break Down Real Problems",
@@ -929,9 +1109,9 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "probability-real-decisions",
   ],
   "conditional-probability-pure-definition": [
+    "bayes-theorem-pure-definition",
     "sensitivity-specificity-screening",
     "base-rates-real-decisions",
-    "dependent-probability-chains-real-decisions",
   ],
   "dependent-probability-chains-real-decisions": [
     "probability-basics-events-independence",
@@ -939,9 +1119,9 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "probability-real-decisions",
   ],
   "sensitivity-specificity-screening": [
+    "confusion-matrix-pure-definition",
+    "bayes-theorem-pure-definition",
     "classifier-metrics-precision-recall-auc",
-    "base-rates-real-decisions",
-    "threshold-tradeoffs-real-decisions",
   ],
   "reading-distributions-percentiles-quartiles": [
     "percentiles-quartiles-real-data",
@@ -969,7 +1149,7 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "model-calibration-real-decisions",
   ],
   "matrices-linear-systems-pure-definition": [
-    "linear-models-slope-intuition",
+    "determinants-pure-definition",
     "least-squares-geometry-real-decisions",
     "regression-real-decisions",
   ],
@@ -979,9 +1159,9 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "ridge-regularization-real-decisions",
   ],
   "norms-and-distance-pure-definition": [
+    "feature-scaling-zscore-pure-definition",
     "k-nearest-neighbors-classification-pure-definition",
     "vectors-and-features-pure-definition",
-    "dot-product-cosine-similarity-pure-definition",
   ],
   "orthogonality-uncorrelated-inputs-pure-definition": [
     "logistic-regression-classification-pure-definition",
@@ -989,12 +1169,12 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "correlation-vs-causation-real-decisions",
   ],
   "k-nearest-neighbors-classification-pure-definition": [
+    "feature-scaling-zscore-pure-definition",
     "norms-and-distance-pure-definition",
-    "dot-product-cosine-similarity-pure-definition",
     "classifier-metrics-precision-recall-auc",
   ],
   "logistic-regression-classification-pure-definition": [
-    "linear-models-slope-intuition",
+    "logarithms-odds-pure-definition",
     "classification-loss-functions-pure-definition",
     "classifier-metrics-precision-recall-auc",
   ],
@@ -1006,6 +1186,66 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
   "gradient-descent-optimizers-pure-definition": [
     "classification-loss-functions-pure-definition",
     "least-squares-geometry-real-decisions",
+    "ridge-regularization-real-decisions",
+  ],
+  "permutations-pure-definition": [
+    "combinations-pure-definition",
+    "probability-basics-events-independence",
+    "expected-value-pure-definition",
+  ],
+  "combinations-pure-definition": [
+    "permutations-pure-definition",
+    "probability-basics-events-independence",
+    "sample-size-real-decisions",
+  ],
+  "determinants-pure-definition": [
+    "matrices-linear-systems-pure-definition",
+    "eigenvalues-pure-definition",
+    "eigenvectors-pure-definition",
+  ],
+  "eigenvalues-pure-definition": [
+    "eigenvectors-pure-definition",
+    "determinants-pure-definition",
+    "pca-intuition-real-decisions",
+  ],
+  "eigenvectors-pure-definition": [
+    "eigenvalues-pure-definition",
+    "pca-intuition-real-decisions",
+    "orthogonality-uncorrelated-inputs-pure-definition",
+  ],
+  "feature-scaling-zscore-pure-definition": [
+    "norms-and-distance-pure-definition",
+    "k-nearest-neighbors-classification-pure-definition",
+    "normal-distribution-gaussian-pure-definition",
+  ],
+  "bayes-theorem-pure-definition": [
+    "conditional-probability-pure-definition",
+    "base-rates-real-decisions",
+    "sensitivity-specificity-screening",
+  ],
+  "confusion-matrix-pure-definition": [
+    "sensitivity-specificity-screening",
+    "classifier-metrics-precision-recall-auc",
+    "threshold-tradeoffs-real-decisions",
+  ],
+  "normal-distribution-gaussian-pure-definition": [
+    "feature-scaling-zscore-pure-definition",
+    "variance-spread-real-data",
+    "confidence-intervals-real-decisions",
+  ],
+  "logarithms-odds-pure-definition": [
+    "logistic-regression-classification-pure-definition",
+    "percent-change-real-decisions",
+    "expected-value-pure-definition",
+  ],
+  "covariance-pure-definition": [
+    "correlation-vs-causation-real-decisions",
+    "orthogonality-uncorrelated-inputs-pure-definition",
+    "multicollinearity-real-decisions",
+  ],
+  "bias-variance-tradeoff-real-decisions": [
+    "overfitting-real-decisions",
+    "eval-sample-size-real-decisions",
     "ridge-regularization-real-decisions",
   ],
   "prime-factorization-real-problems": [
@@ -1029,13 +1269,13 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "percentiles-quartiles-real-data",
   ],
   "pca-intuition-real-decisions": [
-    "variance-spread-real-data",
-    "multicollinearity-real-decisions",
-    "correlation-vs-causation-real-decisions",
+    "eigenvalues-pure-definition",
+    "eigenvectors-pure-definition",
+    "covariance-pure-definition",
   ],
   "correlation-vs-causation-real-decisions": [
+    "covariance-pure-definition",
     "multicollinearity-real-decisions",
-    "regression-real-decisions",
     "selection-bias-real-decisions",
   ],
   "multicollinearity-real-decisions": [
@@ -1069,9 +1309,9 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "matrices-linear-systems-pure-definition",
   ],
   "overfitting-real-decisions": [
+    "bias-variance-tradeoff-real-decisions",
     "concept-drift-real-decisions",
-    "regression-real-decisions",
-    "model-calibration-real-decisions",
+    "ridge-regularization-real-decisions",
   ],
   "regression-to-the-mean-real-decisions": [
     "goodhart-law-real-decisions",
@@ -1155,7 +1395,7 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "eval-sample-size-real-decisions",
   ],
   "classifier-metrics-precision-recall-auc": [
-    "logistic-regression-classification-pure-definition",
+    "confusion-matrix-pure-definition",
     "threshold-tradeoffs-real-decisions",
     "model-calibration-real-decisions",
   ],
