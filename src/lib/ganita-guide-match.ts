@@ -202,6 +202,18 @@ const SYNONYMS: Record<string, string[]> = {
   logit: ["odds", "logistic", "logarithm"],
   covariance: ["correlation", "cov", "features"],
   cov: ["covariance", "correlation"],
+  binomial: ["trials", "successes", "distribution", "probability"],
+  poisson: ["rate", "arrivals", "events", "distribution"],
+  arrivals: ["poisson", "rate", "events"],
+  clt: ["central-limit", "normal", "sampling", "mean"],
+  "central-limit": ["clt", "normal", "sampling"],
+  mle: ["maximum-likelihood", "likelihood", "estimation"],
+  likelihood: ["mle", "maximum-likelihood", "estimation"],
+  entropy: ["information-gain", "decision-tree", "uncertainty"],
+  "information-gain": ["entropy", "decision-tree", "split"],
+  softmax: ["logits", "multiclass", "probability", "sigmoid"],
+  logits: ["softmax", "scores", "multiclass"],
+  multiclass: ["softmax", "classification", "classes"],
 };
 
 function normalize(text: string): string {

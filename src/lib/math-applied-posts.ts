@@ -478,6 +478,96 @@ export const MATH_POSTS: MathPost[] = [
     ],
   },
   {
+    slug: "binomial-distribution-pure-definition",
+    href: "/math-applied/binomial-distribution-pure-definition",
+    title: "The Binomial Distribution: Counting Successes in n Trials",
+    description:
+      "P(X=k) = C(n,k) p^k (1-p)^(n-k): the probability of each count of successes across n independent trials.",
+    image: "/binomial_distribution.svg",
+    category: "foundations",
+    tags: ["binomial", "probability", "distribution", "foundation"],
+    problemPhrases: [
+      "binomial distribution explained",
+      "probability of k successes in n trials",
+      "n choose k times p to the k",
+    ],
+  },
+  {
+    slug: "poisson-distribution-pure-definition",
+    href: "/math-applied/poisson-distribution-pure-definition",
+    title: "The Poisson Distribution: Rare Events Over a Fixed Window",
+    description:
+      "P(X=k) = λ^k e^-λ / k!: counts of independent events per interval when you only know the average rate.",
+    image: "/poisson_distribution.svg",
+    category: "foundations",
+    tags: ["poisson", "probability", "distribution", "rate", "foundation"],
+    problemPhrases: [
+      "poisson distribution explained",
+      "events per hour probability",
+      "count of arrivals given average rate",
+    ],
+  },
+  {
+    slug: "central-limit-theorem-pure-definition",
+    href: "/math-applied/central-limit-theorem-pure-definition",
+    title: "The Central Limit Theorem: Why Averages Go Normal",
+    description:
+      "Average enough independent draws and the sample mean is approximately normal, centered at μ with spread σ/√n.",
+    image: "/central_limit_theorem.svg",
+    category: "foundations",
+    tags: ["clt", "central-limit-theorem", "normal", "sampling", "foundation"],
+    problemPhrases: [
+      "central limit theorem explained",
+      "why is the sample mean normal",
+      "standard error sigma over root n",
+    ],
+  },
+  {
+    slug: "maximum-likelihood-estimation-pure-definition",
+    href: "/math-applied/maximum-likelihood-estimation-pure-definition",
+    title: "Maximum Likelihood: Pick the Parameter That Best Explains the Data",
+    description:
+      "MLE chooses the parameter that makes the observed data most probable — the principle behind fitting most models.",
+    image: "/maximum_likelihood.svg",
+    category: "foundations",
+    tags: ["mle", "maximum-likelihood", "estimation", "training", "foundation"],
+    problemPhrases: [
+      "what is maximum likelihood estimation",
+      "parameter that best explains the data",
+      "log likelihood argmax",
+    ],
+  },
+  {
+    slug: "entropy-information-gain-pure-definition",
+    href: "/math-applied/entropy-information-gain-pure-definition",
+    title: "Entropy and Information Gain: How a Split Reduces Uncertainty",
+    description:
+      "Entropy measures uncertainty in a label mix; information gain is how much a split lowers it — the decision-tree split score.",
+    image: "/entropy_information_gain.svg",
+    category: "foundations",
+    tags: ["entropy", "information-gain", "decision-tree", "foundation"],
+    problemPhrases: [
+      "what is entropy in machine learning",
+      "information gain decision tree split",
+      "how a tree chooses a feature",
+    ],
+  },
+  {
+    slug: "softmax-multiclass-pure-definition",
+    href: "/math-applied/softmax-multiclass-pure-definition",
+    title: "Softmax: Turning Scores Into a Probability Distribution",
+    description:
+      "Softmax exponentiates raw class scores and normalizes them to positive numbers that sum to one — the multiclass sigmoid.",
+    image: "/softmax.svg",
+    category: "foundations",
+    tags: ["softmax", "multiclass", "probability", "classification", "foundation"],
+    problemPhrases: [
+      "what is softmax function",
+      "turn logits into probabilities",
+      "multiclass probability distribution",
+    ],
+  },
+  {
     slug: "bias-variance-tradeoff-real-decisions",
     href: "/math-applied/bias-variance-tradeoff-real-decisions",
     title: "Bias vs Variance: Underfit, Overfit, and the U-Shaped Error Curve",
@@ -1242,6 +1332,36 @@ const RELATED_BY_SLUG: Record<string, string[]> = {
     "correlation-vs-causation-real-decisions",
     "orthogonality-uncorrelated-inputs-pure-definition",
     "multicollinearity-real-decisions",
+  ],
+  "binomial-distribution-pure-definition": [
+    "combinations-pure-definition",
+    "poisson-distribution-pure-definition",
+    "probability-real-decisions",
+  ],
+  "poisson-distribution-pure-definition": [
+    "binomial-distribution-pure-definition",
+    "normal-distribution-gaussian-pure-definition",
+    "stacking-rare-risks-real-decisions",
+  ],
+  "central-limit-theorem-pure-definition": [
+    "normal-distribution-gaussian-pure-definition",
+    "confidence-intervals-real-decisions",
+    "sample-size-real-decisions",
+  ],
+  "maximum-likelihood-estimation-pure-definition": [
+    "logistic-regression-classification-pure-definition",
+    "classification-loss-functions-pure-definition",
+    "gradient-descent-optimizers-pure-definition",
+  ],
+  "entropy-information-gain-pure-definition": [
+    "decision-trees-classification-real-decisions",
+    "classification-loss-functions-pure-definition",
+    "maximum-likelihood-estimation-pure-definition",
+  ],
+  "softmax-multiclass-pure-definition": [
+    "logistic-regression-classification-pure-definition",
+    "classification-loss-functions-pure-definition",
+    "model-calibration-real-decisions",
   ],
   "bias-variance-tradeoff-real-decisions": [
     "overfitting-real-decisions",

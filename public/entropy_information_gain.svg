@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#ffffff"/>
+  <text x="400" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" font-weight="800" fill="#111111">Entropy &amp; Information Gain</text>
+  <rect x="120" y="100" width="560" height="280" rx="12" fill="#f8fafc" stroke="#d1d5db" stroke-width="2"/>
+  <line x1="150" y1="360" x2="650" y2="360" stroke="#9ca3af" stroke-width="2"/>
+  <line x1="150" y1="120" x2="150" y2="360" stroke="#9ca3af" stroke-width="2"/>
+  <path d="M 150 360 Q 260 200 400 150 Q 540 200 650 360" stroke="#7c3aed" stroke-width="3.5" fill="none"/>
+  <line x1="400" y1="150" x2="400" y2="360" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <circle cx="400" cy="150" r="6" fill="#64748b"/>
+  <text x="400" y="140" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#64748b">1 bit (50/50)</text>
+  <circle cx="250" cy="255" r="6" fill="#2563eb"/>
+  <circle cx="600" cy="300" r="6" fill="#ea580c"/>
+  <text x="160" y="352" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#374151">pure</text>
+  <text x="620" y="352" text-anchor="end" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#374151">pure</text>
+  <text x="400" y="392" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#374151">Fraction positive</text>
+  <text x="130" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#374151" transform="rotate(-90 130 240)">entropy</text>
+  <text x="400" y="458" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#111111">H = - &#931; p log&#8322; p     Gain = H(parent) - &#931; w H(child)</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#ffffff"/>
+  <text x="400" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" font-weight="800" fill="#111111">Maximum Likelihood</text>
+  <rect x="120" y="100" width="560" height="280" rx="12" fill="#f8fafc" stroke="#d1d5db" stroke-width="2"/>
+  <line x1="150" y1="360" x2="650" y2="360" stroke="#9ca3af" stroke-width="2"/>
+  <line x1="150" y1="120" x2="150" y2="360" stroke="#9ca3af" stroke-width="2"/>
+  <path d="M 150 360 Q 300 356 400 300 Q 480 250 500 150 Q 520 250 600 330 Q 630 356 650 360" stroke="#2563eb" stroke-width="3.5" fill="none"/>
+  <line x1="500" y1="120" x2="500" y2="360" stroke="#e11d48" stroke-width="2.5" stroke-dasharray="6 5"/>
+  <circle cx="500" cy="150" r="7" fill="#e11d48"/>
+  <text x="500" y="138" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#e11d48">MLE peak</text>
+  <text x="400" y="392" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#374151">Candidate parameter p</text>
+  <text x="130" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#374151" transform="rotate(-90 130 240)">likelihood</text>
+  <text x="400" y="458" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#111111">&#952;&#770; = argmax &#931; log P(data | &#952;)</text>
+</svg>
